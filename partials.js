@@ -50,8 +50,29 @@
       <div class="nav-spacer"></div>
       <a class="btn btn-ghost" href="__ROOT__support.html">Se connecter</a>
       <a class="btn btn-accent" href="__ROOT__tarifs.html">Demander un devis <span class="arrow"></span></a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
+  <div class="nav-mobile-panel">
+    <div class="mobile-section-title">Produits</div>
+    <a href="__ROOT__products/caisse.html"><div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2.5" y="3" width="13" height="10" rx="1.5"/><path d="M2.5 7h13"/></svg></div>Caisse</a>
+    <a href="__ROOT__products/borne.html"><div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="5" y="2" width="8" height="14" rx="1"/><path d="M8 13.5h2"/></svg></div>Borne de commande</a>
+    <a href="__ROOT__products/kds.html"><div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="3.5" width="14" height="10" rx="1.5"/><path d="M5 16h8M9 13.5v2.5"/></svg></div>Écran cuisine (KDS)</a>
+    <a href="__ROOT__products/ecran-client.html"><div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="3.5" width="15" height="9" rx="1"/><path d="M6 15h6"/></svg></div>Écran client</a>
+    <a href="__ROOT__products/commande-en-ligne.html"><div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="5.5" y="2" width="7" height="14" rx="1.5"/><circle cx="9" cy="13.5" r=".7" fill="currentColor"/></svg></div>Commande en ligne</a>
+    <a href="__ROOT__products/livraison.html"><div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 12V5h8v7"/><path d="M10 8h4l2 3v1h-6"/><circle cx="5.5" cy="13" r="1.5"/><circle cx="13" cy="13" r="1.5"/></svg></div>Livraison</a>
+    <a href="__ROOT__products/commande-table.html"><div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="12" height="12" rx="1.5"/><path d="M6 6h6M6 9h6M6 12h3"/></svg></div>Commande à table</a>
+    <a href="__ROOT__products/manager.html"><div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2.5 13.5l3.5-4 3 3 5.5-6"/><path d="M11 6.5h3.5V10"/></svg></div>Manager en ligne</a>
+    <div class="mobile-section-title">Découvrir</div>
+    <a href="__ROOT__ecosystem.html">Écosystème</a>
+    <a href="__ROOT__use-cases.html">Cas d'usage</a>
+    <a href="__ROOT__integrations.html">Intégrations</a>
+    <a href="__ROOT__support.html">Support</a>
+    <div class="mobile-cta">
+      <a class="btn btn-accent" href="__ROOT__tarifs.html">Demander un devis <span class="arrow"></span></a>
+      <a class="btn btn-ghost" href="__ROOT__support.html">Se connecter</a>
+    </div>
+  </div>
   `;
 
   const FOOTER = `
@@ -114,7 +135,6 @@
   </footer>
   `;
 
-  // ROOT = "" for top-level pages, "../" for products/*.html
   const root = document.documentElement.dataset.root || '';
   const navMount = document.getElementById('site-nav');
   const footMount = document.getElementById('site-footer');

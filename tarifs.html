@@ -68,6 +68,10 @@
 .rule { background: var(--surface); padding: 36px 32px; display: flex; flex-direction: column; gap: 8px; }
 .rule-num { color: var(--accent); font-size: 28px; line-height: 1; margin-bottom: 16px; font-style: italic; }
 .rule h3 { font-size: 22px; }
+@media (max-width: 480px) {
+  .rule { padding: 24px 20px; }
+  .rule h3 { font-size: 19px; }
+}
 </style>
 
 <!-- ============ FORM ============ -->
@@ -293,6 +297,7 @@
   position: relative;
   overflow: hidden;
 }
+.devis-card > div { padding: 36px; }
 .form-section { padding: 24px 0; border-bottom: 1px solid var(--line); }
 .form-section:first-of-type { padding-top: 18px; }
 
@@ -308,6 +313,39 @@
 }
 .devis-ok:not([hidden]) ~ * { display: none; }
 .devis-ok:not([hidden]) + div { display: none; }
+
+/* --- tarifs: 900px breakpoint --- */
+@media (max-width: 900px) {
+  .devis-layout { gap: 36px !important; }
+  .devis-card > div { padding: 28px; }
+}
+
+/* --- tarifs: 700px breakpoint --- */
+@media (max-width: 700px) {
+  .devis-layout { gap: 28px !important; }
+  .devis-card > div { padding: 22px; }
+  .devis-ok:not([hidden]) { padding: 40px 20px; }
+  /* Form grid-2 inside .devis-card: stack on mobile */
+  .devis-card .grid-2 { grid-template-columns: 1fr !important; }
+  /* Checkbox grid single-column */
+  .devis-card .checkbox-grid { grid-template-columns: 1fr; }
+  /* Full-width submit button */
+  .devis-card .btn-accent { width: 100%; }
+}
+
+/* --- tarifs: 480px breakpoint --- */
+@media (max-width: 480px) {
+  .devis-layout { gap: 20px !important; }
+  .devis-card > div { padding: 16px; }
+  .devis-card { border-radius: var(--r); }
+  .devis-ok:not([hidden]) { padding: 32px 16px; }
+  .devis-steps { gap: 20px; }
+  .devis-aside { padding: 16px; }
+  .form-section { padding: 18px 0; }
+  /* Consent checkbox padding */
+  .devis-card .checkbox[style] { padding: 10px !important; }
+  .devis-card .btn-accent { width: 100%; padding: 14px 16px !important; font-size: 14px !important; }
+}
 </style>
 
 <!-- ============ FAQ MINI ============ -->

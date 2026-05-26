@@ -23,6 +23,24 @@
 
   document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 
+  // mobile nav toggle
+  const toggle = document.querySelector('.nav-toggle');
+  const mobilePanel = document.querySelector('.nav-mobile-panel');
+  if (toggle && mobilePanel) {
+    toggle.addEventListener('click', () => {
+      const open = toggle.classList.toggle('open');
+      mobilePanel.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    mobilePanel.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => {
+        toggle.classList.remove('open');
+        mobilePanel.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
   // mark current nav link active based on filename
   const path = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-link[data-href]').forEach((a) => {

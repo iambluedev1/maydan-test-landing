@@ -79,12 +79,22 @@
 .sc-icn { width: 36px; height: 36px; border-radius: 8px; background: var(--accent-tint); color: var(--accent-deep); display: grid; place-items: center; border: 1px solid oklch(0.86 0.07 50); }
 .sc-h h3 { font-size: 18px; }
 .support-channel .chip { align-self: flex-start; margin-top: 4px; }
+
+@media (max-width: 900px) {
+  .support-channel { padding: 22px; }
+  .support-channel .serif { font-size: 24px !important; }
+}
+@media (max-width: 480px) {
+  .support-channel { padding: 18px; gap: 10px; }
+  .support-channel .serif { font-size: 20px !important; }
+  .sc-h h3 { font-size: 16px; }
+}
 </style>
 
 <!-- ============ STATUS BANNER ============ -->
 <section style="padding:0 0 80px" id="status">
   <div class="container">
-    <div class="card reveal" style="padding:28px;display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center">
+    <div class="card reveal status-banner" style="padding:28px">
       <div style="width:46px;height:46px;border-radius:50%;background:var(--ok);display:grid;place-items:center;color:#fff">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10l3 3 7-8"/></svg>
       </div>
@@ -98,7 +108,7 @@
       </div>
     </div>
 
-    <div class="grid grid-4 mt-4 reveal">
+    <div class="grid grid-4 status-pills mt-4 reveal">
       <div class="status-pill">
         <div class="row" style="justify-content:space-between"><b>Caisse</b><span class="chip-dot live"></span></div>
         <div class="mono small muted">100% uptime · 90j</div>
@@ -123,6 +133,19 @@
 .status-pill { padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); display: flex; flex-direction: column; gap: 6px; }
 .status-pill b { font-weight: 500; font-size: 14px; }
 .status-pill .chip-dot { background: var(--ok); }
+
+.status-banner { display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center; }
+
+@media (max-width: 900px) {
+  .status-banner { grid-template-columns: 1fr; gap: 16px; text-align: center; }
+  .status-banner > div:first-child { justify-self: center; }
+  .status-banner > .row { justify-content: center; }
+  .grid.grid-4.status-pills { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .grid.grid-4.status-pills { grid-template-columns: 1fr; }
+  .status-pill { padding: 12px 14px; }
+}
 </style>
 
 <!-- ============ FAQ ============ -->
@@ -337,6 +360,19 @@
   font-size: 14.5px; color: var(--ink-2); line-height: 1.6;
 }
 .faq-item[aria-expanded="true"] + .faq-body { max-height: 400px; padding-bottom: 16px; }
+
+@media (max-width: 900px) {
+  .faq-cats { gap: 24px; }
+  .faq-cat { padding: 22px; }
+  .faq-cat h3 { font-size: 20px; margin-bottom: 14px; padding-bottom: 12px; }
+}
+@media (max-width: 480px) {
+  .faq-cats { gap: 18px; }
+  .faq-cat { padding: 16px; }
+  .faq-cat h3 { font-size: 18px; margin-bottom: 12px; }
+  .faq-item { padding: 14px 0; font-size: 14px; }
+  .faq-body { font-size: 13.5px; }
+}
 </style>
 
 <!-- ============ RESOURCES ============ -->
