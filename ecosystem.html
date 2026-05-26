@@ -31,7 +31,7 @@
 </header>
 
 <!-- ============ ECOSYSTEM DIAGRAM ============ -->
-<section style="padding:0 0 80px">
+<section class="eco-section" style="padding:0 0 80px">
   <div class="container">
     <div class="eco-stage reveal">
       <!-- center hub -->
@@ -189,9 +189,36 @@
 .eco-stage .n5:hover { transform: translateY(-50%) translateY(-3px); }
 
 @media (max-width: 900px) {
-  .eco-stage { height: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .eco-lines, .eco-hub { display: none; }
+  .eco-stage { height: auto; max-width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .eco-lines { display: none; }
+  .eco-hub {
+    position: static; transform: none;
+    width: 100%; height: auto;
+    border-radius: var(--r-l);
+    grid-column: 1 / -1;
+  }
+  .eco-hub-inner { padding: 20px; }
+  .eco-hub .serif { font-size: 26px; }
+  .eco-pulse { display: none; }
   .eco-node { position: static !important; width: 100% !important; transform: none !important; }
+  .eco-node:hover { transform: translateY(-3px) !important; }
+}
+
+@media (max-width: 700px) {
+  .eco-section { padding-bottom: 56px !important; }
+  .eco-hub-inner { padding: 16px; }
+  .eco-hub .serif { font-size: 22px; }
+  .eco-node { padding: 12px; }
+  .eco-node b { font-size: 14px; }
+}
+
+@media (max-width: 480px) {
+  .eco-section { padding-bottom: 40px !important; }
+  .eco-stage { grid-template-columns: 1fr; gap: 10px; }
+  .eco-hub-inner { padding: 14px; }
+  .eco-hub .serif { font-size: 20px; }
+  .eco-node { padding: 10px; }
+  .eco-node b { font-size: 13px; }
 }
 </style>
 
@@ -274,6 +301,18 @@
   background: var(--line);
   margin: 8px 0 8px 13px;
 }
+@media (max-width: 700px) {
+  .flow-lane { padding: 20px; }
+  .flow-lane-h h3 { font-size: 19px; }
+  .flow-step b { font-size: 14px; }
+}
+@media (max-width: 480px) {
+  .flow-lane { padding: 16px; }
+  .flow-lane-h { padding-bottom: 14px; margin-bottom: 14px; }
+  .flow-lane-h h3 { font-size: 17px; }
+  .flow-step { gap: 10px; }
+  .flow-line { height: 18px; margin: 6px 0 6px 13px; }
+}
 </style>
 
 <!-- ============ ONE MENU PROPAGATION ============ -->
@@ -348,6 +387,15 @@
 .propag-targets { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
 .propag-t { display: flex; justify-content: space-between; padding: 10px 14px; background: var(--bg-2); border-radius: 8px; font-size: 13.5px; }
 .propag-ok { color: var(--ok); font-weight: 500; }
+@media (max-width: 700px) {
+  .propag-diagram { padding: 20px; }
+  .propag-source { padding: 12px; }
+}
+@media (max-width: 480px) {
+  .propag-diagram { padding: 16px; }
+  .propag-targets { grid-template-columns: 1fr; }
+  .propag-t { padding: 8px 12px; font-size: 13px; }
+}
 </style>
 
 <!-- ============ STACK COMPARISON ============ -->
@@ -412,6 +460,19 @@
 .stack-list li .muted { color: #8B8B86; font-size: 12.5px; }
 .stack-list li .muted-i { color: oklch(0.78 0.14 50); font-size: 12.5px; font-family: var(--mono); }
 .stack-foot { display: flex; flex-direction: column; gap: 4px; padding-top: 12px; border-top: 1px solid #2A2A28; }
+@media (max-width: 700px) {
+  .stack-col { padding: 28px 20px; gap: 14px; }
+  .stack-h h3 { font-size: 19px; }
+  .stack-list li { flex-direction: column; gap: 2px; padding: 10px 12px; font-size: 13px; }
+  .stack-list li .muted,
+  .stack-list li .muted-i { font-size: 12px; }
+}
+@media (max-width: 480px) {
+  .stack-col { padding: 20px 16px; gap: 12px; }
+  .stack-h h3 { font-size: 17px; }
+  .stack-list { gap: 8px; }
+  .stack-list li { padding: 8px 10px; }
+}
 </style>
 
 <!-- ============ INTEGRATIONS QUICK ============ -->
@@ -474,6 +535,7 @@
 .cta-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(50% 70% at 90% 100%, oklch(0.66 0.19 38 / 0.5), transparent 70%), radial-gradient(40% 60% at 0% 0%, oklch(0.74 0.16 60 / 0.3), transparent 70%); }
 .cta-content { position: relative; z-index: 1; }
 @media (max-width: 700px) { .cta-card { padding: 48px 28px; } }
+@media (max-width: 480px) { .cta-card { padding: 36px 20px; } }
 </style>
 
 <div id="site-footer"></div>

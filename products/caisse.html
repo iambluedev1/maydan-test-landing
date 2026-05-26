@@ -112,8 +112,12 @@
 .caisse-side-1 { left: -10px; top: 80px; transform: rotate(-3deg); }
 .caisse-side-2 { right: -10px; top: 360px; transform: rotate(3deg); }
 @media (max-width: 900px) {
-  .caisse-hero-stage { height: auto; display: flex; flex-direction: column; gap: 16px; }
-  .caisse-hero-stage .float-tablet, .caisse-side { position: static; transform: none; width: auto; }
+  .caisse-hero-stage { height: auto; display: flex; flex-direction: column; gap: 16px; align-items: center; }
+  .caisse-hero-stage .float-tablet, .caisse-side { position: static !important; transform: none !important; width: 100% !important; max-width: 400px; }
+}
+@media (max-width: 480px) {
+  .caisse-hero-stage .float-tablet { max-width: 100%; }
+  .caisse-side { max-width: 100%; }
 }
 .pos-screen { padding: 12px; display: flex; flex-direction: column; gap: 10px; min-height: 460px;}
 .pos-top { display: flex; justify-content: space-between; align-items: center; padding: 2px 4px; }
@@ -130,6 +134,13 @@
 .float-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-l); box-shadow: var(--shadow-3); padding: 14px; }
 .mock-tablet { background: #111; padding: 12px; border-radius: 22px; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.35), inset 0 0 0 2px #1d1d1d; }
 .mock-screen { background: var(--bg); border-radius: 12px; overflow: hidden; }
+@media (max-width: 480px) {
+  .pos-screen { min-height: auto; padding: 10px; }
+  .pos-grid { grid-template-columns: repeat(3, 1fr); gap: 4px; }
+  .pos-cat { padding: 6px 6px; font-size: 11px; }
+  .pos-items { grid-template-columns: 1fr; }
+  .pos-total b { font-size: 18px; }
+}
 </style>
 
 <!-- =================== KPI ROW =================== -->
@@ -291,6 +302,11 @@
 .table.warn { background: oklch(0.95 0.10 80); border-color: oklch(0.84 0.13 80); }
 .table.active { background: var(--ink); color: #fff; border-color: var(--ink); }
 .table.active .t-state { color: #fff; }
+@media (max-width: 480px) {
+  .tables { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .table { font-size: 22px; }
+  .floor-plan { padding: 14px; gap: 14px; }
+}
 
 /* HW grid */
 .hw-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -304,6 +320,9 @@
 .hw-tpe::after { content: ""; position: absolute; inset: 4px 4px 50% 4px; background: oklch(0.55 0.12 220); border-radius: 2px; }
 .hw-drawer { width: 65%; aspect-ratio: 3/1; background: #2A2A28; border-radius: 4px; position: relative; }
 .hw-drawer::after { content: ""; position: absolute; left: 8px; top: 4px; bottom: 4px; width: 8px; background: #1A1A18; border-radius: 2px; }
+@media (max-width: 480px) {
+  .hw-grid { grid-template-columns: 1fr; gap: 12px; }
+}
 </style>
 
 <!-- =================== HOW IT WORKS =================== -->
@@ -348,6 +367,10 @@
   .steps-grid { grid-template-columns: 1fr; }
   .step-arrow { display: none; }
 }
+@media (max-width: 480px) {
+  .step { padding: 20px; }
+  .step h3 { font-size: 18px; }
+}
 </style>
 
 <!-- =================== SPECS =================== -->
@@ -376,7 +399,11 @@
 .spec-row { display: grid; grid-template-columns: 220px 1fr; gap: 24px; padding: 18px 0; border-top: 1px solid var(--line); font-size: 15px; }
 .spec-row:last-child { border-bottom: 1px solid var(--line); }
 .spec-row span:first-child { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); padding-top: 2px; }
+@media (max-width: 900px) {
+  .section > .container > .grid[style*="grid-template-columns: 1fr 2fr"] { grid-template-columns: 1fr !important; gap: 28px !important; }
+}
 @media (max-width: 700px) { .spec-row { grid-template-columns: 1fr; gap: 4px; } }
+@media (max-width: 480px) { .spec-row { padding: 14px 0; font-size: 14px; } }
 </style>
 
 <!-- =================== RELATED =================== -->

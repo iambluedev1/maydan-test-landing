@@ -29,6 +29,18 @@
   </div>
 </header>
 
+<!-- page-level responsive overrides (hero + sections, not nav/footer) -->
+<style>
+@media (max-width: 700px) {
+  body[data-screen-label="Cas d'usage"] .hero { padding-top: 40px !important; padding-bottom: 28px !important; }
+  body[data-screen-label="Cas d'usage"] .section { padding: 56px 0; }
+}
+@media (max-width: 480px) {
+  body[data-screen-label="Cas d'usage"] .hero { padding-top: 32px !important; padding-bottom: 20px !important; }
+  body[data-screen-label="Cas d'usage"] .section { padding: 40px 0; }
+}
+</style>
+
 <!-- ============ TABS NAV ============ -->
 <section style="border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface);position:sticky;top:62px;z-index:50;backdrop-filter:blur(10px)">
   <div class="container">
@@ -48,6 +60,9 @@
 .uc-tab { white-space: nowrap; padding: 8px 14px; border-radius: 999px; font-size: 14px; color: var(--ink-2); display: inline-flex; align-items: center; gap: 8px; transition: background .15s ease, color .15s ease; }
 .uc-tab:hover { background: var(--bg-2); color: var(--ink); }
 .uc-tab .mono { color: var(--ink-4); }
+@media (max-width: 480px) {
+  .uc-tab { padding: 6px 10px; font-size: 13px; gap: 5px; }
+}
 </style>
 
 <!-- ============ CASE 1: Resto rapide ============ -->
@@ -358,16 +373,18 @@
 </section>
 
 <style>
+/* ---- UC row layout ---- */
 .uc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 .uc-row.reverse { direction: rtl; }
 .uc-row.reverse > * { direction: ltr; }
-@media (max-width: 900px) { .uc-row { grid-template-columns: 1fr; gap: 32px; } .uc-row.reverse { direction: ltr; } }
 
+/* ---- Stats row ---- */
 .uc-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .uc-stat { display: flex; flex-direction: column; gap: 2px; }
 .uc-stat b { font-size: 28px; line-height: 1; color: var(--accent); letter-spacing: -.02em; font-style: italic; }
 .uc-stat span { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); }
 
+/* ---- Illustration cards ---- */
 .uc-illu { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-l); padding: 22px; box-shadow: var(--shadow-2); }
 .uc-illu-h { display: flex; justify-content: space-between; align-items: center; padding-bottom: 14px; border-bottom: 1px solid var(--line); margin-bottom: 16px; }
 .uc-blocks { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
@@ -377,7 +394,7 @@
 .uc-block span { font-size: 11.5px; color: var(--ink-3); font-family: var(--mono); }
 .uc-foot { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
 
-/* Floor (service) */
+/* ---- Floor plan (service) ---- */
 .uc-floor { display: flex; flex-direction: column; gap: 14px; }
 .uc-floor-zone { display: flex; flex-direction: column; gap: 6px; }
 .uc-tables { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
@@ -394,7 +411,7 @@
 .uc-legend .dot.warn { background: oklch(0.74 0.16 80); }
 .uc-legend .dot.free { background: var(--line-2); }
 
-/* Dark kitchen */
+/* ---- Dark kitchen ---- */
 .uc-dark { padding: 0; overflow: hidden; }
 .uc-dark .uc-illu-h { padding: 14px 18px; margin: 0; }
 .uc-dk-list { padding: 12px; display: flex; flex-direction: column; gap: 4px; background: #0F0F0F; }
@@ -406,7 +423,7 @@
 .uc-src.d { background: #1C1C1C; color: #00CCBC; border: 1px solid #00CCBC22; }
 .uc-src.m { background: #1C1C1C; color: oklch(0.78 0.16 50); border: 1px solid oklch(0.66 0.19 38 / 0.4); }
 
-/* Chain */
+/* ---- Chain ---- */
 .uc-chain-total { padding: 18px; background: var(--bg-2); border-radius: var(--r); margin-bottom: 14px; }
 .uc-chain-list { display: flex; flex-direction: column; gap: 8px; }
 .uc-chain-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: center; padding: 8px 0; font-size: 13.5px; }
@@ -414,7 +431,7 @@
 .uc-chain-row .bar { height: 5px; background: var(--bg-2); border-radius: 3px; position: relative; overflow: hidden; }
 .uc-chain-row .bar::after { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: var(--w); background: var(--accent); border-radius: 3px; }
 
-/* Franchise */
+/* ---- Franchise ---- */
 .franch-tree { padding: 12px; }
 .franch-master { background: var(--ink); color: #fff; padding: 16px; border-radius: var(--r); text-align: center; }
 .franch-master b { display: block; margin-top: 4px; color: #fff; }
@@ -424,6 +441,61 @@
 .franch-leaf { background: var(--bg-2); border-radius: var(--r); padding: 14px; display: flex; flex-direction: column; gap: 2px; text-align: center; position: relative; }
 .franch-leaf::before { content: ""; position: absolute; left: 50%; top: -16px; width: 1px; height: 16px; background: var(--line-2); }
 .franch-leaf b { font-size: 14px; }
+
+/* ==================================================
+   RESPONSIVE — 900px (tablet)
+   ================================================== */
+@media (max-width: 900px) {
+  .uc-row { grid-template-columns: 1fr; gap: 32px; }
+  .uc-row.reverse { direction: ltr; }
+  .uc-illu { padding: 18px; }
+  .uc-chain-total { padding: 14px; }
+}
+
+/* ==================================================
+   RESPONSIVE — 700px (large phone / small tablet)
+   ================================================== */
+@media (max-width: 700px) {
+  .uc-stats { grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 12px 0; }
+  .uc-stat b { font-size: 22px; }
+  .uc-stat span { font-size: 10px; }
+
+  .uc-dk-row { grid-template-columns: 50px 50px 1fr auto; gap: 6px; padding: 10px; font-size: 12px; }
+  .uc-dark .uc-illu-h { padding: 12px 14px; }
+  .uc-dk-list { padding: 8px; }
+
+  .uc-chain-row { grid-template-columns: 1fr auto; gap: 8px; font-size: 12.5px; }
+  .uc-chain-row .bar { display: none; }
+
+  .uc-chain-total .serif { font-size: 32px !important; }
+
+  .franch-branches { grid-template-columns: 1fr; gap: 6px; }
+  .franch-leaf::before { display: none; }
+  .franch-leaf { text-align: left; padding: 12px; }
+  .franch-master { padding: 14px; }
+}
+
+/* ==================================================
+   RESPONSIVE — 480px (small phone)
+   ================================================== */
+@media (max-width: 480px) {
+  .uc-stats { grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+  .uc-stat b { font-size: 20px; }
+
+  .uc-illu { padding: 14px; border-radius: var(--r); }
+  .uc-illu-h { flex-wrap: wrap; gap: 6px; padding-bottom: 10px; margin-bottom: 12px; }
+  .uc-blocks { grid-template-columns: 1fr; gap: 6px; }
+  .uc-block { padding: 10px; }
+
+  .uc-tables { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .uc-t { font-size: 14px; }
+
+  .uc-dk-row { grid-template-columns: 44px 1fr auto; gap: 6px; padding: 8px; font-size: 11px; }
+  .uc-dk-row b { display: none; }
+
+  .uc-chain-total .serif { font-size: 26px !important; }
+  .uc-chain-row { font-size: 12px; }
+}
 </style>
 
 <!-- ============ CTA ============ -->
@@ -452,6 +524,7 @@
 .cta-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(50% 70% at 90% 100%, oklch(0.66 0.19 38 / 0.5), transparent 70%), radial-gradient(40% 60% at 0% 0%, oklch(0.74 0.16 60 / 0.3), transparent 70%); }
 .cta-content { position: relative; z-index: 1; }
 @media (max-width: 700px) { .cta-card { padding: 48px 28px; } }
+@media (max-width: 480px) { .cta-card { padding: 36px 20px; border-radius: var(--r-l); } .cta-card .row { flex-direction: column; gap: 10px !important; margin-top: 24px !important; } .cta-card .btn { width: 100%; justify-content: center; } }
 </style>
 
 <div id="site-footer"></div>

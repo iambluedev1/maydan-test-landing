@@ -59,8 +59,30 @@
     <div class="nav-spacer"></div>
     <a class="btn btn-ghost" href="support.html">Se connecter</a>
     <a class="btn btn-accent" href="tarifs.html">Demander un devis <span class="arrow"></span></a>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
+
+<div class="nav-mobile-panel">
+  <div class="mobile-section-title">Produits</div>
+  <a href="products/caisse.html"><div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2.5" y="3" width="13" height="10" rx="1.5"/><path d="M2.5 7h13"/></svg></div>Caisse</a>
+  <a href="products/borne.html"><div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="5" y="2" width="8" height="14" rx="1"/><path d="M8 13.5h2"/></svg></div>Borne de commande</a>
+  <a href="products/kds.html"><div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="3.5" width="14" height="10" rx="1.5"/><path d="M5 16h8M9 13.5v2.5"/></svg></div>Écran cuisine (KDS)</a>
+  <a href="products/ecran-client.html"><div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="3.5" width="15" height="9" rx="1"/><path d="M6 15h6"/></svg></div>Écran client</a>
+  <a href="products/commande-en-ligne.html"><div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="5.5" y="2" width="7" height="14" rx="1.5"/><circle cx="9" cy="13.5" r=".7" fill="currentColor"/></svg></div>Commande en ligne</a>
+  <a href="products/livraison.html"><div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 12V5h8v7"/><path d="M10 8h4l2 3v1h-6"/><circle cx="5.5" cy="13" r="1.5"/><circle cx="13" cy="13" r="1.5"/></svg></div>Livraison</a>
+  <a href="products/commande-table.html"><div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="12" height="12" rx="1.5"/><path d="M6 6h6M6 9h6M6 12h3"/></svg></div>Commande à table</a>
+  <a href="products/manager.html"><div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2.5 13.5l3.5-4 3 3 5.5-6"/><path d="M11 6.5h3.5V10"/></svg></div>Manager en ligne</a>
+  <div class="mobile-section-title">Découvrir</div>
+  <a href="ecosystem.html">Écosystème</a>
+  <a href="use-cases.html">Cas d'usage</a>
+  <a href="integrations.html">Intégrations</a>
+  <a href="support.html">Support</a>
+  <div class="mobile-cta">
+    <a class="btn btn-accent" href="tarifs.html">Demander un devis <span class="arrow"></span></a>
+    <a class="btn btn-ghost" href="support.html">Se connecter</a>
+  </div>
+</div>
 
 <!-- =================== HERO =================== -->
 <header class="hero">
@@ -253,7 +275,9 @@
   }
   @media (max-width: 900px) {
     .hero-stage { height: auto; display: flex; flex-direction: column; gap: 16px; margin-top: 40px; }
-    .float-card, .float-tablet { position: static !important; transform: none !important; }
+    .float-card, .float-tablet { position: static !important; transform: none !important; width: 100% !important; max-width: 100% !important; animation: none !important; }
+    .float-tablet { width: 100% !important; }
+    .pos-screen { min-height: auto; }
   }
   .float-card, .float-tablet { position: absolute; }
   .float-card {
@@ -386,7 +410,8 @@
   .trust-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; }
   .trust-item { display: flex; gap: 14px; align-items: flex-start; color: var(--ink-2); }
   .trust-item b { font-size: 14px; color: var(--ink); display: block; }
-  @media (max-width: 900px) { .trust-strip { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 900px) { .trust-strip { grid-template-columns: 1fr 1fr; gap: 16px; } }
+  @media (max-width: 480px) { .trust-strip { grid-template-columns: 1fr; gap: 14px; } .trust-item { gap: 10px; } }
 </style>
 
 <!-- =================== ECOSYSTEM =================== -->
@@ -698,6 +723,7 @@
   .diff h3 { font-size: 22px; }
   .diff p { font-size: 15px; line-height: 1.55; }
   .diff p b { color: var(--ink); font-weight: 500; }
+  @media (max-width: 480px) { .diff { padding: 24px 20px; } }
 </style>
 
 <!-- =================== ONE MANAGER FOCUS =================== -->
@@ -786,7 +812,8 @@
   .mgr-pills { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
   .mgr-pill { background: var(--bg-2); border-radius: 8px; padding: 10px 12px; display: flex; flex-direction: column; gap: 2px; }
   .mgr-pill b { font-family: var(--serif); font-size: 18px; letter-spacing: -.02em; }
-  @media (max-width: 700px) { .mgr-body { grid-template-columns: 1fr; } .mgr-side { display: none; } }
+  @media (max-width: 700px) { .mgr-body { grid-template-columns: 1fr; } .mgr-side { display: none; } .mgr-main { padding: 16px; } .mgr-big { font-size: 36px; } .mgr-chart { height: 120px; } }
+  @media (max-width: 480px) { .mgr-pills { grid-template-columns: repeat(2, 1fr); } }
 </style>
 
 <!-- =================== USE CASES =================== -->
@@ -841,6 +868,7 @@
   .usecase:hover { background: #1A1A18; }
   .usecase h3 { color: #fff; font-size: 22px; }
   .usecase p { color: #B5B5B0; font-size: 14.5px; }
+  @media (max-width: 480px) { .usecase { padding: 20px; } }
 </style>
 
 <!-- =================== INTEGRATIONS MARQUEE =================== -->
@@ -886,6 +914,7 @@
     color: var(--ink-3);
     font-weight: 500;
   }
+  @media (max-width: 700px) { .logo-pill { font-size: 16px; } .marquee-track { gap: 36px; padding-right: 36px; } }
 </style>
 
 <!-- =================== MARKETING AUTOMATION =================== -->
@@ -950,8 +979,13 @@
     color: #fff; font-family: var(--mono); font-size: 11px; font-weight: 500;
     display: grid; place-items: center; flex-shrink: 0;
   }
-  .campaign-body { flex: 1; }
+  .campaign-body { flex: 1; min-width: 0; }
   .campaign-body b { font-size: 15px; display: block; }
+  @media (max-width: 600px) {
+    .campaign { flex-wrap: wrap; gap: 10px; padding: 14px; }
+    .campaign .chip { font-size: 10px; padding: 4px 8px; }
+    .campaign-icon { width: 40px; height: 40px; border-radius: 8px; font-size: 10px; }
+  }
 </style>
 
 <!-- =================== CTA =================== -->

@@ -68,6 +68,10 @@
 .rule { background: var(--surface); padding: 36px 32px; display: flex; flex-direction: column; gap: 8px; }
 .rule-num { color: var(--accent); font-size: 28px; line-height: 1; margin-bottom: 16px; font-style: italic; }
 .rule h3 { font-size: 22px; }
+@media (max-width: 480px) {
+  .rule { padding: 24px 20px; }
+  .rule h3 { font-size: 19px; }
+}
 </style>
 
 <!-- ============ FORM ============ -->
@@ -308,6 +312,39 @@
 }
 .devis-ok:not([hidden]) ~ * { display: none; }
 .devis-ok:not([hidden]) + div { display: none; }
+
+/* --- tarifs: 900px breakpoint --- */
+@media (max-width: 900px) {
+  .devis-layout { gap: 36px !important; }
+  .devis-card > div:not(.devis-ok) { padding: 28px !important; }
+}
+
+/* --- tarifs: 700px breakpoint --- */
+@media (max-width: 700px) {
+  .devis-layout { gap: 28px !important; }
+  .devis-card > div:not(.devis-ok) { padding: 22px !important; }
+  .devis-ok:not([hidden]) { padding: 40px 20px; }
+  /* Form grid-2 inside .devis-card: stack on mobile */
+  .devis-card .grid-2 { grid-template-columns: 1fr !important; }
+  /* Checkbox grid single-column */
+  .devis-card .checkbox-grid { grid-template-columns: 1fr; }
+  /* Full-width submit button */
+  .devis-card .btn-accent { width: 100%; }
+}
+
+/* --- tarifs: 480px breakpoint --- */
+@media (max-width: 480px) {
+  .devis-layout { gap: 20px !important; }
+  .devis-card > div:not(.devis-ok) { padding: 16px !important; }
+  .devis-card { border-radius: var(--r); }
+  .devis-ok:not([hidden]) { padding: 32px 16px; }
+  .devis-steps { gap: 20px; }
+  .devis-aside { padding: 16px; }
+  .form-section { padding: 18px 0; }
+  /* Consent checkbox padding */
+  .devis-card .checkbox[style] { padding: 10px !important; }
+  .devis-card .btn-accent { width: 100%; padding: 14px 16px !important; font-size: 14px !important; }
+}
 </style>
 
 <!-- ============ FAQ MINI ============ -->
@@ -356,6 +393,22 @@
     </p>
   </div>
 </section>
+
+<style>
+/* --- Tarifs page: hero & transparency section mobile --- */
+@media (max-width: 700px) {
+  /* Reduce transparency section bottom padding */
+  section[style*="padding:40px 0 80px"] { padding-bottom: 48px !important; }
+  /* FAQ pricing grid: already handled by .grid-2 going 1fr, but gap */
+  .grid.grid-2[style*="gap:20px"] { gap: 14px !important; }
+}
+@media (max-width: 480px) {
+  section[style*="padding:40px 0 80px"] { padding-bottom: 32px !important; }
+  .grid.grid-2[style*="gap:20px"] { gap: 10px !important; }
+  /* KPI numbers in FAQ cards */
+  .card .kpi-num { font-size: 32px; }
+}
+</style>
 
 <div id="site-footer"></div>
 
