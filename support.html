@@ -445,6 +445,27 @@
 .cta-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(50% 70% at 90% 100%, oklch(0.66 0.19 38 / 0.5), transparent 70%), radial-gradient(40% 60% at 0% 0%, oklch(0.74 0.16 60 / 0.3), transparent 70%); }
 .cta-content { position: relative; z-index: 1; }
 @media (max-width: 700px) { .cta-card { padding: 48px 28px; } }
+@media (max-width: 480px) { .cta-card { padding: 36px 20px; } }
+</style>
+
+<!-- ============ PAGE-LEVEL RESPONSIVE ============ -->
+<style>
+@media (max-width: 900px) {
+  /* Reduce heavy section bottom-paddings */
+  #contact { padding-bottom: 56px !important; }
+  #status  { padding-bottom: 56px !important; }
+}
+@media (max-width: 700px) {
+  #contact { padding-bottom: 40px !important; }
+  #status  { padding-bottom: 40px !important; }
+  .status-banner { padding: 22px !important; }
+}
+@media (max-width: 480px) {
+  #contact { padding-bottom: 32px !important; }
+  #status  { padding-bottom: 32px !important; }
+  .status-banner { padding: 16px !important; }
+  .status-banner h3 { font-size: 18px !important; }
+}
 </style>
 
 <div id="site-footer"></div>
