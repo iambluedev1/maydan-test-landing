@@ -48,7 +48,7 @@
         <a class="nav-link" data-href="support.html" href="__ROOT__support.html">Support</a>
       </div>
       <div class="nav-spacer"></div>
-      <a class="btn btn-ghost" href="__ROOT__support.html">Se connecter</a>
+      <a class="btn btn-ghost" href="__ROOT__login.html">Se connecter</a>
       <a class="btn btn-accent" href="__ROOT__tarifs.html">Demander un devis <span class="arrow"></span></a>
       <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
@@ -70,7 +70,7 @@
     <a href="__ROOT__support.html">Support</a>
     <div class="mobile-cta">
       <a class="btn btn-accent" href="__ROOT__tarifs.html">Demander un devis <span class="arrow"></span></a>
-      <a class="btn btn-ghost" href="__ROOT__support.html">Se connecter</a>
+      <a class="btn btn-ghost" href="__ROOT__login.html">Se connecter</a>
     </div>
   </div>
   `;
@@ -112,18 +112,20 @@
         <div class="footer-col">
           <h5>Support</h5>
           <ul>
+            <li><a href="__ROOT__centre-aide.html">Centre d'aide</a></li>
             <li><a href="__ROOT__support.html">Aide &amp; FAQ</a></li>
             <li><a href="__ROOT__support.html#contact">Nous contacter</a></li>
             <li><a href="__ROOT__support.html#status">État des services</a></li>
+            <li><a href="__ROOT__changelog.html">Changelog</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Légal</h5>
           <ul>
-            <li><a href="#">Mentions légales</a></li>
-            <li><a href="#">CGV</a></li>
-            <li><a href="#">Confidentialité</a></li>
-            <li><a href="#">Attestation NF525</a></li>
+            <li><a href="__ROOT__mentions-legales.html">Mentions légales</a></li>
+            <li><a href="__ROOT__cgv.html">CGV</a></li>
+            <li><a href="__ROOT__confidentialite.html">Confidentialité</a></li>
+            <li><a href="__ROOT__attestation-nf525.html">Attestation NF525</a></li>
           </ul>
         </div>
       </div>
