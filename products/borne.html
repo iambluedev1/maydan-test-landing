@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="fr" data-root="../">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Borne de commande — Maydan</title>
+<meta name="description" content="Borne de commande autonome pour restaurants. Matériel libre, logiciel rapide, +30% de panier moyen." />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body data-screen-label="03 Produit · Borne">
+
+<div id="site-nav"></div>
+
+<header class="product-hero">
+  <div class="hero-bg"><div class="grid-bg"></div></div>
+  <div class="container hero-inner">
+    <div class="product-hero-grid">
+      <div class="stack reveal" style="gap:24px">
+        <span class="eyebrow">02 / Borne de commande</span>
+        <h1 style="font-size:clamp(40px,5.4vw,76px)">
+          <span class="serif italic">Self-order</span>,<br/>
+          panier moyen<br/>qui monte tout seul.
+        </h1>
+        <p class="lead">
+          Tu fournis la borne ou tu prends la nôtre — au choix. Le logiciel
+          tourne sur Linux, Android et Windows (sous réserve de compatibilité matérielle).
+          Upsell intelligent, paiement intégré, accessible et multilingue.
+        </p>
+        <div class="row" style="gap:14px;margin-top:8px">
+          <a class="btn btn-accent" href="../tarifs.html">Demander un devis <span class="arrow"></span></a>
+          <a class="btn btn-ghost" href="#fonctionnalites">Voir les fonctionnalités</a>
+        </div>
+        <div class="row" style="gap:8px;margin-top:8px">
+          <span class="chip">Multi-OS</span>
+          <span class="chip">Accessibilité PMR</span>
+          <span class="chip">5 langues</span>
+        </div>
+      </div>
+
+      <div class="reveal reveal-d2">
+        <div class="borne-stage">
+          <div class="kiosk-big">
+            <div class="kiosk-big-screen">
+              <div class="kiosk-h">
+                <div class="kiosk-logo">m.</div>
+                <div class="mono small muted">CHOIX DU MENU · ÉTAPE 2 / 4</div>
+              </div>
+              <h3 class="serif italic" style="font-size:32px;margin:8px 0 16px;color:#fff">Et avec ça ?</h3>
+              <div class="kiosk-items">
+                <div class="kiosk-item active">
+                  <div class="kiosk-thumb" style="background:linear-gradient(135deg,#F3D9C1,#E9B58A)"></div>
+                  <div>Frites maison</div>
+                  <div class="mono" style="color:var(--accent)">+ 3,50 €</div>
+                </div>
+                <div class="kiosk-item">
+                  <div class="kiosk-thumb" style="background:linear-gradient(135deg,#E2D9C8,#B5A682)"></div>
+                  <div>Onion rings</div>
+                  <div class="mono" style="color:#A8A8A2">+ 4,50 €</div>
+                </div>
+                <div class="kiosk-item">
+                  <div class="kiosk-thumb" style="background:linear-gradient(135deg,#D9E5C8,#94B582)"></div>
+                  <div>Salade verte</div>
+                  <div class="mono" style="color:#A8A8A2">+ 3,00 €</div>
+                </div>
+              </div>
+              <div class="kiosk-cta-big">CONTINUER &nbsp; →</div>
+            </div>
+            <div class="kiosk-leg"></div>
+            <div class="kiosk-base-big"></div>
+          </div>
+          <div class="float-card borne-side-1">
+            <span class="mono small muted">Panier moyen ce mois</span>
+            <div class="serif" style="font-size:32px;line-height:1;margin-top:4px">18,40&nbsp;€</div>
+            <div class="small" style="color:var(--ok);margin-top:4px">↑ 31% vs caisse</div>
+          </div>
+          <div class="float-card borne-side-2">
+            <span class="mono small muted">Suggestions upsell</span>
+            <div class="row" style="gap:8px;margin-top:8px;flex-wrap:wrap">
+              <span class="chip chip-accent">Boisson +12%</span>
+              <span class="chip">Dessert +8%</span>
+              <span class="chip">XL +5%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+.borne-stage { position: relative; height: 560px; display: grid; place-items: center; }
+.kiosk-big { width: 320px; display: flex; flex-direction: column; align-items: center; gap: 0; }
+.kiosk-big-screen {
+  width: 100%;
+  aspect-ratio: 9/16;
+  background: linear-gradient(180deg, #1A1A18, #0F0F0F);
+  border-radius: 24px 24px 6px 6px;
+  padding: 24px 20px;
+  border: 8px solid #0A0A0A;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.4);
+  display: flex; flex-direction: column; gap: 8px;
+  color: #fff;
+}
+.kiosk-h { display: flex; align-items: center; gap: 12px; }
+.kiosk-logo { font-family: var(--serif); font-style: italic; font-size: 24px; color: var(--accent); line-height: 1; }
+.kiosk-items { display: flex; flex-direction: column; gap: 10px; flex: 1; margin-top: 6px; }
+.kiosk-item {
+  display: grid; grid-template-columns: 44px 1fr auto; gap: 12px; align-items: center;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px; padding: 10px 12px;
+  font-size: 13px;
+}
+.kiosk-item.active { background: oklch(0.66 0.19 38 / 0.2); border-color: var(--accent); }
+.kiosk-thumb { width: 44px; height: 44px; border-radius: 8px; }
+.kiosk-cta-big {
+  background: var(--accent); color: #fff;
+  text-align: center;
+  padding: 16px;
+  border-radius: 12px;
+  font-weight: 500;
+  letter-spacing: .04em;
+  margin-top: auto;
+}
+.kiosk-leg { width: 30px; height: 70px; background: #1A1A18; }
+.kiosk-base-big { width: 140px; height: 14px; background: #0F0F0F; border-radius: 4px 4px 0 0; }
+.borne-side-1 { position: absolute; left: -10px; top: 100px; width: 200px; transform: rotate(-3deg); }
+.borne-side-2 { position: absolute; right: -10px; top: 360px; width: 220px; transform: rotate(3deg); }
+@media (max-width: 900px) {
+  .borne-stage { height: auto; flex-direction: column; }
+  .borne-side-1, .borne-side-2 { position: static; transform: none; width: auto; }
+}
+.float-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-l); box-shadow: var(--shadow-3); padding: 14px; }
+.small { font-size: 11.5px; }
+</style>
+
+<!-- KPI -->
+<section class="section-tight" style="border-bottom:1px solid var(--line)">
+  <div class="container">
+    <div class="grid grid-4">
+      <div class="kpi reveal"><div class="kpi-num"><em>+30</em>%</div><div class="kpi-label">Panier moyen vs comptoir</div></div>
+      <div class="kpi reveal reveal-d2"><div class="kpi-num"><em>22</em>s</div><div class="kpi-label">Pour passer commande</div></div>
+      <div class="kpi reveal reveal-d3"><div class="kpi-num"><em>5</em></div><div class="kpi-label">Langues incluses</div></div>
+      <div class="kpi reveal reveal-d4"><div class="kpi-num"><em>0</em></div><div class="kpi-label">Erreur de prise de commande</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="fonctionnalites">
+  <div class="container">
+    <div class="feature-row">
+      <div class="stack reveal" style="gap:20px">
+        <span class="eyebrow">Upsell intelligent</span>
+        <h2><span class="serif italic">+30%</span> de panier moyen.<br/>Sans pression.</h2>
+        <p class="muted" style="font-size:17px;max-width:48ch">
+          La borne propose des suppléments pertinents au bon moment.
+          Sauce, taille XL, dessert, boisson — basés sur ton menu et le contexte.
+          Tu paramètres les règles, Maydan apprend.
+        </p>
+        <ul class="check-list">
+          <li>Suggestions contextuelles configurables</li>
+          <li>Règles : "burger sans frites" → propose des frites</li>
+          <li>Combos automatiques avec remise</li>
+          <li>Mesure du taux d'acceptation par suggestion</li>
+        </ul>
+      </div>
+      <div class="reveal reveal-d2">
+        <div class="card">
+          <span class="eyebrow">PERFORMANCE UPSELL</span>
+          <div class="perf-list mt-3">
+            <div class="perf-row"><span>Boisson 33cl</span><div class="perf-bar"><div style="width:78%"></div></div><span class="mono small">78%</span></div>
+            <div class="perf-row"><span>Frites taille L</span><div class="perf-bar"><div style="width:62%"></div></div><span class="mono small">62%</span></div>
+            <div class="perf-row"><span>Sauce extra</span><div class="perf-bar"><div style="width:54%"></div></div><span class="mono small">54%</span></div>
+            <div class="perf-row"><span>Dessert</span><div class="perf-bar"><div style="width:38%"></div></div><span class="mono small">38%</span></div>
+            <div class="perf-row"><span>Café</span><div class="perf-bar"><div style="width:24%"></div></div><span class="mono small">24%</span></div>
+          </div>
+          <div style="border-top:1px solid var(--line);margin-top:20px;padding-top:16px" class="row">
+            <span class="muted small">Sur 1 248 commandes ce mois</span>
+            <span class="chip chip-accent" style="margin-left:auto">+ 4 720 € · upsell</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row reverse">
+      <div class="stack reveal" style="gap:20px">
+        <span class="eyebrow">Matériel libre</span>
+        <h2>Notre borne,<br/><span class="serif italic">ou la tienne.</span></h2>
+        <p class="muted" style="font-size:17px;max-width:48ch">
+          Tu prends notre borne tout-équipée (écran 22-32", paiement intégré, imprimante)
+          ou tu installes Maydan sur ton kiosk existant — sous réserve de compatibilité hardware.
+          Pas de DRM, pas de prison dorée.
+        </p>
+        <ul class="check-list">
+          <li>Compatibilité Linux, Android, Windows</li>
+          <li>Écrans tactiles 22" à 32"</li>
+          <li>Lecteur CB intégré ou TPE déporté</li>
+          <li>Imprimante ticket en option</li>
+        </ul>
+      </div>
+      <div class="reveal reveal-d2">
+        <div class="hw-grid">
+          <div class="hw-card"><span class="mono small muted">CONFIG SOL</span><b style="font-family:var(--serif);font-size:24px">Borne sur pied</b><p class="muted small mt-1">Écran 32", lecteur CB, imprimante, station de recharge.</p></div>
+          <div class="hw-card"><span class="mono small muted">CONFIG MUR</span><b style="font-family:var(--serif);font-size:24px">Borne murale</b><p class="muted small mt-1">Écran 22", économie d'espace, pour comptoirs.</p></div>
+          <div class="hw-card"><span class="mono small muted">CONFIG BYOD</span><b style="font-family:var(--serif);font-size:24px">Logiciel seul</b><p class="muted small mt-1">Tu installes Maydan sur ton kiosk existant.</p></div>
+          <div class="hw-card"><span class="mono small muted">PAIEMENT</span><b style="font-family:var(--serif);font-size:24px">TPE intégré</b><p class="muted small mt-1">SumUp, Stripe, Verifone — au choix.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="stack reveal" style="gap:20px">
+        <span class="eyebrow">Accessibilité</span>
+        <h2>Pensée pour tous.<br/><span class="serif italic">Vraiment.</span></h2>
+        <p class="muted" style="font-size:17px;max-width:48ch">
+          Mode PMR avec interface basse, gros boutons, contraste renforcé.
+          Cinq langues incluses (FR, EN, ES, IT, AR), changement en un clic.
+          Affichage adapté aux daltoniens.
+        </p>
+        <ul class="check-list">
+          <li>Mode hauteur réduite (PMR) sur écran haut</li>
+          <li>FR · EN · ES · IT · AR — extensible</li>
+          <li>Contraste renforcé, taille de texte adaptable</li>
+          <li>Mode allergènes &amp; régimes (vegan, gluten…)</li>
+        </ul>
+      </div>
+      <div class="reveal reveal-d2">
+        <div class="card" style="padding:0;overflow:hidden">
+          <div class="mock-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          <div style="padding:28px">
+            <span class="mono small muted">LANGUES ACTIVÉES</span>
+            <div class="lang-grid mt-3">
+              <div class="lang on"><span class="flag">FR</span> Français</div>
+              <div class="lang on"><span class="flag">EN</span> English</div>
+              <div class="lang on"><span class="flag">ES</span> Español</div>
+              <div class="lang on"><span class="flag">IT</span> Italiano</div>
+              <div class="lang on"><span class="flag">AR</span> العربية</div>
+              <div class="lang"><span class="flag">+</span> Ajouter une langue</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.perf-list { display: flex; flex-direction: column; gap: 12px; }
+.perf-row { display: grid; grid-template-columns: 140px 1fr 50px; gap: 16px; align-items: center; font-size: 14px; }
+.perf-bar { height: 6px; background: var(--bg-2); border-radius: 999px; overflow: hidden; }
+.perf-bar > div { height: 100%; background: var(--accent); border-radius: 999px; }
+.perf-row .mono { color: var(--ink-3); text-align: right; }
+.hw-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.hw-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-l); padding: 20px; display: flex; flex-direction: column; gap: 4px; }
+.lang-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.lang { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--r); font-size: 14px; }
+.lang.on { background: var(--accent-tint); border-color: oklch(0.86 0.07 50); }
+.flag { font-family: var(--mono); font-size: 11px; padding: 4px 6px; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; }
+.lang.on .flag { background: var(--accent); color: #fff; border-color: var(--accent); }
+</style>
+
+<!-- Related & CTA -->
+<section class="section-tight" style="background:var(--bg-2)">
+  <div class="container">
+    <div class="row" style="justify-content:space-between;margin-bottom:24px">
+      <span class="eyebrow">Aller plus loin</span>
+      <a class="btn-link" href="../ecosystem.html">L'écosystème complet →</a>
+    </div>
+    <div class="grid grid-3">
+      <a class="card card-hover reveal" href="caisse.html"><span class="mono small muted">CAISSE</span><h3 class="mt-2">Logiciel TPV</h3><p class="muted mt-1">Le pendant comptoir de la borne. Une seule base produits.</p><span class="btn-link mt-3">Découvrir →</span></a>
+      <a class="card card-hover reveal reveal-d2" href="ecran-client.html"><span class="mono small muted">SALLE</span><h3 class="mt-2">Écran client</h3><p class="muted mt-1">Les numéros sortis de la borne, affichés sur ta TV.</p><span class="btn-link mt-3">Découvrir →</span></a>
+      <a class="card card-hover reveal reveal-d3" href="kds.html"><span class="mono small muted">CUISINE</span><h3 class="mt-2">KDS cuisine</h3><p class="muted mt-1">Les commandes de la borne tombent direct sur l'écran cuisine.</p><span class="btn-link mt-3">Découvrir →</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-card reveal">
+      <div class="cta-bg"></div>
+      <div class="cta-content">
+        <h2 style="color:#fff;max-width:18ch"><span class="serif italic">Une borne, ça change tout.</span></h2>
+        <p style="color:rgba(255,255,255,0.78);max-width:50ch;margin-top:14px;font-size:17px">
+          On dimensionne ta config selon le flux. Une seule borne, ou trois. Sur pied, murale, ou logiciel seul.
+        </p>
+        <div class="row" style="margin-top:28px;gap:14px">
+          <a class="btn btn-accent" href="../tarifs.html">Demander un devis <span class="arrow"></span></a>
+          <a class="btn btn-ghost" href="../support.html" style="border-color:rgba(255,255,255,.25);color:#fff">Parler à quelqu'un</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+.cta-card { position: relative; background: #0F0F0F; border-radius: var(--r-xl); padding: 64px 56px; overflow: hidden; isolation: isolate; }
+.cta-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(50% 70% at 90% 100%, oklch(0.66 0.19 38 / 0.5), transparent 70%), radial-gradient(40% 60% at 0% 0%, oklch(0.74 0.16 60 / 0.3), transparent 70%); }
+.cta-content { position: relative; z-index: 1; }
+@media (max-width: 700px) { .cta-card { padding: 48px 28px; } }
+</style>
+
+<div id="site-footer"></div>
+<script src="../partials.js"></script>
+<script src="../scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Écosystème — Maydan</title>
+<meta name="description" content="Comment caisse, borne, KDS, écrans, app mobile, livraison et manager s'articulent dans un seul écosystème. Un menu, toutes les plateformes." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-screen-label="Écosystème">
+
+<div id="site-nav"></div>
+
+<!-- ============ HERO ============ -->
+<header class="hero" style="padding-top:60px;padding-bottom:40px">
+  <div class="hero-bg"><div class="grid-bg"></div></div>
+  <div class="container hero-inner">
+    <div class="stack reveal" style="max-width:880px;margin:0 auto;text-align:center;gap:24px">
+      <span class="eyebrow" style="justify-self:center">L'écosystème</span>
+      <h1>
+        <span class="serif italic">Tout connecté.</span><br/>
+        Un seul cerveau.
+      </h1>
+      <p class="lead" style="margin:0 auto">
+        Huit produits, un manager unique. Maydan, c'est l'idée folle qu'un restaurateur ne devrait
+        avoir <em>qu'un seul</em> outil à apprendre, <em>qu'une seule</em> carte à mettre à jour,
+        <em>qu'un seul</em> tableau à regarder.
+      </p>
+    </div>
+  </div>
+</header>
+
+<!-- ============ ECOSYSTEM DIAGRAM ============ -->
+<section style="padding:0 0 80px">
+  <div class="container">
+    <div class="eco-stage reveal">
+      <!-- center hub -->
+      <div class="eco-hub">
+        <div class="eco-hub-inner">
+          <div class="mono small" style="color:var(--ink-3);letter-spacing:.12em">MANAGER MAYDAN</div>
+          <div class="serif" style="font-size:34px;line-height:1;margin-top:4px;font-style:italic">un seul menu</div>
+          <div class="muted small mt-1">propagé partout, temps réel</div>
+          <div class="eco-pulse"></div>
+          <div class="eco-pulse" style="animation-delay:-1.5s"></div>
+        </div>
+      </div>
+
+      <!-- orbital products -->
+      <a class="eco-node n1" href="products/caisse.html">
+        <span class="eco-num">01</span>
+        <b>Caisse</b>
+        <span class="muted small">Tablette Android</span>
+      </a>
+      <a class="eco-node n2" href="products/borne.html">
+        <span class="eco-num">02</span>
+        <b>Borne</b>
+        <span class="muted small">Self-order</span>
+      </a>
+      <a class="eco-node n3" href="products/kds.html">
+        <span class="eco-num">03</span>
+        <b>KDS cuisine</b>
+        <span class="muted small">Android / Win</span>
+      </a>
+      <a class="eco-node n4" href="products/ecran-client.html">
+        <span class="eco-num">04</span>
+        <b>Écran client</b>
+        <span class="muted small">TV salle</span>
+      </a>
+      <a class="eco-node n5" href="products/commande-en-ligne.html">
+        <span class="eco-num">05</span>
+        <b>Commande en ligne</b>
+        <span class="muted small">App + Web</span>
+      </a>
+      <a class="eco-node n6" href="products/livraison.html">
+        <span class="eco-num">06</span>
+        <b>Livraison</b>
+        <span class="muted small">Flotte interne/externe</span>
+      </a>
+      <a class="eco-node n7" href="products/commande-table.html">
+        <span class="eco-num">07</span>
+        <b>Commande à table</b>
+        <span class="muted small">QR / Tablette</span>
+      </a>
+      <a class="eco-node n8" href="products/manager.html">
+        <span class="eco-num">08</span>
+        <b>Manager</b>
+        <span class="muted small">Back-office</span>
+      </a>
+
+      <!-- connection lines -->
+      <svg class="eco-lines" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="lg" x1="0" x2="1">
+            <stop offset="0%" stop-color="oklch(0.66 0.19 38)" stop-opacity="0"/>
+            <stop offset="50%" stop-color="oklch(0.66 0.19 38)" stop-opacity=".8"/>
+            <stop offset="100%" stop-color="oklch(0.66 0.19 38)" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <g stroke="var(--line-2)" stroke-width="1" stroke-dasharray="2 4" fill="none">
+          <line x1="500" y1="350" x2="140" y2="120"/>
+          <line x1="500" y1="350" x2="500" y2="80"/>
+          <line x1="500" y1="350" x2="860" y2="120"/>
+          <line x1="500" y1="350" x2="940" y2="350"/>
+          <line x1="500" y1="350" x2="860" y2="580"/>
+          <line x1="500" y1="350" x2="500" y2="620"/>
+          <line x1="500" y1="350" x2="140" y2="580"/>
+          <line x1="500" y1="350" x2="60"  y2="350"/>
+        </g>
+        <g stroke="url(#lg)" stroke-width="2" fill="none" class="eco-flow">
+          <line x1="500" y1="350" x2="140" y2="120"/>
+          <line x1="500" y1="350" x2="500" y2="80"/>
+          <line x1="500" y1="350" x2="860" y2="120"/>
+          <line x1="500" y1="350" x2="940" y2="350"/>
+          <line x1="500" y1="350" x2="860" y2="580"/>
+          <line x1="500" y1="350" x2="500" y2="620"/>
+          <line x1="500" y1="350" x2="140" y2="580"/>
+          <line x1="500" y1="350" x2="60"  y2="350"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<style>
+.eco-stage {
+  position: relative;
+  height: 700px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.eco-lines { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.eco-flow line { stroke-dasharray: 8 200; animation: dash 5s linear infinite; }
+@keyframes dash { to { stroke-dashoffset: -208; } }
+
+.eco-hub {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-3);
+  display: grid; place-items: center;
+  z-index: 5;
+  text-align: center;
+}
+.eco-hub-inner { padding: 24px; position: relative; }
+.eco-pulse {
+  position: absolute; inset: -1px;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
+  opacity: 0;
+  animation: ecop 3s ease-out infinite;
+  pointer-events: none;
+}
+@keyframes ecop {
+  0%   { transform: scale(1);   opacity: .6; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+.eco-node {
+  position: absolute;
+  width: 180px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-l);
+  padding: 16px;
+  display: flex; flex-direction: column; gap: 2px;
+  box-shadow: var(--shadow-2);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  z-index: 4;
+}
+.eco-node:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: var(--shadow-3); }
+.eco-num { font-family: var(--mono); font-size: 10px; letter-spacing: .12em; color: var(--accent); }
+.eco-node b { font-size: 15px; }
+
+.eco-stage .n1 { top: 60px;  left: 50px; }
+.eco-stage .n2 { top: 30px;  left: 50%; transform: translateX(-50%); }
+.eco-stage .n3 { top: 60px;  right: 50px; }
+.eco-stage .n4 { top: 50%;   right: 0;   transform: translateY(-50%); }
+.eco-stage .n6 { bottom: 60px; right: 50px; }
+.eco-stage .n7 { bottom: 30px; left: 50%; transform: translateX(-50%); }
+.eco-stage .n8 { bottom: 60px; left: 50px; }
+.eco-stage .n5 { top: 50%;   left: 0;    transform: translateY(-50%); }
+.eco-stage .n2:hover { transform: translateX(-50%) translateY(-3px); }
+.eco-stage .n7:hover { transform: translateX(-50%) translateY(-3px); }
+.eco-stage .n4:hover { transform: translateY(-50%) translateY(-3px); }
+.eco-stage .n5:hover { transform: translateY(-50%) translateY(-3px); }
+
+@media (max-width: 900px) {
+  .eco-stage { height: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .eco-lines, .eco-hub { display: none; }
+  .eco-node { position: static !important; width: 100% !important; transform: none !important; }
+}
+</style>
+
+<!-- ============ FLOW STORY ============ -->
+<section class="section" style="background:var(--bg-2)">
+  <div class="container">
+    <div class="reveal" style="max-width:760px;margin-bottom:48px">
+      <span class="eyebrow">Une commande, plein de chemins</span>
+      <h2 class="mt-2">Le client commande<br/><span class="serif italic">comme il veut.</span></h2>
+      <p class="lead mt-3">
+        Maydan accueille toutes les façons de prendre une commande. Sur place, à table,
+        à la borne, depuis le canapé, via Uber. Tout retombe sur le même KDS,
+        dans la même cuisine, sur le même tableau de bord.
+      </p>
+    </div>
+
+    <div class="flow-grid">
+      <!-- Lane 1: Sur place -->
+      <div class="flow-lane reveal">
+        <div class="flow-lane-h">
+          <span class="mono small muted">SUR PLACE</span>
+          <h3>Le client est devant toi</h3>
+        </div>
+        <div class="flow-step"><span class="flow-tag">01</span><div><b>Borne ou comptoir</b><div class="muted small">Le client commande seul ou avec ton équipe</div></div></div>
+        <div class="flow-line"></div>
+        <div class="flow-step"><span class="flow-tag">02</span><div><b>KDS cuisine</b><div class="muted small">Ticket envoyé par poste, timer lancé</div></div></div>
+        <div class="flow-line"></div>
+        <div class="flow-step"><span class="flow-tag">03</span><div><b>Écran client</b><div class="muted small">Le numéro s'affiche : "PRÊT"</div></div></div>
+      </div>
+
+      <!-- Lane 2: À table -->
+      <div class="flow-lane reveal reveal-d2">
+        <div class="flow-lane-h">
+          <span class="mono small muted">À TABLE</span>
+          <h3>Le client s'installe</h3>
+        </div>
+        <div class="flow-step"><span class="flow-tag">01</span><div><b>QR code / tablette</b><div class="muted small">Commande à table, sans serveur ou avec</div></div></div>
+        <div class="flow-line"></div>
+        <div class="flow-step"><span class="flow-tag">02</span><div><b>KDS cuisine</b><div class="muted small">Numéro de table indiqué, envoi propre</div></div></div>
+        <div class="flow-line"></div>
+        <div class="flow-step"><span class="flow-tag">03</span><div><b>Paiement à table</b><div class="muted small">Carte, addition partagée, pourboire</div></div></div>
+      </div>
+
+      <!-- Lane 3: En ligne -->
+      <div class="flow-lane reveal reveal-d3">
+        <div class="flow-lane-h">
+          <span class="mono small muted">EN LIGNE</span>
+          <h3>Le client est ailleurs</h3>
+        </div>
+        <div class="flow-step"><span class="flow-tag">01</span><div><b>App mobile / site / Uber</b><div class="muted small">Click&amp;collect ou livraison</div></div></div>
+        <div class="flow-line"></div>
+        <div class="flow-step"><span class="flow-tag">02</span><div><b>KDS cuisine</b><div class="muted small">Heure de retrait visible, file ordonnée</div></div></div>
+        <div class="flow-line"></div>
+        <div class="flow-step"><span class="flow-tag">03</span><div><b>Livreur ou retrait</b><div class="muted small">Tracking live, notification client</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.flow-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 900px) { .flow-grid { grid-template-columns: 1fr; } }
+.flow-lane { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-l); padding: 28px; }
+.flow-lane-h { padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid var(--line); }
+.flow-lane-h h3 { margin-top: 8px; font-size: 22px; }
+.flow-step { display: flex; gap: 14px; align-items: flex-start; }
+.flow-step b { font-size: 15px; }
+.flow-tag {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--accent-tint);
+  border: 1px solid oklch(0.86 0.07 50);
+  color: var(--accent-deep);
+  font-family: var(--mono); font-size: 11px; font-weight: 500;
+  display: grid; place-items: center;
+  flex-shrink: 0;
+}
+.flow-line {
+  width: 1px; height: 24px;
+  background: var(--line);
+  margin: 8px 0 8px 13px;
+}
+</style>
+
+<!-- ============ ONE MENU PROPAGATION ============ -->
+<section class="section">
+  <div class="container">
+    <div class="feature-row" style="border:none;padding:0">
+      <div class="stack reveal" style="gap:20px">
+        <span class="eyebrow">La règle d'or</span>
+        <h2>Un menu.<br/><span class="serif italic">Huit canaux.</span><br/>Zéro copier-coller.</h2>
+        <p class="lead">
+          Tu ajoutes un plat dans le manager. En moins de 5 secondes,
+          il est visible sur la caisse, la borne, l'app mobile, ton site,
+          Uber Eats et Deliveroo. Tu changes un prix ? Pareil.
+          Tu mets une option en rupture ? Pareil.
+        </p>
+        <ul class="check-list mt-2">
+          <li>Synchronisation temps réel sur tous les canaux</li>
+          <li>Prix différenciés possibles par canal (livraison, sur place...)</li>
+          <li>Photos, descriptions, allergènes — tout au même endroit</li>
+          <li>Disponibilité gérée en un toggle</li>
+        </ul>
+      </div>
+
+      <div class="reveal reveal-d2">
+        <div class="propag-diagram">
+          <div class="propag-source">
+            <div class="mono small muted">SOURCE · MANAGER</div>
+            <div class="row mt-2" style="gap:10px">
+              <div style="width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,#F3D9C1,#E9B58A);border:1px solid var(--line)"></div>
+              <div>
+                <b>Burger maison</b>
+                <div class="muted small">14,50 € · Disponible</div>
+              </div>
+            </div>
+          </div>
+          <div class="propag-pulse"></div>
+          <div class="propag-targets">
+            <div class="propag-t">Caisse <span class="propag-ok">✓</span></div>
+            <div class="propag-t">Borne <span class="propag-ok">✓</span></div>
+            <div class="propag-t">KDS <span class="propag-ok">✓</span></div>
+            <div class="propag-t">App mobile <span class="propag-ok">✓</span></div>
+            <div class="propag-t">Site web <span class="propag-ok">✓</span></div>
+            <div class="propag-t">Uber Eats <span class="propag-ok">✓</span></div>
+            <div class="propag-t">Deliveroo <span class="propag-ok">✓</span></div>
+            <div class="propag-t">Écran client <span class="propag-ok">✓</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.propag-diagram { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-l); padding: 28px; box-shadow: var(--shadow-2); }
+.propag-source { background: var(--bg-2); border-radius: var(--r); padding: 16px; }
+.propag-pulse {
+  height: 24px;
+  background:
+    radial-gradient(circle at center, var(--accent) 1px, transparent 1.5px) 0 50% / 8px 8px repeat-x;
+  opacity: .6;
+  margin: 16px 0;
+  position: relative;
+}
+.propag-pulse::after {
+  content: ""; position: absolute; left: -2px; top: 50%; width: 30%; height: 1px;
+  background: linear-gradient(to right, transparent, var(--accent), transparent);
+  animation: pflow 2.4s linear infinite;
+}
+@keyframes pflow {
+  to { left: 102%; }
+}
+.propag-targets { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
+.propag-t { display: flex; justify-content: space-between; padding: 10px 14px; background: var(--bg-2); border-radius: 8px; font-size: 13.5px; }
+.propag-ok { color: var(--ok); font-weight: 500; }
+</style>
+
+<!-- ============ STACK COMPARISON ============ -->
+<section class="section" style="background:var(--ink);color:var(--bg)">
+  <div class="container">
+    <div class="reveal" style="max-width:760px">
+      <span class="eyebrow" style="color:#A8A8A2">Avant / Après</span>
+      <h2 style="color:var(--bg);margin-top:12px">
+        Ton stack actuel<br/>
+        <span class="serif italic" style="color:oklch(0.85 0.13 50)">vs. Maydan.</span>
+      </h2>
+    </div>
+
+    <div class="stack-grid mt-5 reveal reveal-d2">
+      <div class="stack-col stack-old">
+        <div class="stack-h">
+          <span class="mono small" style="color:#8B8B86">SETUP CLASSIQUE</span>
+          <h3>5 outils, 5 factures, 5 logins</h3>
+        </div>
+        <ul class="stack-list">
+          <li>Logiciel de caisse <span class="muted">Lightspeed / L'Addition</span></li>
+          <li>Borne <span class="muted">Tiller / Kiosk autonome</span></li>
+          <li>KDS <span class="muted">Toast / Sub-logiciel</span></li>
+          <li>App mobile <span class="muted">Sunday / Yumap</span></li>
+          <li>Livraison <span class="muted">Stuart + Uber Direct</span></li>
+          <li>TPE avec commission <span class="muted">SumUp / Square</span></li>
+          <li>Marketing <span class="muted">Mailchimp + Brevo</span></li>
+          <li>Comptabilité <span class="muted">Connecteur manuel</span></li>
+        </ul>
+        <div class="stack-foot"><span class="mono small" style="color:#8B8B86">→ 8 prestataires</span><span class="mono small" style="color:#8B8B86">→ menus dupliqués partout</span></div>
+      </div>
+
+      <div class="stack-col stack-new">
+        <div class="stack-h">
+          <span class="mono small" style="color:oklch(0.85 0.13 50)">AVEC MAYDAN</span>
+          <h3>Un outil, une facture, un login</h3>
+        </div>
+        <ul class="stack-list">
+          <li>Caisse <span class="muted-i">Inclus</span></li>
+          <li>Borne <span class="muted-i">Inclus</span></li>
+          <li>KDS <span class="muted-i">Inclus</span></li>
+          <li>App mobile + site <span class="muted-i">Inclus</span></li>
+          <li>Livraison <span class="muted-i">Inclus</span></li>
+          <li>TPE <span class="muted-i">Indépendant, 0% commission</span></li>
+          <li>Marketing automation <span class="muted-i">Inclus</span></li>
+          <li>Export comptable <span class="muted-i">Inclus</span></li>
+        </ul>
+        <div class="stack-foot"><span class="mono small" style="color:oklch(0.85 0.13 50)">→ 1 prestataire</span><span class="mono small" style="color:oklch(0.85 0.13 50)">→ 1 carte propagée partout</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.stack-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #2A2A28; border-radius: var(--r-l); overflow: hidden; }
+@media (max-width: 900px) { .stack-grid { grid-template-columns: 1fr; } }
+.stack-col { background: var(--ink); padding: 36px 32px; display: flex; flex-direction: column; gap: 18px; }
+.stack-col.stack-new { background: #161613; }
+.stack-h h3 { color: #fff; font-size: 22px; margin-top: 6px; }
+.stack-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.stack-list li { display: flex; justify-content: space-between; padding: 12px 14px; background: rgba(255,255,255,.04); border-radius: 8px; color: #DDD; font-size: 14px; }
+.stack-list li .muted { color: #8B8B86; font-size: 12.5px; }
+.stack-list li .muted-i { color: oklch(0.78 0.14 50); font-size: 12.5px; font-family: var(--mono); }
+.stack-foot { display: flex; flex-direction: column; gap: 4px; padding-top: 12px; border-top: 1px solid #2A2A28; }
+</style>
+
+<!-- ============ INTEGRATIONS QUICK ============ -->
+<section class="section">
+  <div class="container">
+    <div class="row reveal" style="justify-content:space-between;align-items:flex-end;margin-bottom:32px;gap:24px">
+      <div>
+        <span class="eyebrow">Intégrations</span>
+        <h2 class="mt-2">Branché à ton stack existant.</h2>
+      </div>
+      <a class="btn-link" href="integrations.html">Voir toutes les intégrations →</a>
+    </div>
+    <div class="grid grid-4">
+      <div class="card reveal">
+        <div class="mono small muted">PAIEMENT</div>
+        <h4 class="mt-2">SumUp · Stripe · Payplug · Verifone</h4>
+        <p class="muted mt-2" style="font-size:14px">TPE indépendant, 0% commission de notre côté.</p>
+      </div>
+      <div class="card reveal reveal-d2">
+        <div class="mono small muted">PLATEFORMES</div>
+        <h4 class="mt-2">Uber Eats · Deliveroo</h4>
+        <p class="muted mt-2" style="font-size:14px">Menu synchronisé, commandes dans le même KDS.</p>
+      </div>
+      <div class="card reveal reveal-d3">
+        <div class="mono small muted">COMPTA</div>
+        <h4 class="mt-2">L'Addition · Pennylane · Cegid</h4>
+        <p class="muted mt-2" style="font-size:14px">Export automatique, FEC propre à la demande.</p>
+      </div>
+      <div class="card reveal reveal-d4">
+        <div class="mono small muted">MARKETING</div>
+        <h4 class="mt-2">Google · Meta · Mailchimp</h4>
+        <p class="muted mt-2" style="font-size:14px">Pixels, retargeting, exports segments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section">
+  <div class="container">
+    <div class="cta-card reveal">
+      <div class="cta-bg"></div>
+      <div class="cta-content">
+        <span class="eyebrow" style="color:rgba(255,255,255,0.7)">Configuration sur-mesure</span>
+        <h2 style="color:#fff;max-width:18ch" class="mt-2"><span class="serif italic">Quel setup</span> pour ton resto ?</h2>
+        <p style="color:rgba(255,255,255,0.78);max-width:55ch;margin-top:16px;font-size:17px">
+          Dis-nous quel format, combien de couverts, quels canaux. On te propose la combinaison qui colle.
+        </p>
+        <div class="row" style="margin-top:32px;gap:14px">
+          <a class="btn btn-accent" href="tarifs.html">Demander un devis <span class="arrow"></span></a>
+          <a class="btn btn-ghost" href="use-cases.html" style="border-color:rgba(255,255,255,.25);color:#fff">Voir les cas d'usage</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.cta-card { position: relative; background: #0F0F0F; border-radius: var(--r-xl); padding: 72px 56px; overflow: hidden; isolation: isolate; }
+.cta-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(50% 70% at 90% 100%, oklch(0.66 0.19 38 / 0.5), transparent 70%), radial-gradient(40% 60% at 0% 0%, oklch(0.74 0.16 60 / 0.3), transparent 70%); }
+.cta-content { position: relative; z-index: 1; }
+@media (max-width: 700px) { .cta-card { padding: 48px 28px; } }
+</style>
+
+<div id="site-footer"></div>
+
+<script src="partials.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Devis sur-mesure — Maydan</title>
+<meta name="description" content="Maydan, c'est du sur-mesure. Devis transparent en 24h, sans frais cachés, sans engagement." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-screen-label="Tarifs / Devis">
+
+<div id="site-nav"></div>
+
+<!-- ============ HERO ============ -->
+<header class="hero" style="padding-top:60px;padding-bottom:40px">
+  <div class="hero-bg"><div class="grid-bg"></div></div>
+  <div class="container hero-inner">
+    <div class="stack reveal" style="max-width:880px;margin:0 auto;text-align:center;gap:24px">
+      <span class="eyebrow" style="justify-self:center">Tarifs &amp; devis</span>
+      <h1>
+        Du <span class="serif italic">sur-mesure.</span><br/>
+        Pas de tarif fourre-tout.
+      </h1>
+      <p class="lead" style="margin:0 auto">
+        Chaque resto est différent. Un food truck n'a pas les mêmes besoins qu'une brasserie de 120 couverts.
+        On te fait un devis clair, en 24h, sans engagement — et sans piège tarifaire en bas de page.
+      </p>
+      <div class="row reveal reveal-d2" style="justify-content:center;gap:8px">
+        <span class="chip"><span class="chip-dot live"></span> Réponse sous 24h ouvrées</span>
+        <span class="chip">Sans engagement</span>
+        <span class="chip">Sans frais cachés</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ TRANSPARENCY ============ -->
+<section style="padding:40px 0 80px">
+  <div class="container">
+    <div class="reveal" style="max-width:680px;margin-bottom:32px">
+      <span class="eyebrow">Notre engagement tarifaire</span>
+      <h2 class="mt-2"><span class="serif italic">Trois règles.</span> Imprimées sur ton devis.</h2>
+    </div>
+
+    <div class="rules-grid">
+      <div class="rule reveal">
+        <div class="rule-num serif">N°1</div>
+        <h3>Aucun frais caché.</h3>
+        <p class="muted">Le prix que tu signes, c'est le prix que tu paies. Pas de "frais de mise en service" surprise, pas d'augmentation sournoise au bout de 6 mois.</p>
+      </div>
+      <div class="rule reveal reveal-d2">
+        <div class="rule-num serif">N°2</div>
+        <h3>Zéro commission sur transactions.</h3>
+        <p class="muted">Maydan ne prend pas un centime sur tes paiements TPE. Ton banquier ou ton PSP fait ce qu'il fait. Nous, on est sur l'abonnement.</p>
+      </div>
+      <div class="rule reveal reveal-d3">
+        <div class="rule-num serif">N°3</div>
+        <h3>Matériel non-verrouillé.</h3>
+        <p class="muted">Tu nous quittes ? Tes tablettes ne deviennent pas presse-papiers. Tes écrans peuvent resservir. Tu gardes ce que tu as acheté.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.rules-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r-l); overflow: hidden; }
+@media (max-width: 900px) { .rules-grid { grid-template-columns: 1fr; } }
+.rule { background: var(--surface); padding: 36px 32px; display: flex; flex-direction: column; gap: 8px; }
+.rule-num { color: var(--accent); font-size: 28px; line-height: 1; margin-bottom: 16px; font-style: italic; }
+.rule h3 { font-size: 22px; }
+</style>
+
+<!-- ============ FORM ============ -->
+<section class="section" style="background:var(--bg-2);scroll-margin-top:72px" id="form">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1.6fr;gap:48px" class="devis-layout">
+
+      <!-- LEFT: explainer + steps -->
+      <div class="reveal">
+        <span class="eyebrow">Comment ça marche</span>
+        <h2 class="mt-2">3 étapes,<br/><span class="serif italic">24 heures.</span></h2>
+
+        <div class="devis-steps mt-5">
+          <div class="dstep">
+            <div class="dstep-num">01</div>
+            <div>
+              <b>Tu remplis ce formulaire</b>
+              <p class="muted small">5 minutes. On a besoin du minimum pour t'envoyer une proposition juste.</p>
+            </div>
+          </div>
+          <div class="dstep">
+            <div class="dstep-num">02</div>
+            <div>
+              <b>On te rappelle</b>
+              <p class="muted small">Un humain. Pour préciser ton projet et te conseiller le bon setup.</p>
+            </div>
+          </div>
+          <div class="dstep">
+            <div class="dstep-num">03</div>
+            <div>
+              <b>Tu reçois le devis</b>
+              <p class="muted small">Détaillé, ligne par ligne. Aucune surprise. Sans engagement.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="devis-aside mt-5">
+          <span class="mono small muted">DÉJÀ DES QUESTIONS ?</span>
+          <p class="mt-2" style="font-size:14.5px">
+            Tu peux aussi nous appeler directement. On préfère le téléphone aussi.
+          </p>
+          <a class="btn btn-ghost mt-3" href="support.html">Parler à quelqu'un <span class="arrow"></span></a>
+        </div>
+      </div>
+
+      <!-- RIGHT: form -->
+      <div class="reveal reveal-d2">
+        <form class="devis-card" id="devis-form" novalidate>
+          <div class="devis-ok" id="devis-ok" hidden>
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="24" cy="24" r="22" stroke="var(--accent)"/>
+              <path d="M14 24l8 8 14-16" stroke="var(--accent)"/>
+            </svg>
+            <h3 class="mt-3">Demande envoyée 🎉</h3>
+            <p class="muted mt-2">On te rappelle sous 24h ouvrées. Vérifie ta boîte mail, et regarde aussi en spam au cas où.</p>
+          </div>
+
+          <div style="padding:36px">
+            <h3 style="font-size:22px">Parle-nous de ton resto</h3>
+            <p class="muted small mt-1">Plus tu es précis·e, plus notre proposition sera juste.</p>
+
+            <!-- Section 1: Vous -->
+            <div class="form-section">
+              <span class="mono small muted">01 / TOI</span>
+              <div class="grid grid-2" style="gap:14px;margin-top:12px">
+                <div class="field">
+                  <label for="f-name">Prénom &amp; nom</label>
+                  <input id="f-name" name="name" type="text" placeholder="Léa Verdier" required />
+                </div>
+                <div class="field">
+                  <label for="f-role">Ton rôle</label>
+                  <select id="f-role" name="role">
+                    <option>Propriétaire</option>
+                    <option>Gérant·e</option>
+                    <option>Manager</option>
+                    <option>Directeur·rice opérations</option>
+                    <option>Autre</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="f-email">E-mail</label>
+                  <input id="f-email" name="email" type="email" placeholder="lea@mon-resto.fr" required />
+                </div>
+                <div class="field">
+                  <label for="f-phone">Téléphone</label>
+                  <input id="f-phone" name="phone" type="tel" placeholder="06 12 34 56 78" required />
+                </div>
+              </div>
+            </div>
+
+            <!-- Section 2: Resto -->
+            <div class="form-section">
+              <span class="mono small muted">02 / TON RESTO</span>
+              <div class="grid grid-2" style="gap:14px;margin-top:12px">
+                <div class="field">
+                  <label for="f-resto">Nom du resto</label>
+                  <input id="f-resto" name="resto" type="text" placeholder="Chez Léa" />
+                </div>
+                <div class="field">
+                  <label for="f-city">Ville</label>
+                  <input id="f-city" name="city" type="text" placeholder="Marseille" />
+                </div>
+                <div class="field">
+                  <label for="f-type">Type d'établissement</label>
+                  <select id="f-type" name="type">
+                    <option>Restaurant rapide</option>
+                    <option>Brasserie / Bistro</option>
+                    <option>Restaurant gastronomique</option>
+                    <option>Pizzeria</option>
+                    <option>Sushi / Asiatique</option>
+                    <option>Dark kitchen</option>
+                    <option>Food truck</option>
+                    <option>Boulangerie / Snacking</option>
+                    <option>Autre</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="f-covers">Couverts / jour (estimation)</label>
+                  <select id="f-covers" name="covers">
+                    <option>Moins de 50</option>
+                    <option>50 — 100</option>
+                    <option>100 — 200</option>
+                    <option>200 — 500</option>
+                    <option>Plus de 500</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="f-sites">Nombre d'établissements</label>
+                  <select id="f-sites" name="sites">
+                    <option>1</option>
+                    <option>2 — 3</option>
+                    <option>4 — 10</option>
+                    <option>Plus de 10</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="f-when">Quand veux-tu démarrer ?</label>
+                  <select id="f-when" name="when">
+                    <option>Le plus vite possible</option>
+                    <option>Dans le mois</option>
+                    <option>Dans 1 — 3 mois</option>
+                    <option>Plus tard, je me renseigne</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Section 3: Produits -->
+            <div class="form-section">
+              <span class="mono small muted">03 / TON BESOIN</span>
+              <p class="muted small mt-1" style="margin-bottom:14px">Coche tout ce qui t'intéresse. Tu peux changer d'avis plus tard.</p>
+              <div class="checkbox-grid">
+                <label class="checkbox"><input type="checkbox" name="need" value="caisse" checked /> Caisse enregistreuse</label>
+                <label class="checkbox"><input type="checkbox" name="need" value="borne" /> Borne de commande</label>
+                <label class="checkbox"><input type="checkbox" name="need" value="kds" /> Écran cuisine (KDS)</label>
+                <label class="checkbox"><input type="checkbox" name="need" value="ecran-client" /> Écran client / salle</label>
+                <label class="checkbox"><input type="checkbox" name="need" value="online" /> Commande en ligne (app+site)</label>
+                <label class="checkbox"><input type="checkbox" name="need" value="livraison" /> Livraison (flotte propre)</label>
+                <label class="checkbox"><input type="checkbox" name="need" value="table" /> Commande à table (QR/tablette)</label>
+                <label class="checkbox"><input type="checkbox" name="need" value="ubereats" /> Intégration Uber/Deliveroo</label>
+                <label class="checkbox"><input type="checkbox" name="need" value="hardware" /> Du matériel (tablette, imprimante…)</label>
+                <label class="checkbox"><input type="checkbox" name="need" value="migration" /> Migration depuis un autre logiciel</label>
+              </div>
+            </div>
+
+            <!-- Section 4: Notes -->
+            <div class="form-section">
+              <span class="mono small muted">04 / EN PLUS</span>
+              <div class="field mt-3">
+                <label for="f-notes">Quelque chose à ajouter ? (optionnel)</label>
+                <textarea id="f-notes" name="notes" placeholder="Mon resto a une particularité — terrasse XXL, événementiel, multi-marques, contrainte d'horaires, etc."></textarea>
+              </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-section" style="border-bottom:none">
+              <label class="checkbox" style="background:var(--bg-2);border-color:var(--line);padding:14px">
+                <input type="checkbox" required />
+                <span style="font-size:13.5px">J'accepte d'être recontacté·e par Maydan au sujet de mon projet. Pas de spam, promis.</span>
+              </label>
+              <button type="submit" class="btn btn-accent" style="margin-top:18px;padding:16px 22px;font-size:15px;justify-content:center">
+                Envoyer ma demande <span class="arrow"></span>
+              </button>
+              <p class="muted small mt-2" style="text-align:center">Réponse sous 24h ouvrées · Aucune obligation</p>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.devis-layout { align-items: flex-start; }
+@media (max-width: 1000px) { .devis-layout { grid-template-columns: 1fr !important; } }
+
+.devis-steps { display: flex; flex-direction: column; gap: 28px; }
+.dstep { display: flex; gap: 16px; align-items: flex-start; }
+.dstep b { font-size: 16px; }
+.dstep-num {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--accent-tint);
+  border: 1px solid oklch(0.86 0.07 50);
+  color: var(--accent-deep);
+  font-family: var(--mono); font-size: 12px;
+  display: grid; place-items: center;
+  flex-shrink: 0;
+}
+.devis-aside {
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-l);
+}
+
+.devis-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-l);
+  box-shadow: var(--shadow-2);
+  position: relative;
+  overflow: hidden;
+}
+.form-section { padding: 24px 0; border-bottom: 1px solid var(--line); }
+.form-section:first-of-type { padding-top: 18px; }
+
+.devis-ok {
+  display: none;
+}
+.devis-ok:not([hidden]) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 32px;
+}
+.devis-ok:not([hidden]) ~ * { display: none; }
+.devis-ok:not([hidden]) + div { display: none; }
+</style>
+
+<!-- ============ FAQ MINI ============ -->
+<section class="section">
+  <div class="container">
+    <div class="reveal" style="max-width:680px;margin-bottom:32px">
+      <span class="eyebrow">Questions fréquentes (sur le tarif)</span>
+      <h2 class="mt-2"><span class="serif italic">Combien</span> ça coûte vraiment ?</h2>
+      <p class="muted mt-3">On ne peut pas afficher un prix unique parce qu'il n'y en a pas. Mais voici des fourchettes honnêtes.</p>
+    </div>
+
+    <div class="grid grid-2" style="gap:20px">
+      <div class="card reveal">
+        <span class="mono small muted">FOURCHETTE</span>
+        <h3 class="mt-2">Food truck / petite affaire</h3>
+        <p class="muted mt-2">1 caisse + 1 TPE + site web pré-commande. Démarrage rapide, peu de matos.</p>
+        <div class="kpi-num mt-3"><em>~50€</em>/mois</div>
+        <p class="muted small mt-2">+ matériel à l'unité si besoin (~300–600€ pour une tablette).</p>
+      </div>
+      <div class="card reveal reveal-d2">
+        <span class="mono small muted">FOURCHETTE</span>
+        <h3 class="mt-2">Resto rapide standard</h3>
+        <p class="muted mt-2">2 caisses + 1 borne + KDS + écran client + commande en ligne + intégrations livraison.</p>
+        <div class="kpi-num mt-3"><em>~180€</em>/mois</div>
+        <p class="muted small mt-2">Matériel optionnel — tu peux apporter le tien.</p>
+      </div>
+      <div class="card reveal reveal-d3">
+        <span class="mono small muted">FOURCHETTE</span>
+        <h3 class="mt-2">Brasserie 80–120 couverts</h3>
+        <p class="muted mt-2">3 caisses + commande à table + KDS multi-postes + livraison + manager multi-utilisateurs.</p>
+        <div class="kpi-num mt-3"><em>~260€</em>/mois</div>
+        <p class="muted small mt-2">Inclut formation équipe et support prioritaire.</p>
+      </div>
+      <div class="card reveal reveal-d4">
+        <span class="mono small muted">FOURCHETTE</span>
+        <h3 class="mt-2">Chaîne / multi-sites</h3>
+        <p class="muted mt-2">Dégressif par site. Manager consolidé, permissions fines, déploiement géré par notre équipe.</p>
+        <div class="kpi-num mt-3"><em>Sur</em>&nbsp;devis</div>
+        <p class="muted small mt-2">Économies importantes au-delà de 3 sites.</p>
+      </div>
+    </div>
+
+    <p class="muted small center mt-5" style="max-width:64ch;margin:32px auto 0">
+      <em>Fourchettes indicatives. Le devis final dépend de ton config (nombre de postes, options, hardware fourni).
+      Aucun frais d'installation, aucun frais de résiliation, aucune commission sur transactions.</em>
+    </p>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="partials.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
