@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Connexion — Maydan</title>
+<meta name="description" content="Connectez-vous à votre espace Maydan pour gérer votre restaurant." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-screen-label="Connexion">
+
+<div id="site-nav"></div>
+
+<!-- ============ LOGIN ============ -->
+<section class="section-wide" style="min-height:calc(100vh - 200px);display:flex;align-items:center">
+  <div class="container" style="max-width:460px">
+    <div class="stack reveal" style="text-align:center;gap:24px;margin-bottom:40px">
+      <a href="index.html" class="brand" style="font-size:36px;justify-content:center" aria-label="Maydan">maydan</a>
+      <h2 style="font-size:clamp(26px,4vw,36px)">Content de te <span class="serif italic">revoir</span>.</h2>
+      <p class="muted" style="font-size:15px">Accède à ton espace pour piloter ton restaurant.</p>
+    </div>
+
+    <form class="login-form reveal reveal-d2" onsubmit="return false">
+      <div class="card" style="padding:32px;display:flex;flex-direction:column;gap:20px">
+        <div class="field">
+          <label for="login-email">Adresse e-mail</label>
+          <input type="email" id="login-email" placeholder="ton@email.fr" required autocomplete="email" />
+        </div>
+        <div class="field">
+          <label for="login-password">Mot de passe</label>
+          <input type="password" id="login-password" placeholder="Ton mot de passe" required autocomplete="current-password" />
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-2);cursor:pointer">
+            <input type="checkbox" style="accent-color:var(--accent)" /> Rester connecté
+          </label>
+          <a class="btn-link" href="#" style="font-size:13px">Mot de passe oublié ?</a>
+        </div>
+        <button type="submit" class="btn btn-accent" style="width:100%;justify-content:center;padding:14px 18px;font-size:15px;margin-top:4px">
+          Se connecter <span class="arrow"></span>
+        </button>
+      </div>
+    </form>
+
+    <div class="reveal reveal-d3" style="text-align:center;margin-top:28px">
+      <p class="muted" style="font-size:14px">
+        Pas encore client ?
+        <a class="btn-link" href="tarifs.html" style="font-size:14px;font-weight:500">Demander un devis</a>
+      </p>
+    </div>
+
+    <div class="reveal reveal-d4" style="margin-top:40px;text-align:center">
+      <div class="row" style="justify-content:center;gap:16px">
+        <span class="chip" style="font-size:10.5px"><span class="chip-dot live"></span> Systèmes opérationnels</span>
+        <span class="chip" style="font-size:10.5px">NF525</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="partials.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
