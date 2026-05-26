@@ -264,8 +264,10 @@
 .lang.on { background: var(--accent-tint); border-color: oklch(0.86 0.07 50); }
 .flag { font-family: var(--mono); font-size: 11px; padding: 4px 6px; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; }
 .lang.on .flag { background: var(--accent); color: #fff; border-color: var(--accent); }
-@media (max-width: 480px) {
+@media (max-width: 700px) {
   .perf-row { grid-template-columns: 100px 1fr 40px; gap: 10px; font-size: 13px; }
+}
+@media (max-width: 480px) {
   .hw-grid { grid-template-columns: 1fr; gap: 12px; }
   .lang-grid { grid-template-columns: 1fr; }
   .lang { padding: 10px 12px; font-size: 13px; }

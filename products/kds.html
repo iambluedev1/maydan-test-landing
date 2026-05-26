@@ -102,6 +102,17 @@
 .t-timer.warn { color: var(--accent); font-weight: 500; }
 .kds-progress { margin-top: 8px; height: 3px; background: rgba(255,255,255,.08); border-radius: 999px; overflow: hidden; }
 .kds-progress::after { content: ""; display: block; height: 100%; width: var(--p); background: var(--accent); border-radius: 999px; }
+@media (max-width: 700px) {
+  .kds-cols { grid-template-columns: repeat(2, 1fr); }
+  .kds-big { padding: 14px; }
+  .kds-big-bar { flex-wrap: wrap; gap: 8px; }
+}
+@media (max-width: 480px) {
+  .kds-cols { grid-template-columns: 1fr; }
+  .kds-big { padding: 10px; border-radius: 14px; }
+  .kds-tk { padding: 10px; }
+  .kds-tk-h b { font-size: 14px; }
+}
 </style>
 
 <section class="section-tight" style="border-bottom:1px solid var(--line)">
@@ -222,7 +233,17 @@
 .src { display: flex; flex-direction: column; gap: 4px; padding: 14px; background: var(--bg-2); border-radius: 10px; }
 .src b { font-family: var(--serif); font-size: 28px; letter-spacing: -.03em; line-height: 1; }
 .src-tag { display: inline-block; font-family: var(--mono); font-size: 10px; padding: 3px 6px; border-radius: 4px; letter-spacing: .06em; align-self: flex-start; }
-@media (max-width: 700px) { .src-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 700px) {
+  .src-grid { grid-template-columns: repeat(2, 1fr); }
+  .perf-row { grid-template-columns: 100px 1fr 40px; gap: 10px; font-size: 13px; }
+  .kds-route { grid-template-columns: 80px 1fr auto; gap: 10px; padding: 12px; }
+}
+@media (max-width: 480px) {
+  .kds-route { grid-template-columns: 1fr; gap: 6px; }
+  .src-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .src { padding: 10px; }
+  .src b { font-size: 22px; }
+}
 </style>
 
 <section class="section-tight" style="background:var(--bg-2)">

@@ -89,6 +89,14 @@
 @keyframes pop { 0%,100% { transform: scale(1); } 50% { transform: scale(1.08); } }
 .tv-foot { text-align: center; padding-top: 8px; }
 .tv-stand { width: 70px; height: 14px; background: #1A1A18; border-radius: 0 0 8px 8px; }
+@media (max-width: 480px) {
+  .tv-screen { padding: 14px 14px; border-width: 6px; border-radius: 10px; }
+  .tv-brand { font-size: 24px; }
+  .tv-cols { gap: 10px; }
+  .tv-num { font-size: clamp(28px, 8vw, 48px); }
+  .tv-label { font-size: 10px; letter-spacing: .1em; }
+  .tv-foot { font-size: 10px; }
+}
 </style>
 
 <section class="section-tight" style="border-bottom:1px solid var(--line)">
@@ -214,6 +222,13 @@
 .flow-step b { display: block; font-size: 14px; font-family: var(--mono); font-weight: 500; color: var(--ink); }
 .flow-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent); margin-top: 4px; }
 .flow-step.done .flow-dot { background: var(--accent); }
+@media (max-width: 480px) {
+  .hw-grid { grid-template-columns: 1fr; gap: 12px; }
+  .theme-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .theme-tile { padding: 12px; }
+  .theme-tile .serif { font-size: 26px !important; }
+  .flow-step b { font-size: 12px; }
+}
 </style>
 
 <section class="section-tight" style="background:var(--bg-2)">
