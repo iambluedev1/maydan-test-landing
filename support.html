@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Support — Maydan</title>
+<meta name="description" content="Support 7j/7, base de connaissances, état des services. L'équipe Maydan est joignable." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-screen-label="Support">
+
+<div id="site-nav"></div>
+
+<!-- ============ HERO ============ -->
+<header class="hero" style="padding-top:60px;padding-bottom:40px">
+  <div class="hero-bg"><div class="grid-bg"></div></div>
+  <div class="container hero-inner">
+    <div class="stack reveal" style="max-width:880px;margin:0 auto;text-align:center;gap:24px">
+      <span class="eyebrow" style="justify-self:center">Support</span>
+      <h1>
+        On est <span class="serif italic">là</span>.<br/>
+        7 jours sur 7.
+      </h1>
+      <p class="lead" style="margin:0 auto">
+        Un service du midi qui dérape, c'est la pire des urgences.
+        Notre équipe support est joignable par téléphone, chat et e-mail —
+        avec un humain au bout, basé en France.
+      </p>
+    </div>
+  </div>
+</header>
+
+<!-- ============ STATUS + CONTACTS ============ -->
+<section style="padding:0 0 80px" id="contact">
+  <div class="container">
+    <div class="grid grid-3 reveal" style="gap:18px">
+      <a class="support-channel" href="tel:0123456789">
+        <div class="sc-h">
+          <div class="sc-icn"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4l4 1 2 4-2 1c1 3 3 5 6 6l1-2 4 2 1 4c0 1-1 2-2 2C9 22 0 13 0 4c0-1 1-2 2-2l2 2z" transform="translate(2,2)"/></svg></div>
+          <h3>Appeler</h3>
+        </div>
+        <div class="mono small muted">SUPPORT URGENT · 24/24</div>
+        <b class="serif" style="font-size:30px;letter-spacing:-.02em">01 23 45 67 89</b>
+        <span class="chip"><span class="chip-dot live"></span> Décroche en moins de 90s</span>
+      </a>
+      <a class="support-channel" href="#" data-screen-label="Support · Chat">
+        <div class="sc-h">
+          <div class="sc-icn"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5h16v10h-9l-4 4v-4H3z"/></svg></div>
+          <h3>Chat en direct</h3>
+        </div>
+        <div class="mono small muted">EN LIGNE · 7H — 23H</div>
+        <b class="serif" style="font-size:30px;letter-spacing:-.02em">Ouvrir le chat</b>
+        <span class="chip"><span class="chip-dot live"></span> Réponse en 2 min</span>
+      </a>
+      <a class="support-channel" href="mailto:support@maydan.fr">
+        <div class="sc-h">
+          <div class="sc-icn"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="18" height="13" rx="1.5"/><path d="M2 7l9 6 9-6"/></svg></div>
+          <h3>E-mail</h3>
+        </div>
+        <div class="mono small muted">RÉPONSE SOUS 4H · 7J/7</div>
+        <b class="serif" style="font-size:24px;letter-spacing:-.02em">support@maydan.fr</b>
+        <span class="chip">Pour les questions non-urgentes</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+.support-channel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-l);
+  padding: 28px;
+  display: flex; flex-direction: column; gap: 12px;
+  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.support-channel:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: var(--shadow-3); }
+.sc-h { display: flex; align-items: center; gap: 12px; }
+.sc-icn { width: 36px; height: 36px; border-radius: 8px; background: var(--accent-tint); color: var(--accent-deep); display: grid; place-items: center; border: 1px solid oklch(0.86 0.07 50); }
+.sc-h h3 { font-size: 18px; }
+.support-channel .chip { align-self: flex-start; margin-top: 4px; }
+</style>
+
+<!-- ============ STATUS BANNER ============ -->
+<section style="padding:0 0 80px" id="status">
+  <div class="container">
+    <div class="card reveal" style="padding:28px;display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center">
+      <div style="width:46px;height:46px;border-radius:50%;background:var(--ok);display:grid;place-items:center;color:#fff">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10l3 3 7-8"/></svg>
+      </div>
+      <div>
+        <span class="mono small muted">ÉTAT DES SERVICES</span>
+        <h3 class="mt-1" style="font-size:22px">Tous les systèmes sont opérationnels</h3>
+        <p class="muted small mt-1">Caisse · Borne · KDS · API · Manager · Intégrations · Paiement</p>
+      </div>
+      <div class="row">
+        <a class="btn-link" href="#">Voir l'historique complet →</a>
+      </div>
+    </div>
+
+    <div class="grid grid-4 mt-4 reveal">
+      <div class="status-pill">
+        <div class="row" style="justify-content:space-between"><b>Caisse</b><span class="chip-dot live"></span></div>
+        <div class="mono small muted">100% uptime · 90j</div>
+      </div>
+      <div class="status-pill">
+        <div class="row" style="justify-content:space-between"><b>Manager</b><span class="chip-dot live"></span></div>
+        <div class="mono small muted">99.99% uptime · 90j</div>
+      </div>
+      <div class="status-pill">
+        <div class="row" style="justify-content:space-between"><b>API publique</b><span class="chip-dot live"></span></div>
+        <div class="mono small muted">99.98% uptime · 90j</div>
+      </div>
+      <div class="status-pill">
+        <div class="row" style="justify-content:space-between"><b>Intégrations</b><span class="chip-dot live"></span></div>
+        <div class="mono small muted">99.97% uptime · 90j</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.status-pill { padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); display: flex; flex-direction: column; gap: 6px; }
+.status-pill b { font-weight: 500; font-size: 14px; }
+.status-pill .chip-dot { background: var(--ok); }
+</style>
+
+<!-- ============ FAQ ============ -->
+<section class="section" style="background:var(--bg-2)">
+  <div class="container">
+    <div class="reveal" style="max-width:680px;margin-bottom:40px">
+      <span class="eyebrow">Questions fréquentes</span>
+      <h2 class="mt-2"><span class="serif italic">Tout</span> ce qu'on nous demande.</h2>
+    </div>
+
+    <div class="faq-cats">
+
+      <!-- DEMARRAGE -->
+      <div class="faq-cat reveal">
+        <h3>Démarrage</h3>
+        <div class="faq-list">
+          <button class="faq-item" data-faq aria-expanded="false">
+            <span>Combien de temps pour mettre Maydan en place ?</span>
+            <span class="faq-plus"></span>
+          </button>
+          <div class="faq-body">
+            <p>En général : 24h pour le logiciel, 3-5 jours si on te livre du matériel.
+            On configure ta carte ensemble par visio (1h), on forme ton équipe (1h),
+            et c'est parti. Pour les chaînes, on prévoit un déploiement coordonné.</p>
+          </div>
+          <button class="faq-item" data-faq aria-expanded="false">
+            <span>Vous fournissez le matériel ou je dois l'acheter ?</span>
+            <span class="faq-plus"></span>
+          </button>
+          <div class="faq-body">
+            <p>Les deux options. Tu peux nous acheter le matériel (tablettes, imprimantes, écrans KDS, bornes, boîtiers HDMI),
+            <em>ou</em> utiliser ce que tu as déjà. Maydan tourne sur n'importe quelle tablette Android 10+,
+            sur n'importe quelle TV avec un HDMI, et avec les imprimantes ESC/POS standards. <b>On ne te bloque rien</b>.</p>
+          </div>
+          <button class="faq-item" data-faq aria-expanded="false">
+            <span>Vous reprenez mes données depuis mon ancien logiciel ?</span>
+            <span class="faq-plus"></span>
+          </button>
+          <div class="faq-body">
+            <p>Oui — c'est gratuit. On reprend ta carte, tes catégories, tes photos, ton historique client si tu nous l'exportes.
+            Migration depuis Lightspeed, L'Addition, Tiller, Square, Sumup, Zelty et la plupart des concurrents.</p>
+          </div>
+          <button class="faq-item" data-faq aria-expanded="false">
+            <span>Vous formez mes équipes ?</span>
+            <span class="faq-plus"></span>
+          </button>
+          <div class="faq-body">
+            <p>Oui. Formation incluse en visio (1h serveur, 1h cuisine, 1h manager).
+            On laisse une vidéothèque interne accessible 24/24, et notre support est dispo pendant les premiers services.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TARIFS -->
+      <div class="faq-cat reveal reveal-d2">
+        <h3>Tarifs &amp; engagement</h3>
+        <div class="faq-list">
+          <button class="faq-item" data-faq aria-expanded="false">
+            <span>Pourquoi pas de prix affichés sur le site ?</span>
+            <span class="faq-plus"></span>
+          </button>
+          <div class="faq-body">
+            <p>Parce qu'on serait obligés de tordre la réalité. Un food truck n'a pas les mêmes besoins qu'une brasserie.
+            Plutôt qu'un tarif fourre-tout qui te désavantage, on prend 15 minutes pour configurer ce qu'il te faut
+            <em>vraiment</em>, et on te chiffre ça honnêtement.</p>
+          </div>
+          <button class="faq-item" data-faq aria-expanded="false">
+            <span>Y a-t-il des frais cachés sur les transactions ?</span>
+            <span class="faq-plus"></span>
+          </button>
+          <div class="faq-body">
+            <p><b>Non, zéro.</b> Maydan ne prélève aucune commission sur tes paiements TPE.
+            Tu négocies ton TPE avec ton PSP (SumUp, Stripe, Payplug…) directement.
+            Contrairement à certains concurrents comme Sumup qui prélèvent jusqu'à 1,69% sur chaque transaction.</p>
+          </div>
+          <button class="faq-item" data-faq aria-expanded="false">
+            <span>Quel est le minimum d'engagement ?</span>
+            <span class="faq-plus"></span>
+          </button>
+          <div class="faq-body">
+            <p>Engagement 12 mois standard. Tu peux opter pour un sans-engagement (légèrement plus cher) si tu préfères.
+            En cas de fermeture du resto, suspension possible. Aucun frais de résiliation à terme.</p>
+          </div>
+          <button class="faq-item" data-faq aria-expanded="false">
+            <span>Les mises à jour sont incluses ?</span>
+            <span class="faq-plus"></span>
+          </button>
+          <div class="faq-body">
+            <p>Totalement. On pousse une nouvelle version toutes les 2-3 semaines, sans coût additionnel.
+            Les grosses nouveautés sont annoncées par e-mail et dans le manager.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TECHNIQUE -->
+      <div class="faq-cat reveal reveal-d3">
+        <h3>Technique &amp; matériel</h3>
+        <div class="faq-list">
+          <button class="faq-item" data-faq aria-expanded="false">
+            <span>Ça marche hors-ligne ?</span>
+            <span class="faq-plus"></span>
+          </button>
+          <div class="faq-body">
+            <p>Oui, totalement. La caisse fonctionne en autonomie complète, encaisse, imprime, signe les tickets NF525.
+            Dès que le réseau revient, tout se synchronise automatiquement avec le cloud. Pratique pour les food trucks
+            ou en cas de panne wifi en plein service.</p>
+          </div>
+          <button class="faq-item" data-faq aria-expanded="false">
+            <span>Quelle tablette recommandez-vous ?</span>
+            <span class="faq-plus"></span>
+          </button>
+          <div class="faq-body">
+            <p>Pour la caisse : Samsung Galaxy Tab A9+ ou Lenovo Tab M11 (12"). Pour le serveur en mobile :
+            une tablette 10" suffit. Pour la borne : tout écran tactile 22-27" sous Android, Windows ou Linux.
+            Notre support t'aide à choisir.</p>
+          </div>
+          <button class="faq-item" data-faq aria-expanded="false">
+            <span>Mes imprimantes actuelles sont-elles compatibles ?</span>
+            <span class="faq-plus"></span>
+          </button>
+          <div class="faq-body">
+            <p>Si elles parlent ESC/POS (Epson TM-T20/T82/T88, Star TSP, Custom TG2480…), oui.
+            Branchement USB, Ethernet ou Bluetooth selon le modèle. On a une liste de compatibilité,
+            on la vérifie ensemble avant signature.</p>
+          </div>
+          <button class="faq-item" data-faq aria-expanded="false">
+            <span>Maydan est-il conforme NF525 ?</span>
+            <span class="faq-plus"></span>
+          </button>
+          <div class="faq-body">
+            <p>Oui, totalement. Maydan est certifié NF525 et te fournit l'attestation officielle.
+            Tickets Z automatiques, archivage légal 6 ans, journal des événements horodaté et signé.
+            En cas de contrôle fiscal, tu as tout ce qu'il faut.</p>
+          </div>
+          <button class="faq-item" data-faq aria-expanded="false">
+            <span>Que se passe-t-il si je quitte Maydan ?</span>
+            <span class="faq-plus"></span>
+          </button>
+          <div class="faq-body">
+            <p>Tu récupères toutes tes données (clients, ventes, carte) au format exportable.
+            Tes tablettes, imprimantes et écrans restent utilisables — nous n'installons aucun DRM.
+            Aucun frais de résiliation à terme d'engagement.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTEGRATIONS -->
+      <div class="faq-cat reveal">
+        <h3>Intégrations &amp; livraison</h3>
+        <div class="faq-list">
+          <button class="faq-item" data-faq aria-expanded="false">
+            <span>Comment ça marche avec Uber Eats et Deliveroo ?</span>
+            <span class="faq-plus"></span>
+          </button>
+          <div class="faq-body">
+            <p>Intégration native. Ta carte Maydan est poussée sur Uber et Deliveroo automatiquement.
+            Les commandes tombent directement dans ton KDS — pas de tablette qui bipe à côté.
+            Tu acceptes en un clic. Statistiques croisées dans le manager.</p>
+          </div>
+          <button class="faq-item" data-faq aria-expanded="false">
+            <span>Puis-je avoir ma propre flotte de livreurs ?</span>
+            <span class="faq-plus"></span>
+          </button>
+          <div class="faq-body">
+            <p>Oui. L'application livreur Maydan permet à tes propres équipes de livrer.
+            Affectation automatique selon proximité, tracking live, signature client.
+            Tu peux aussi mixer flotte interne et Uber Direct selon les périodes.</p>
+          </div>
+          <button class="faq-item" data-faq aria-expanded="false">
+            <span>Quel TPE choisir ?</span>
+            <span class="faq-plus"></span>
+          </button>
+          <div class="faq-body">
+            <p>Celui que tu veux. Maydan est compatible SumUp Air/Solo, Stripe Terminal, Payplug,
+            Verifone, Smile&amp;Pay et la plupart des terminaux standards.
+            On te conseille selon ton volume et ta banque.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.faq-cats { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+@media (max-width: 900px) { .faq-cats { grid-template-columns: 1fr; } }
+.faq-cat { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-l); padding: 28px; }
+.faq-cat h3 { font-size: 22px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.faq-list { display: flex; flex-direction: column; }
+.faq-item {
+  width: 100%;
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  background: none; border: none; padding: 16px 0; text-align: left;
+  font: 500 15px var(--sans); color: var(--ink); cursor: pointer;
+  border-top: 1px solid var(--line);
+}
+.faq-item:first-of-type { border-top: none; }
+.faq-plus {
+  width: 18px; height: 18px; position: relative; flex-shrink: 0;
+}
+.faq-plus::before, .faq-plus::after {
+  content: ""; position: absolute; background: var(--ink-3);
+  transition: transform .2s ease;
+}
+.faq-plus::before { left: 0; right: 0; top: 8px; height: 1.5px; }
+.faq-plus::after  { top: 0; bottom: 0; left: 8px; width: 1.5px; }
+.faq-item[aria-expanded="true"] .faq-plus::after { transform: scaleY(0); }
+.faq-body {
+  max-height: 0; overflow: hidden;
+  transition: max-height .35s ease;
+  font-size: 14.5px; color: var(--ink-2); line-height: 1.6;
+}
+.faq-item[aria-expanded="true"] + .faq-body { max-height: 400px; padding-bottom: 16px; }
+</style>
+
+<!-- ============ RESOURCES ============ -->
+<section class="section">
+  <div class="container">
+    <div class="reveal" style="max-width:680px;margin-bottom:40px">
+      <span class="eyebrow">Ressources</span>
+      <h2 class="mt-2">Pour aller<br/><span class="serif italic">plus loin.</span></h2>
+    </div>
+
+    <div class="grid grid-3" style="gap:18px">
+      <a class="card card-hover reveal" href="#">
+        <span class="mono small muted">DOCUMENTATION</span>
+        <h3 class="mt-2">Centre d'aide</h3>
+        <p class="muted mt-2">Articles pas-à-pas, vidéos, raccourcis clavier. Tout ce qui aide une nouvelle recrue à démarrer.</p>
+        <span class="btn-link mt-3">Ouvrir le centre →</span>
+      </a>
+      <a class="card card-hover reveal reveal-d2" href="#">
+        <span class="mono small muted">API</span>
+        <h3 class="mt-2">Doc développeur</h3>
+        <p class="muted mt-2">REST API, webhooks, sandbox. Pour brancher tes propres outils.</p>
+        <span class="btn-link mt-3">Accéder à la doc →</span>
+      </a>
+      <a class="card card-hover reveal reveal-d3" href="#">
+        <span class="mono small muted">LÉGAL</span>
+        <h3 class="mt-2">Attestation NF525</h3>
+        <p class="muted mt-2">Téléchargeable depuis ton compte. Pour ton expert-comptable ou un contrôle fiscal.</p>
+        <span class="btn-link mt-3">Télécharger →</span>
+      </a>
+      <a class="card card-hover reveal" href="#">
+        <span class="mono small muted">VIDÉOS</span>
+        <h3 class="mt-2">Tutos &amp; webinars</h3>
+        <p class="muted mt-2">Démos en live, retours d'expérience clients, prises en main produit.</p>
+        <span class="btn-link mt-3">Voir les vidéos →</span>
+      </a>
+      <a class="card card-hover reveal reveal-d2" href="#">
+        <span class="mono small muted">COMMUNAUTÉ</span>
+        <h3 class="mt-2">Forum restaurateurs</h3>
+        <p class="muted mt-2">Échange avec d'autres restaurateurs Maydan. Partage tes hacks, pose tes questions.</p>
+        <span class="btn-link mt-3">Rejoindre →</span>
+      </a>
+      <a class="card card-hover reveal reveal-d3" href="#">
+        <span class="mono small muted">NEWS</span>
+        <h3 class="mt-2">Changelog produit</h3>
+        <p class="muted mt-2">Toutes les nouvelles features, mois par mois. Pour ne rien rater.</p>
+        <span class="btn-link mt-3">Voir le changelog →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section">
+  <div class="container">
+    <div class="cta-card reveal">
+      <div class="cta-bg"></div>
+      <div class="cta-content">
+        <span class="eyebrow" style="color:rgba(255,255,255,0.7)">Pas encore client</span>
+        <h2 style="color:#fff;max-width:18ch" class="mt-2"><span class="serif italic">Avant tout ça,</span><br/>parlons de ton projet.</h2>
+        <div class="row" style="margin-top:32px;gap:14px">
+          <a class="btn btn-accent" href="tarifs.html">Demander un devis <span class="arrow"></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.cta-card { position: relative; background: #0F0F0F; border-radius: var(--r-xl); padding: 72px 56px; overflow: hidden; isolation: isolate; }
+.cta-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(50% 70% at 90% 100%, oklch(0.66 0.19 38 / 0.5), transparent 70%), radial-gradient(40% 60% at 0% 0%, oklch(0.74 0.16 60 / 0.3), transparent 70%); }
+.cta-content { position: relative; z-index: 1; }
+@media (max-width: 700px) { .cta-card { padding: 48px 28px; } }
+</style>
+
+<div id="site-footer"></div>
+
+<script src="partials.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>

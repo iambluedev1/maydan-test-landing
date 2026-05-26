@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="fr" data-root="../">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Livraison — Maydan</title>
+<meta name="description" content="Application de livraison pour restaurants. Flotte interne ou externe, tracking temps réel, optimisation de tournées." />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body data-screen-label="07 Produit · Livraison">
+
+<div id="site-nav"></div>
+
+<header class="product-hero">
+  <div class="hero-bg"><div class="grid-bg"></div></div>
+  <div class="container hero-inner">
+    <div class="product-hero-grid">
+      <div class="stack reveal" style="gap:24px">
+        <span class="eyebrow">06 / Livraison</span>
+        <h1 style="font-size:clamp(40px,5.4vw,76px)">
+          <span class="serif italic">Tes propres</span><br/>
+          livreurs. Tes<br/>propres marges.
+        </h1>
+        <p class="lead">
+          Une appli pour ta flotte interne, ou un mode "livreurs externes" pour gérer
+          des indépendants. Tracking GPS, optimisation des tournées, paiement à la livraison —
+          tout en un seul endroit.
+        </p>
+        <div class="row" style="gap:14px;margin-top:8px">
+          <a class="btn btn-accent" href="../tarifs.html">Demander un devis <span class="arrow"></span></a>
+          <a class="btn btn-ghost" href="#fonctionnalites">Voir les fonctionnalités</a>
+        </div>
+        <div class="row" style="gap:8px;margin-top:8px">
+          <span class="chip">Flotte interne</span>
+          <span class="chip">Indépendants</span>
+          <span class="chip">Tracking GPS</span>
+        </div>
+      </div>
+
+      <div class="reveal reveal-d2">
+        <div class="map-stage">
+          <div class="map-card">
+            <div class="map-h">
+              <span class="mono small muted">DISPATCH · 13:24</span>
+              <span class="chip"><span class="chip-dot live"></span> 3 livreurs actifs</span>
+            </div>
+            <div class="map-svg">
+              <svg viewBox="0 0 360 300" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%">
+                <rect width="360" height="300" fill="#F2F1EC"/>
+                <!-- streets -->
+                <g stroke="#D8D6CE" stroke-width="14" stroke-linecap="round">
+                  <line x1="-10" y1="80" x2="380" y2="60"/>
+                  <line x1="-10" y1="160" x2="380" y2="180"/>
+                  <line x1="-10" y1="240" x2="380" y2="220"/>
+                  <line x1="60" y1="-10" x2="40" y2="320"/>
+                  <line x1="180" y1="-10" x2="200" y2="320"/>
+                  <line x1="290" y1="-10" x2="310" y2="320"/>
+                </g>
+                <g stroke="#EAE8E1" stroke-width="12" stroke-linecap="round">
+                  <line x1="-10" y1="120" x2="380" y2="125"/>
+                  <line x1="120" y1="-10" x2="130" y2="320"/>
+                  <line x1="240" y1="-10" x2="260" y2="320"/>
+                </g>
+                <!-- routes -->
+                <path d="M180 180 Q230 140 290 100 T350 60" stroke="oklch(0.66 0.19 38)" stroke-width="2.2" stroke-dasharray="4 4" fill="none"/>
+                <path d="M180 180 Q120 160 60 200 T20 260" stroke="oklch(0.66 0.19 38)" stroke-width="2.2" stroke-dasharray="4 4" fill="none"/>
+                <path d="M180 180 Q200 240 240 260" stroke="oklch(0.66 0.19 38)" stroke-width="2.2" stroke-dasharray="4 4" fill="none"/>
+                <!-- restaurant -->
+                <circle cx="180" cy="180" r="10" fill="#0F0F0F"/>
+                <text x="180" y="184" text-anchor="middle" fill="#fff" font-size="10" font-family="Geist Mono" font-weight="500">m.</text>
+                <!-- drivers -->
+                <g class="driver-pin" transform="translate(290,100)">
+                  <circle r="14" fill="oklch(0.66 0.19 38)"/>
+                  <text y="4" text-anchor="middle" fill="#fff" font-size="11" font-family="Geist" font-weight="500">A</text>
+                </g>
+                <g class="driver-pin" transform="translate(60,200)">
+                  <circle r="14" fill="oklch(0.66 0.19 38)"/>
+                  <text y="4" text-anchor="middle" fill="#fff" font-size="11" font-family="Geist" font-weight="500">N</text>
+                </g>
+                <g class="driver-pin" transform="translate(240,260)">
+                  <circle r="14" fill="oklch(0.66 0.19 38)"/>
+                  <text y="4" text-anchor="middle" fill="#fff" font-size="11" font-family="Geist" font-weight="500">K</text>
+                </g>
+                <!-- customers -->
+                <circle cx="350" cy="60" r="6" fill="#fff" stroke="#0F0F0F" stroke-width="2"/>
+                <circle cx="20" cy="260" r="6" fill="#fff" stroke="#0F0F0F" stroke-width="2"/>
+                <circle cx="270" cy="280" r="6" fill="#fff" stroke="#0F0F0F" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="map-foot">
+              <div class="map-foot-cell"><span class="mono small muted">EN COURS</span><b>7</b></div>
+              <div class="map-foot-cell"><span class="mono small muted">EN ATTENTE</span><b>2</b></div>
+              <div class="map-foot-cell"><span class="mono small muted">TEMPS MOYEN</span><b>22'</b></div>
+            </div>
+          </div>
+
+          <div class="float-card delivery-side">
+            <div class="row" style="gap:10px">
+              <div style="width:32px;height:32px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:500;font-size:13px">A</div>
+              <div>
+                <div style="font-weight:500;font-size:14px">Amine · interne</div>
+                <div class="muted small">2 livraisons · 8 min · 1.2 km</div>
+              </div>
+              <span class="chip chip-accent" style="margin-left:auto"><span class="chip-dot live" style="background:var(--accent)"></span> live</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+.map-stage { position: relative; height: 540px; }
+.map-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-xl); overflow: hidden; box-shadow: var(--shadow-3); }
+.map-h { padding: 14px 18px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; }
+.map-svg { aspect-ratio: 6/5; background: #F2F1EC; }
+.map-foot { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid var(--line); }
+.map-foot-cell { padding: 16px 18px; border-right: 1px solid var(--line); display: flex; flex-direction: column; gap: 4px; }
+.map-foot-cell:last-child { border-right: 0; }
+.map-foot-cell b { font-family: var(--serif); font-size: 24px; line-height: 1; letter-spacing: -.02em; }
+.delivery-side { position: absolute; right: -10px; bottom: -10px; width: 280px; }
+@media (max-width: 900px) { .map-stage { height: auto; } .delivery-side { position: static; width: auto; margin-top: 12px; } }
+.float-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-l); box-shadow: var(--shadow-3); padding: 14px; }
+.small { font-size: 11.5px; }
+.driver-pin { animation: pinpulse 2.4s ease-in-out infinite; transform-origin: center; }
+.driver-pin:nth-child(2) { animation-delay: -1s; }
+.driver-pin:nth-child(3) { animation-delay: -1.6s; }
+@keyframes pinpulse { 0%, 100% { transform-box: fill-box; } 50% { } }
+</style>
+
+<section class="section-tight" style="border-bottom:1px solid var(--line)">
+  <div class="container">
+    <div class="grid grid-4">
+      <div class="kpi reveal"><div class="kpi-num"><em>0</em>%</div><div class="kpi-label">Commission marketplace</div></div>
+      <div class="kpi reveal reveal-d2"><div class="kpi-num"><em>22</em>'</div><div class="kpi-label">Temps moyen de livraison</div></div>
+      <div class="kpi reveal reveal-d3"><div class="kpi-num"><em>2</em>×</div><div class="kpi-label">Livraisons par tour</div></div>
+      <div class="kpi reveal reveal-d4"><div class="kpi-num"><em>GPS</em></div><div class="kpi-label">Tracking en temps réel</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="fonctionnalites">
+  <div class="container">
+    <div class="feature-row">
+      <div class="stack reveal" style="gap:20px">
+        <span class="eyebrow">Flotte interne</span>
+        <h2><span class="serif italic">Tes livreurs.</span><br/>Ton appli. Ton style.</h2>
+        <p class="muted" style="font-size:17px;max-width:48ch">
+          Tes livreurs salariés ou indépendants utilisent l'appli Maydan Driver.
+          Ils voient leurs tournées, les itinéraires optimisés, les coordonnées clients.
+          Tu suis tout en temps réel depuis ton manager.
+        </p>
+        <ul class="check-list">
+          <li>Application livreur iOS &amp; Android</li>
+          <li>Tournées optimisées automatiquement</li>
+          <li>Navigation intégrée (Google Maps / Waze)</li>
+          <li>Paiement à la livraison : CB, espèces, ticket resto</li>
+        </ul>
+      </div>
+      <div class="reveal reveal-d2">
+        <div class="card">
+          <span class="eyebrow">DRIVER APP · TOURNÉE</span>
+          <div class="route mt-3">
+            <div class="route-step done"><span class="route-num">1</span><div><b>15 rue Lafayette</b><span class="muted small">Léa V. · #143 · 12,80 €</span></div></div>
+            <div class="route-step done"><span class="route-num">2</span><div><b>42 av. Voltaire</b><span class="muted small">Karim · #145 · 18,40 €</span></div></div>
+            <div class="route-step active"><span class="route-num">3</span><div><b>8 rue du Marché</b><span class="muted small">En cours · 3 min</span></div></div>
+            <div class="route-step"><span class="route-num">4</span><div><b>22 bd Sébastopol</b><span class="muted small">Prévu 13:48</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row reverse">
+      <div class="stack reveal" style="gap:20px">
+        <span class="eyebrow">Livreurs externes</span>
+        <h2>Pas envie d'embaucher ?<br/><span class="serif italic">Branche un prestataire.</span></h2>
+        <p class="muted" style="font-size:17px;max-width:48ch">
+          Mode "livreurs externes" : Maydan dispatch tes commandes à un partenaire
+          (Stuart, Coursier, ou ton propre indépendant). Tarif convenu, contrôle gardé,
+          marge protégée.
+        </p>
+        <ul class="check-list">
+          <li>Bascule par défaut sur un partenaire externe</li>
+          <li>Tarification au km, à la course, ou hybride</li>
+          <li>Tracking unifié quelle que soit la source</li>
+          <li>Reporting consolidé : interne vs externe</li>
+        </ul>
+      </div>
+      <div class="reveal reveal-d2">
+        <div class="grid grid-2" style="gap:12px">
+          <div class="card" style="padding:20px"><span class="mono small muted">PARTENAIRES</span><b style="font-family:var(--serif);font-size:22px">Stuart</b><p class="muted small mt-1">Indépendants à la demande, tarif à la course.</p></div>
+          <div class="card" style="padding:20px"><span class="mono small muted">PARTENAIRES</span><b style="font-family:var(--serif);font-size:22px">Coursier.fr</b><p class="muted small mt-1">Couverture nationale, scooter ou vélo.</p></div>
+          <div class="card" style="padding:20px"><span class="mono small muted">FLOTTE INTERNE</span><b style="font-family:var(--serif);font-size:22px">Salariés</b><p class="muted small mt-1">Coût fixe, contrôle maximal.</p></div>
+          <div class="card" style="padding:20px"><span class="mono small muted">HYBRIDE</span><b style="font-family:var(--serif);font-size:22px">Bascule auto</b><p class="muted small mt-1">Interne en priorité, externe en débordement.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="stack reveal" style="gap:20px">
+        <span class="eyebrow">Optimisation</span>
+        <h2>2 livraisons à la fois.<br/><span class="serif italic">Sans s'emmêler.</span></h2>
+        <p class="muted" style="font-size:17px;max-width:48ch">
+          Maydan regroupe les commandes proches et propose au livreur l'itinéraire optimal.
+          Gain de temps, gain de marge, et le client reste prévenu de l'ETA en continu.
+        </p>
+        <ul class="check-list">
+          <li>Regroupement intelligent des courses</li>
+          <li>ETA recalculée en continu, partagée au client</li>
+          <li>Suggestion de regroupement au livreur avec accord</li>
+          <li>Alertes auto si une commande prend du retard</li>
+        </ul>
+      </div>
+      <div class="reveal reveal-d2">
+        <div class="card" style="padding:24px">
+          <span class="eyebrow">GAINS · CE MOIS</span>
+          <div class="grid grid-2 mt-3" style="gap:14px">
+            <div class="kpi-box"><span class="mono small muted">COURSES GROUPÉES</span><div class="serif" style="font-size:32px;line-height:1;margin-top:6px">42%</div></div>
+            <div class="kpi-box"><span class="mono small muted">DISTANCE ÉCONOMISÉE</span><div class="serif" style="font-size:32px;line-height:1;margin-top:6px">312 km</div></div>
+            <div class="kpi-box"><span class="mono small muted">TEMPS ÉCONOMISÉ</span><div class="serif" style="font-size:32px;line-height:1;margin-top:6px">18 h</div></div>
+            <div class="kpi-box"><span class="mono small muted">COÛT ÉVITÉ</span><div class="serif" style="font-size:32px;line-height:1;margin-top:6px;color:var(--accent)">+ 940 €</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.route { display: flex; flex-direction: column; gap: 14px; }
+.route-step { display: grid; grid-template-columns: 32px 1fr; gap: 12px; align-items: flex-start; opacity: .5; }
+.route-step.done, .route-step.active { opacity: 1; }
+.route-num { width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--line); display: grid; place-items: center; font-family: var(--mono); font-size: 12px; font-weight: 500; background: var(--bg); }
+.route-step.done .route-num { background: var(--accent); border-color: var(--accent); color: #fff; }
+.route-step.active .route-num { background: var(--bg); border-color: var(--accent); color: var(--accent); box-shadow: 0 0 0 4px oklch(0.66 0.19 38 / 0.15); }
+.route-step b { display: block; font-size: 14px; }
+.kpi-box { background: var(--bg-2); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 2px; }
+</style>
+
+<section class="section-tight" style="background:var(--bg-2)">
+  <div class="container">
+    <div class="row" style="justify-content:space-between;margin-bottom:24px">
+      <span class="eyebrow">Aller plus loin</span>
+      <a class="btn-link" href="../ecosystem.html">L'écosystème complet →</a>
+    </div>
+    <div class="grid grid-3">
+      <a class="card card-hover reveal" href="commande-en-ligne.html"><span class="mono small muted">APP &amp; WEB</span><h3 class="mt-2">Commande en ligne</h3><p class="muted mt-1">D'où viennent les commandes que tu livres.</p><span class="btn-link mt-3">Découvrir →</span></a>
+      <a class="card card-hover reveal reveal-d2" href="kds.html"><span class="mono small muted">CUISINE</span><h3 class="mt-2">KDS cuisine</h3><p class="muted mt-1">Le livreur sait quand partir grâce au bump cuisine.</p><span class="btn-link mt-3">Découvrir →</span></a>
+      <a class="card card-hover reveal reveal-d3" href="../integrations.html"><span class="mono small muted">UBER · DELIVEROO</span><h3 class="mt-2">Intégrations livraison</h3><p class="muted mt-1">Continue avec les marketplaces en parallèle si tu veux.</p><span class="btn-link mt-3">Découvrir →</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-card reveal">
+      <div class="cta-bg"></div>
+      <div class="cta-content">
+        <h2 style="color:#fff;max-width:18ch"><span class="serif italic">Garde tes marges.</span></h2>
+        <p style="color:rgba(255,255,255,0.78);max-width:50ch;margin-top:14px;font-size:17px">
+          Que tu livres avec ta flotte ou des indépendants, le coût et le contrôle sont les tiens.
+        </p>
+        <div class="row" style="margin-top:28px;gap:14px">
+          <a class="btn btn-accent" href="../tarifs.html">Demander un devis <span class="arrow"></span></a>
+          <a class="btn btn-ghost" href="../support.html" style="border-color:rgba(255,255,255,.25);color:#fff">Parler à quelqu'un</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+.cta-card { position: relative; background: #0F0F0F; border-radius: var(--r-xl); padding: 64px 56px; overflow: hidden; isolation: isolate; }
+.cta-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(50% 70% at 90% 100%, oklch(0.66 0.19 38 / 0.5), transparent 70%), radial-gradient(40% 60% at 0% 0%, oklch(0.74 0.16 60 / 0.3), transparent 70%); }
+.cta-content { position: relative; z-index: 1; }
+@media (max-width: 700px) { .cta-card { padding: 48px 28px; } }
+</style>
+
+<div id="site-footer"></div>
+<script src="../partials.js"></script>
+<script src="../scripts.js"></script>
+</body>
+</html>

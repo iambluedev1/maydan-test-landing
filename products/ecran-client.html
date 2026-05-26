@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="fr" data-root="../">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Écran client — Maydan</title>
+<meta name="description" content="Affichage du suivi de commande sur n'importe quelle TV. Page web, HDMI suffit." />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body data-screen-label="05 Produit · Écran client">
+
+<div id="site-nav"></div>
+
+<header class="product-hero">
+  <div class="hero-bg"><div class="grid-bg"></div></div>
+  <div class="container hero-inner">
+    <div class="product-hero-grid">
+      <div class="stack reveal" style="gap:24px">
+        <span class="eyebrow">04 / Écran de rappel client</span>
+        <h1 style="font-size:clamp(40px,5.4vw,76px)">
+          <span class="serif italic">"#142,</span><br/>
+          c'est prêt"
+        </h1>
+        <p class="lead">
+          Tes clients voient leur numéro passer en vert quand c'est prêt.
+          Plus de "vous appelez le 142 s'il vous plait ?". C'est une page web :
+          ta TV avec un HDMI suffit. On peut te fournir un boîtier streaming.
+        </p>
+        <div class="row" style="gap:14px;margin-top:8px">
+          <a class="btn btn-accent" href="../tarifs.html">Demander un devis <span class="arrow"></span></a>
+          <a class="btn btn-ghost" href="#fonctionnalites">Voir les fonctionnalités</a>
+        </div>
+        <div class="row" style="gap:8px;margin-top:8px">
+          <span class="chip">N'importe quelle TV</span>
+          <span class="chip">Page web · HDMI</span>
+          <span class="chip">Brandable</span>
+        </div>
+      </div>
+
+      <div class="reveal reveal-d2">
+        <div class="tv-frame">
+          <div class="tv-screen">
+            <div class="tv-h">
+              <div class="tv-brand">m.</div>
+              <div class="mono small" style="color:#A8A8A2">EN SALLE · 13:24</div>
+            </div>
+            <div class="tv-cols">
+              <div class="tv-col">
+                <div class="tv-label mono">EN PRÉPARATION</div>
+                <div class="tv-nums">
+                  <div class="tv-num">142</div>
+                  <div class="tv-num">144</div>
+                  <div class="tv-num">145</div>
+                </div>
+              </div>
+              <div class="tv-divider"></div>
+              <div class="tv-col">
+                <div class="tv-label mono ready">PRÊT</div>
+                <div class="tv-nums">
+                  <div class="tv-num ready">139</div>
+                  <div class="tv-num ready">140</div>
+                  <div class="tv-num ready pop">141</div>
+                </div>
+              </div>
+            </div>
+            <div class="tv-foot mono small" style="color:#A8A8A2">Présente ton numéro au comptoir · maydan</div>
+          </div>
+          <div class="tv-stand"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+.tv-frame { display: flex; flex-direction: column; align-items: center; }
+.tv-screen { width: 100%; aspect-ratio: 16/10; background: linear-gradient(135deg,#1A1A18,#0A0A0A); border-radius: 14px; padding: 20px 24px; border: 10px solid #0A0A0A; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.45); display: flex; flex-direction: column; color: #fff; }
+.tv-h { display: flex; justify-content: space-between; align-items: center; }
+.tv-brand { font-family: var(--serif); font-style: italic; font-size: 32px; color: var(--accent); line-height: 1; }
+.tv-cols { display: grid; grid-template-columns: 1fr 1px 1fr; flex: 1; gap: 16px; padding: 12px 0; align-items: center; }
+.tv-divider { background: rgba(255,255,255,.1); width: 1px; height: 80%; align-self: center; }
+.tv-col { display: flex; flex-direction: column; gap: 12px; align-items: center; }
+.tv-label { font-size: 11px; letter-spacing: .14em; color: #8B8B86; }
+.tv-label.ready { color: #65C18A; }
+.tv-nums { display: flex; flex-direction: column; gap: 4px; align-items: center; }
+.tv-num { font-family: var(--serif); font-size: clamp(40px,5vw,68px); line-height: 1; color: #fff; }
+.tv-num.ready { color: #65C18A; }
+.tv-num.pop { animation: pop 1.5s ease-in-out infinite; }
+@keyframes pop { 0%,100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+.tv-foot { text-align: center; padding-top: 8px; }
+.tv-stand { width: 70px; height: 14px; background: #1A1A18; border-radius: 0 0 8px 8px; }
+</style>
+
+<section class="section-tight" style="border-bottom:1px solid var(--line)">
+  <div class="container">
+    <div class="grid grid-4">
+      <div class="kpi reveal"><div class="kpi-num"><em>0</em>€</div><div class="kpi-label">Matériel imposé</div></div>
+      <div class="kpi reveal reveal-d2"><div class="kpi-num"><em>-60</em>%</div><div class="kpi-label">D'appels micro en salle</div></div>
+      <div class="kpi reveal reveal-d3"><div class="kpi-num"><em>HDMI</em></div><div class="kpi-label">Suffit pour brancher</div></div>
+      <div class="kpi reveal reveal-d4"><div class="kpi-num"><em>1</em>s</div><div class="kpi-label">Délai de mise à jour</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="fonctionnalites">
+  <div class="container">
+    <div class="feature-row">
+      <div class="stack reveal" style="gap:20px">
+        <span class="eyebrow">Zéro matériel imposé</span>
+        <h2><span class="serif italic">Ta TV.</span><br/>Ta marque. Ton vibe.</h2>
+        <p class="muted" style="font-size:17px;max-width:48ch">
+          C'est une page web. Tu ouvres l'URL sur n'importe quel navigateur :
+          smart TV, Chromecast, Fire Stick, mini-PC. Si tu n'as rien sous la main,
+          on te fournit un boîtier streaming HDMI clé en main.
+        </p>
+        <ul class="check-list">
+          <li>Page web : compatible navigateur moderne</li>
+          <li>Boîtier streaming HDMI fourni (optionnel)</li>
+          <li>Multi-écrans simultanés (cuisine, salle, click&amp;collect)</li>
+          <li>Mode kiosque navigateur, auto-relance</li>
+        </ul>
+      </div>
+      <div class="reveal reveal-d2">
+        <div class="hw-grid">
+          <div class="hw-card"><span class="mono small muted">OPTION A</span><b style="font-family:var(--serif);font-size:22px">TV smart</b><p class="muted small mt-1">Tu utilises ton navigateur TV directement.</p></div>
+          <div class="hw-card"><span class="mono small muted">OPTION B</span><b style="font-family:var(--serif);font-size:22px">Chromecast</b><p class="muted small mt-1">Cast depuis un mini-PC ou tablette.</p></div>
+          <div class="hw-card"><span class="mono small muted">OPTION C</span><b style="font-family:var(--serif);font-size:22px">Boîtier Maydan</b><p class="muted small mt-1">Clé HDMI préconfigurée, on l'envoie.</p></div>
+          <div class="hw-card"><span class="mono small muted">OPTION D</span><b style="font-family:var(--serif);font-size:22px">Mini-PC</b><p class="muted small mt-1">Si tu as déjà un mini-PC en place.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row reverse">
+      <div class="stack reveal" style="gap:20px">
+        <span class="eyebrow">Brandable</span>
+        <h2>À tes couleurs.<br/><span class="serif italic">Vraiment à toi.</span></h2>
+        <p class="muted" style="font-size:17px;max-width:48ch">
+          Ton logo, ta typo, tes couleurs. Tu peux ajouter une publicité locale,
+          un fond personnalisé, un message du chef. L'écran client devient un média.
+        </p>
+        <ul class="check-list">
+          <li>Logo, couleurs, typographie personnalisables</li>
+          <li>Médias secondaires : promos, photos, vidéos courtes</li>
+          <li>Plusieurs templates selon le format de salle</li>
+          <li>Horloge, météo, info trafic en option</li>
+        </ul>
+      </div>
+      <div class="reveal reveal-d2">
+        <div class="theme-grid">
+          <div class="theme-tile" style="background:#0F0F0F;color:#fff">
+            <div class="serif italic" style="color:var(--accent);font-size:22px">m.</div>
+            <div class="mono small" style="color:#A8A8A2">DARK · ORANGE</div>
+            <div class="serif" style="font-size:34px;margin-top:auto">141</div>
+          </div>
+          <div class="theme-tile" style="background:#1A1A2E;color:#fff">
+            <div class="serif italic" style="color:#FF6B9D;font-size:22px">m.</div>
+            <div class="mono small" style="color:#A8A8A2">MIDNIGHT · PINK</div>
+            <div class="serif" style="font-size:34px;margin-top:auto;color:#FF6B9D">142</div>
+          </div>
+          <div class="theme-tile" style="background:#F2F1EC;color:var(--ink)">
+            <div class="serif italic" style="color:#0F0F0F;font-size:22px">m.</div>
+            <div class="mono small" style="color:var(--ink-3)">LIGHT · INK</div>
+            <div class="serif" style="font-size:34px;margin-top:auto">143</div>
+          </div>
+          <div class="theme-tile" style="background:oklch(0.30 0.05 155);color:#fff">
+            <div class="serif italic" style="color:oklch(0.85 0.15 145);font-size:22px">m.</div>
+            <div class="mono small" style="color:#A8A8A2">FOREST · LIME</div>
+            <div class="serif" style="font-size:34px;margin-top:auto;color:oklch(0.85 0.15 145)">144</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="stack reveal" style="gap:20px">
+        <span class="eyebrow">Notifications</span>
+        <h2>Pas que sur l'écran.<br/><span class="serif italic">Push, SMS, app.</span></h2>
+        <p class="muted" style="font-size:17px;max-width:48ch">
+          Le client a commandé via l'app ? Il reçoit une push. En click&amp;collect ?
+          Un SMS. Sur place ? Son numéro passe en vert sur la TV. Tout converge,
+          rien n'est perdu.
+        </p>
+        <ul class="check-list">
+          <li>Push mobile via l'app Maydan</li>
+          <li>SMS automatique au passage "prêt"</li>
+          <li>Synchronisation temps réel avec le KDS</li>
+          <li>Mode sonore opt-in (gong, voix)</li>
+        </ul>
+      </div>
+      <div class="reveal reveal-d2">
+        <div class="card">
+          <span class="eyebrow">FLUX D'UNE COMMANDE</span>
+          <div class="flow mt-3">
+            <div class="flow-step"><span class="flow-dot"></span><div><b>13:18</b><span class="muted small">Client passe sa commande #142</span></div></div>
+            <div class="flow-step"><span class="flow-dot"></span><div><b>13:18</b><span class="muted small">KDS reçoit le ticket en cuisine</span></div></div>
+            <div class="flow-step"><span class="flow-dot"></span><div><b>13:21</b><span class="muted small">L'écran client affiche #142 en préparation</span></div></div>
+            <div class="flow-step done"><span class="flow-dot"></span><div><b>13:24</b><span class="muted small">Cuisine bump le ticket → écran client passe au vert</span></div></div>
+            <div class="flow-step done"><span class="flow-dot"></span><div><b>13:24</b><span class="muted small">Push + SMS envoyés au client</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.hw-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.hw-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-l); padding: 20px; display: flex; flex-direction: column; gap: 4px; }
+.theme-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.theme-tile { aspect-ratio: 16/10; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 4px; border: 1px solid var(--line); }
+.flow { display: flex; flex-direction: column; gap: 14px; position: relative; }
+.flow::before { content: ""; position: absolute; left: 6px; top: 8px; bottom: 8px; width: 1px; background: var(--line); }
+.flow-step { display: grid; grid-template-columns: 20px 1fr; gap: 12px; align-items: flex-start; position: relative; z-index: 1; }
+.flow-step b { display: block; font-size: 14px; font-family: var(--mono); font-weight: 500; color: var(--ink); }
+.flow-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent); margin-top: 4px; }
+.flow-step.done .flow-dot { background: var(--accent); }
+</style>
+
+<section class="section-tight" style="background:var(--bg-2)">
+  <div class="container">
+    <div class="row" style="justify-content:space-between;margin-bottom:24px">
+      <span class="eyebrow">Aller plus loin</span>
+      <a class="btn-link" href="../ecosystem.html">L'écosystème complet →</a>
+    </div>
+    <div class="grid grid-3">
+      <a class="card card-hover reveal" href="kds.html"><span class="mono small muted">CUISINE</span><h3 class="mt-2">KDS cuisine</h3><p class="muted mt-1">L'écran client suit le bump cuisine en temps réel.</p><span class="btn-link mt-3">Découvrir →</span></a>
+      <a class="card card-hover reveal reveal-d2" href="caisse.html"><span class="mono small muted">CAISSE</span><h3 class="mt-2">Logiciel TPV</h3><p class="muted mt-1">L'origine du numéro de commande, à la prise.</p><span class="btn-link mt-3">Découvrir →</span></a>
+      <a class="card card-hover reveal reveal-d3" href="commande-en-ligne.html"><span class="mono small muted">APP</span><h3 class="mt-2">Commande en ligne</h3><p class="muted mt-1">Le client reçoit aussi une push sur son téléphone.</p><span class="btn-link mt-3">Découvrir →</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-card reveal">
+      <div class="cta-bg"></div>
+      <div class="cta-content">
+        <h2 style="color:#fff;max-width:18ch"><span class="serif italic">Branche, et c'est parti.</span></h2>
+        <p style="color:rgba(255,255,255,0.78);max-width:50ch;margin-top:14px;font-size:17px">
+          Page web ou boîtier HDMI clé en main. Tu nous dis combien d'écrans, on s'occupe du reste.
+        </p>
+        <div class="row" style="margin-top:28px;gap:14px">
+          <a class="btn btn-accent" href="../tarifs.html">Demander un devis <span class="arrow"></span></a>
+          <a class="btn btn-ghost" href="../support.html" style="border-color:rgba(255,255,255,.25);color:#fff">Parler à quelqu'un</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+.cta-card { position: relative; background: #0F0F0F; border-radius: var(--r-xl); padding: 64px 56px; overflow: hidden; isolation: isolate; }
+.cta-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(50% 70% at 90% 100%, oklch(0.66 0.19 38 / 0.5), transparent 70%), radial-gradient(40% 60% at 0% 0%, oklch(0.74 0.16 60 / 0.3), transparent 70%); }
+.cta-content { position: relative; z-index: 1; }
+@media (max-width: 700px) { .cta-card { padding: 48px 28px; } }
+</style>
+
+<div id="site-footer"></div>
+<script src="../partials.js"></script>
+<script src="../scripts.js"></script>
+</body>
+</html>

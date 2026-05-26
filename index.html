@@ -1,0 +1,1060 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Maydan — L'écosystème complet pour ton restaurant</title>
+<meta name="description" content="Caisse, borne, KDS, livraison, commande en ligne. Un seul manager pour tout piloter. Sans hardware propriétaire, sans frais cachés." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- =================== NAV =================== -->
+<nav class="nav" data-screen-label="01 Home">
+  <div class="nav-inner">
+    <a href="index.html" class="brand" aria-label="Maydan">maydan</a>
+    <div class="nav-links">
+      <div class="nav-dropdown">
+        <a class="nav-link nav-dropdown-trigger" href="ecosystem.html">Produits</a>
+        <div class="nav-dropdown-menu" role="menu">
+          <a class="dd-item" href="products/caisse.html">
+            <div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2.5" y="3" width="13" height="10" rx="1.5"/><path d="M2.5 7h13"/></svg></div>
+            <div><div class="dd-title">Caisse</div><div class="dd-desc">Logiciel TPV sur Android</div></div>
+          </a>
+          <a class="dd-item" href="products/borne.html">
+            <div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="5" y="2" width="8" height="14" rx="1"/><path d="M8 13.5h2"/></svg></div>
+            <div><div class="dd-title">Borne de commande</div><div class="dd-desc">Self-order autonome</div></div>
+          </a>
+          <a class="dd-item" href="products/kds.html">
+            <div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="3.5" width="14" height="10" rx="1.5"/><path d="M5 16h8M9 13.5v2.5"/></svg></div>
+            <div><div class="dd-title">Écran cuisine (KDS)</div><div class="dd-desc">Tickets, timers, rappels</div></div>
+          </a>
+          <a class="dd-item" href="products/ecran-client.html">
+            <div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="3.5" width="15" height="9" rx="1"/><path d="M6 15h6"/></svg></div>
+            <div><div class="dd-title">Écran client</div><div class="dd-desc">Suivi des commandes en salle</div></div>
+          </a>
+          <a class="dd-item" href="products/commande-en-ligne.html">
+            <div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="5.5" y="2" width="7" height="14" rx="1.5"/><circle cx="9" cy="13.5" r=".7" fill="currentColor"/></svg></div>
+            <div><div class="dd-title">Commande en ligne</div><div class="dd-desc">App mobile & site web</div></div>
+          </a>
+          <a class="dd-item" href="products/livraison.html">
+            <div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 12V5h8v7"/><path d="M10 8h4l2 3v1h-6"/><circle cx="5.5" cy="13" r="1.5"/><circle cx="13" cy="13" r="1.5"/></svg></div>
+            <div><div class="dd-title">Livraison</div><div class="dd-desc">Flotte interne ou externe</div></div>
+          </a>
+          <a class="dd-item" href="products/commande-table.html">
+            <div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="12" height="12" rx="1.5"/><path d="M6 6h6M6 9h6M6 12h3"/></svg></div>
+            <div><div class="dd-title">Commande à table</div><div class="dd-desc">QR code & tablette serveur</div></div>
+          </a>
+          <a class="dd-item" href="products/manager.html">
+            <div class="dd-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2.5 13.5l3.5-4 3 3 5.5-6"/><path d="M11 6.5h3.5V10"/></svg></div>
+            <div><div class="dd-title">Manager en ligne</div><div class="dd-desc">Un menu, toutes plateformes</div></div>
+          </a>
+        </div>
+      </div>
+      <a class="nav-link" data-href="ecosystem.html" href="ecosystem.html">Écosystème</a>
+      <a class="nav-link" data-href="use-cases.html" href="use-cases.html">Cas d'usage</a>
+      <a class="nav-link" data-href="integrations.html" href="integrations.html">Intégrations</a>
+      <a class="nav-link" data-href="support.html" href="support.html">Support</a>
+    </div>
+    <div class="nav-spacer"></div>
+    <a class="btn btn-ghost" href="support.html">Se connecter</a>
+    <a class="btn btn-accent" href="tarifs.html">Demander un devis <span class="arrow"></span></a>
+  </div>
+</nav>
+
+<!-- =================== HERO =================== -->
+<header class="hero">
+  <div class="hero-bg">
+    <div class="grid-bg"></div>
+  </div>
+  <div class="container hero-inner">
+    <div style="display:grid;grid-template-columns:1fr;gap:32px;max-width:980px;margin:0 auto;text-align:center">
+      <span class="chip chip-accent reveal" style="justify-self:center">
+        <span class="chip-dot live" style="background:var(--accent)"></span>
+        Nouvelle génération de logiciel de caisse · NF525
+      </span>
+      <h1 class="reveal reveal-d2">
+        <span class="serif italic">Sers, encaisse, livre.</span><br/>
+        Sans changer d'outil.
+      </h1>
+      <p class="lead reveal reveal-d3" style="margin:0 auto">
+        Maydan, c'est l'écosystème logiciel &amp; matériel qui couvre tout ton restaurant —
+        de la prise de commande à la livraison. Sans hardware propriétaire,
+        sans frais cachés, sans surprise.
+      </p>
+      <div class="row reveal reveal-d4" style="justify-content:center;gap:14px;margin-top:8px">
+        <a class="btn btn-accent" href="tarifs.html">Obtenir mon devis <span class="arrow"></span></a>
+        <a class="btn btn-ghost" href="ecosystem.html">Voir l'écosystème</a>
+      </div>
+    </div>
+
+    <!-- ECOSYSTEM COMPOSITION -->
+    <div class="hero-stage reveal reveal-d5">
+      <!-- Floating: KDS -->
+      <div class="float-card float-kds">
+        <div class="float-head">
+          <span class="mono small muted">KDS · Cuisine</span>
+          <span class="chip"><span class="chip-dot live"></span> en service</span>
+        </div>
+        <div class="kds-tickets">
+          <div class="kds-ticket">
+            <div class="kds-ticket-head"><b>#142</b><span class="t-timer">01:24</span></div>
+            <ul><li>Burger maison <span>×2</span></li><li>Frites <span>×2</span></li><li>Coca cherry <span>×1</span></li></ul>
+          </div>
+          <div class="kds-ticket urgent">
+            <div class="kds-ticket-head"><b>#143</b><span class="t-timer warn">04:51</span></div>
+            <ul><li>Pizza Reine <span>×1</span></li><li>Tiramisu <span>×1</span></li></ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center tablet: POS -->
+      <div class="float-tablet">
+        <div class="mock-tablet">
+          <div class="mock-screen pos-screen">
+            <div class="pos-top">
+              <span class="mono small">Table 12 · service midi</span>
+              <span class="pos-status"><span class="chip-dot live"></span></span>
+            </div>
+            <div class="pos-grid">
+              <div class="pos-cat active">Burgers</div>
+              <div class="pos-cat">Pizzas</div>
+              <div class="pos-cat">Salades</div>
+              <div class="pos-cat">Boissons</div>
+              <div class="pos-cat">Desserts</div>
+              <div class="pos-cat">Menus</div>
+            </div>
+            <div class="pos-items">
+              <div class="pos-item">
+                <div class="pos-thumb" style="background:linear-gradient(135deg,#F3D9C1,#E9B58A)"></div>
+                <div><b>Burger maison</b><br/><span class="muted small">14,50&nbsp;€</span></div>
+              </div>
+              <div class="pos-item">
+                <div class="pos-thumb" style="background:linear-gradient(135deg,#E7D9C3,#C8A57A)"></div>
+                <div><b>Smash double</b><br/><span class="muted small">16,90&nbsp;€</span></div>
+              </div>
+              <div class="pos-item">
+                <div class="pos-thumb" style="background:linear-gradient(135deg,#F0E2C8,#D9C58A)"></div>
+                <div><b>Chèvre miel</b><br/><span class="muted small">15,50&nbsp;€</span></div>
+              </div>
+              <div class="pos-item">
+                <div class="pos-thumb" style="background:linear-gradient(135deg,#F4DBD0,#E0A893)"></div>
+                <div><b>Veggie</b><br/><span class="muted small">14,00&nbsp;€</span></div>
+              </div>
+            </div>
+            <div class="pos-cart">
+              <div><b>Commande</b> · 4 articles</div>
+              <div class="pos-total"><span class="muted small mono">TOTAL</span><b>62,40&nbsp;€</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating: Customer screen -->
+      <div class="float-card float-client">
+        <div class="float-head"><span class="mono small muted">Écran client</span><span class="chip">Salle</span></div>
+        <div class="client-screen">
+          <div class="client-row">
+            <span class="client-num mono">#140</span>
+            <span class="client-state ready">PRÊT</span>
+          </div>
+          <div class="client-row">
+            <span class="client-num mono">#141</span>
+            <span class="client-state ready">PRÊT</span>
+          </div>
+          <div class="client-row prep">
+            <span class="client-num mono">#142</span>
+            <span class="client-state">EN PRÉPARATION</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating: Mobile order -->
+      <div class="float-card float-mobile">
+        <div class="float-head"><span class="mono small muted">App mobile</span><span class="chip chip-accent">+1</span></div>
+        <div class="mobile-order">
+          <div class="mobile-avatar">L</div>
+          <div>
+            <div style="font-weight:500">Léa V.</div>
+            <div class="muted small">Commande #143 · click&amp;collect 12:45</div>
+          </div>
+          <div class="mono small" style="margin-left:auto">23,80&nbsp;€</div>
+        </div>
+      </div>
+
+      <!-- Floating: Manager stats -->
+      <div class="float-card float-stats">
+        <div class="float-head"><span class="mono small muted">Manager · aujourd'hui</span></div>
+        <div class="stats-num"><span data-count="2847" data-suffix=" €">0 €</span></div>
+        <div class="stats-spark">
+          <svg viewBox="0 0 120 36" preserveAspectRatio="none" style="width:100%;height:36px">
+            <path d="M0 28 L12 22 L24 25 L36 18 L48 20 L60 14 L72 15 L84 9 L96 12 L108 6 L120 8"
+              fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M0 28 L12 22 L24 25 L36 18 L48 20 L60 14 L72 15 L84 9 L96 12 L108 6 L120 8 L120 36 L0 36 Z"
+              fill="oklch(0.66 0.19 38 / 0.12)" />
+          </svg>
+        </div>
+        <div class="row" style="justify-content:space-between;font-size:12px">
+          <span class="muted mono">12:00 → 14:30</span>
+          <span style="color:var(--ok);font-weight:500">↑ 18%</span>
+        </div>
+      </div>
+
+      <!-- Floating: QR table -->
+      <div class="float-card float-qr">
+        <div class="float-head"><span class="mono small muted">Commande à table</span></div>
+        <div class="qr-block">
+          <div class="qr-pat" aria-hidden="true">
+            <svg viewBox="0 0 36 36" width="48" height="48"><rect width="36" height="36" fill="#fff"/>
+              <g fill="#0F0F0F">
+                <rect x="3" y="3" width="9" height="9"/><rect x="6" y="6" width="3" height="3" fill="#fff"/>
+                <rect x="24" y="3" width="9" height="9"/><rect x="27" y="6" width="3" height="3" fill="#fff"/>
+                <rect x="3" y="24" width="9" height="9"/><rect x="6" y="27" width="3" height="3" fill="#fff"/>
+                <rect x="15" y="3" width="3" height="3"/><rect x="18" y="9" width="3" height="3"/>
+                <rect x="15" y="15" width="3" height="3"/><rect x="21" y="15" width="3" height="3"/>
+                <rect x="27" y="18" width="3" height="3"/><rect x="24" y="24" width="3" height="3"/>
+                <rect x="30" y="27" width="3" height="3"/><rect x="18" y="30" width="3" height="3"/>
+                <rect x="24" y="30" width="3" height="3"/>
+              </g>
+            </svg>
+          </div>
+          <div>
+            <div style="font-weight:500">Table 12</div>
+            <div class="muted small">Scan &amp; commande</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating: Delivery -->
+      <div class="float-card float-delivery">
+        <div class="float-head"><span class="mono small muted">Livraison</span><span class="chip"><span class="chip-dot live"></span> 3 en route</span></div>
+        <div class="delivery-row">
+          <div class="delivery-driver">A</div>
+          <div>
+            <div style="font-weight:500;font-size:13.5px">Amine</div>
+            <div class="muted small">2 livraisons · 8 min</div>
+          </div>
+          <div class="mono small" style="margin-left:auto;color:var(--accent)">→ 1.2 km</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  /* HERO STAGE */
+  .hero-stage {
+    position: relative;
+    margin-top: 64px;
+    height: 620px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (max-width: 900px) {
+    .hero-stage { height: auto; display: flex; flex-direction: column; gap: 16px; margin-top: 40px; }
+    .float-card, .float-tablet { position: static !important; transform: none !important; }
+  }
+  .float-card, .float-tablet { position: absolute; }
+  .float-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r-l);
+    box-shadow: var(--shadow-3);
+    padding: 14px;
+    width: 260px;
+    z-index: 2;
+    animation: float 7s ease-in-out infinite;
+  }
+  .float-card .float-head {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 8px; margin-bottom: 10px;
+  }
+  .small { font-size: 11.5px; }
+  .mono.small { font-family: var(--mono); }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-6px); }
+  }
+  .float-kds      { top: 30px;  left: 0;  animation-delay: 0s;   transform: rotate(-2deg); }
+  .float-client   { top: 80px;  right: 0; animation-delay: -2s;  transform: rotate(1.5deg); }
+  .float-mobile   { top: 280px; left: -10px; animation-delay: -1s; width: 280px; transform: rotate(1deg);}
+  .float-stats    { top: 320px; right: 10px; animation-delay: -3s; width: 280px; transform: rotate(-1deg); }
+  .float-qr       { bottom: 0;  left: 200px; animation-delay: -4s; width: 220px;}
+  .float-delivery { bottom: 30px; right: 200px; animation-delay: -2.5s; width: 260px; transform: rotate(1deg); }
+
+  .float-tablet {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    width: 380px;
+    animation: float 9s ease-in-out infinite;
+  }
+
+  /* POS screen */
+  .pos-screen { padding: 12px; display: flex; flex-direction: column; gap: 10px; min-height: 460px;}
+  .pos-top { display: flex; justify-content: space-between; align-items: center; padding: 2px 4px; }
+  .pos-status .chip-dot { background: var(--ok); }
+  .pos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .pos-cat {
+    background: var(--surface); border: 1px solid var(--line);
+    padding: 8px 10px; border-radius: 8px; font-size: 12px; text-align: center;
+  }
+  .pos-cat.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .pos-items { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; flex: 1; }
+  .pos-item {
+    display: flex; gap: 8px; align-items: center;
+    background: var(--surface); border: 1px solid var(--line);
+    padding: 8px; border-radius: 10px; font-size: 12px;
+  }
+  .pos-thumb { width: 36px; height: 36px; border-radius: 6px; flex-shrink: 0; }
+  .pos-cart {
+    background: var(--ink); color: var(--bg);
+    border-radius: 10px; padding: 12px; display: flex; justify-content: space-between; align-items: center;
+    font-size: 13px;
+  }
+  .pos-total { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+  .pos-total b { font-family: var(--serif); font-size: 22px; line-height: 1; }
+
+  /* KDS */
+  .kds-tickets { display: flex; flex-direction: column; gap: 8px; }
+  .kds-ticket {
+    background: var(--bg); border: 1px solid var(--line);
+    border-radius: 10px; padding: 10px; font-size: 12px;
+  }
+  .kds-ticket.urgent { border-color: oklch(0.85 0.10 50); background: var(--accent-tint); }
+  .kds-ticket-head { display: flex; justify-content: space-between; margin-bottom: 6px; }
+  .kds-ticket ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 2px; }
+  .kds-ticket ul li { display: flex; justify-content: space-between; color: var(--ink-2); }
+  .t-timer { font-family: var(--mono); color: var(--ink-3); }
+  .t-timer.warn { color: var(--accent); font-weight: 500; }
+
+  /* Client screen */
+  .client-screen { display: flex; flex-direction: column; gap: 6px; }
+  .client-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 8px 10px; border-radius: 8px; background: var(--bg-2);
+    font-size: 12px;
+  }
+  .client-row.prep { background: var(--accent-tint); }
+  .client-num { font-size: 14px; font-weight: 500; }
+  .client-state { font-family: var(--mono); font-size: 10px; letter-spacing: .08em; color: var(--ink-3); }
+  .client-state.ready { color: var(--ok); }
+
+  /* Mobile / delivery / qr / stats */
+  .mobile-order, .delivery-row { display: flex; align-items: center; gap: 10px; }
+  .mobile-avatar, .delivery-driver {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--accent); color: #fff;
+    display: grid; place-items: center; font-size: 12px; font-weight: 500;
+  }
+  .delivery-driver { background: var(--ink); }
+  .stats-num { font-family: var(--serif); font-size: 32px; letter-spacing: -0.02em; line-height: 1; margin: 4px 0; }
+  .qr-block { display: flex; gap: 12px; align-items: center; }
+  .qr-pat { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 4px; display: grid; place-items: center; }
+</style>
+
+<!-- =================== TRUST STRIP =================== -->
+<section class="section-tight" style="border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="container">
+    <div class="trust-strip">
+      <div class="trust-item reveal">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M11 2l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V5l8-3z"/><path d="M7.5 11l2.5 2.5L15 8.5"/></svg>
+        <div><b>NF525</b><div class="muted small">Conforme &amp; attestation</div></div>
+      </div>
+      <div class="trust-item reveal reveal-d2">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="11" cy="11" r="8"/><path d="M11 6v5l3 2"/></svg>
+        <div><b>Support 7j/7</b><div class="muted small">Équipe basée en France</div></div>
+      </div>
+      <div class="trust-item reveal reveal-d3">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="6" width="18" height="12" rx="2"/><path d="M2 10h18M6 14h3"/></svg>
+        <div><b>Sans frais cachés</b><div class="muted small">Zéro commission TPE</div></div>
+      </div>
+      <div class="trust-item reveal reveal-d4">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 11l4-4 4 4 4-4 4 4"/><path d="M3 18l4-4 4 4 4-4 4 4"/></svg>
+        <div><b>Hardware libre</b><div class="muted small">Tu gardes tes tablettes</div></div>
+      </div>
+      <div class="trust-item reveal reveal-d5">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M11 3v3M11 16v3M3 11h3M16 11h3M5 5l2 2M15 15l2 2M5 17l2-2M15 7l2-2"/></svg>
+        <div><b>Mises à jour</b><div class="muted small">Incluses, automatiques</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .trust-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; }
+  .trust-item { display: flex; gap: 14px; align-items: flex-start; color: var(--ink-2); }
+  .trust-item b { font-size: 14px; color: var(--ink); display: block; }
+  @media (max-width: 900px) { .trust-strip { grid-template-columns: 1fr 1fr; } }
+</style>
+
+<!-- =================== ECOSYSTEM =================== -->
+<section class="section">
+  <div class="container">
+    <div class="row" style="justify-content:space-between;align-items:flex-end;margin-bottom:48px;gap:32px">
+      <div class="stack reveal">
+        <span class="eyebrow">L'écosystème</span>
+        <h2><span class="serif italic">Huit produits.</span> Un seul menu.<br/>Un seul manager.</h2>
+      </div>
+      <p class="lead reveal reveal-d2" style="max-width:42ch">
+        Quand tu modifies un prix dans Maydan, il change <em>partout</em>, en temps réel.
+        Caisse, borne, app mobile, Uber Eats, Deliveroo, écran cuisine. Sans copier-coller.
+      </p>
+    </div>
+
+    <div class="product-grid">
+      <a class="prod-card reveal" href="products/caisse.html">
+        <div class="prod-card-illu">
+          <div class="mock mock-pos-mini">
+            <div class="mock-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="pos-mini-grid">
+              <div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+          </div>
+        </div>
+        <div class="prod-card-body">
+          <span class="mono small muted">01 / Caisse</span>
+          <h3>Logiciel de caisse</h3>
+          <p class="muted">Une appli Android. N'importe quelle tablette fait l'affaire.</p>
+          <span class="btn-link">Découvrir →</span>
+        </div>
+      </a>
+
+      <a class="prod-card reveal reveal-d2" href="products/borne.html">
+        <div class="prod-card-illu">
+          <div class="kiosk-mini">
+            <div class="kiosk-screen">
+              <div class="kiosk-h"></div>
+              <div class="kiosk-row"></div>
+              <div class="kiosk-row"></div>
+              <div class="kiosk-cta"></div>
+            </div>
+            <div class="kiosk-base"></div>
+          </div>
+        </div>
+        <div class="prod-card-body">
+          <span class="mono small muted">02 / Borne</span>
+          <h3>Borne de commande</h3>
+          <p class="muted">Matériel + logiciel, ou logiciel seul sur ton kiosk.</p>
+          <span class="btn-link">Découvrir →</span>
+        </div>
+      </a>
+
+      <a class="prod-card reveal reveal-d3" href="products/kds.html">
+        <div class="prod-card-illu">
+          <div class="kds-mini">
+            <div class="kds-mini-t"><b>#142</b><span>01:24</span></div>
+            <div class="kds-mini-t warn"><b>#143</b><span>04:51</span></div>
+            <div class="kds-mini-t"><b>#144</b><span>00:32</span></div>
+          </div>
+        </div>
+        <div class="prod-card-body">
+          <span class="mono small muted">03 / KDS</span>
+          <h3>Écran cuisine</h3>
+          <p class="muted">Android &amp; Windows. Tickets, timers, rappels.</p>
+          <span class="btn-link">Découvrir →</span>
+        </div>
+      </a>
+
+      <a class="prod-card reveal reveal-d4" href="products/ecran-client.html">
+        <div class="prod-card-illu">
+          <div class="client-mini">
+            <div class="client-mini-col">
+              <div class="mono small muted">EN COURS</div>
+              <span>140</span><span>141</span><span>142</span>
+            </div>
+            <div class="client-mini-col ready">
+              <div class="mono small muted">PRÊT</div>
+              <span>138</span><span>139</span>
+            </div>
+          </div>
+        </div>
+        <div class="prod-card-body">
+          <span class="mono small muted">04 / Écran client</span>
+          <h3>Suivi en salle</h3>
+          <p class="muted">Page web. N'importe quelle TV avec un HDMI.</p>
+          <span class="btn-link">Découvrir →</span>
+        </div>
+      </a>
+
+      <a class="prod-card reveal" href="products/commande-en-ligne.html">
+        <div class="prod-card-illu">
+          <div class="phone-mini">
+            <div class="phone-mini-screen">
+              <div class="phone-h"></div>
+              <div class="phone-row"></div>
+              <div class="phone-row"></div>
+              <div class="phone-cta"></div>
+            </div>
+          </div>
+        </div>
+        <div class="prod-card-body">
+          <span class="mono small muted">05 / Commande en ligne</span>
+          <h3>App mobile &amp; site web</h3>
+          <p class="muted">Fidélité, suivi temps réel, promos automatiques.</p>
+          <span class="btn-link">Découvrir →</span>
+        </div>
+      </a>
+
+      <a class="prod-card reveal reveal-d2" href="products/livraison.html">
+        <div class="prod-card-illu">
+          <div class="map-mini">
+            <svg viewBox="0 0 160 100" width="100%" height="100%" preserveAspectRatio="none">
+              <rect width="160" height="100" fill="#F2F1EC"/>
+              <path d="M10 70 Q40 60 50 80 T120 60 T160 50" stroke="#D8D6CE" fill="none" stroke-width="1"/>
+              <path d="M0 30 L60 40 L90 20 L160 35" stroke="#D8D6CE" fill="none" stroke-width="1"/>
+              <path d="M20 90 L60 70 L80 78 L120 50 L140 40" stroke="oklch(0.66 0.19 38)" fill="none" stroke-width="1.6" stroke-dasharray="3 3"/>
+              <circle cx="20" cy="90" r="3.5" fill="#0F0F0F"/>
+              <circle cx="140" cy="40" r="3.5" fill="oklch(0.66 0.19 38)"/>
+            </svg>
+          </div>
+        </div>
+        <div class="prod-card-body">
+          <span class="mono small muted">06 / Livraison</span>
+          <h3>Livraison</h3>
+          <p class="muted">Flotte interne ou livreurs externes. Tracking live.</p>
+          <span class="btn-link">Découvrir →</span>
+        </div>
+      </a>
+
+      <a class="prod-card reveal reveal-d3" href="products/commande-table.html">
+        <div class="prod-card-illu">
+          <div class="table-mini">
+            <div class="qr-mini">
+              <svg viewBox="0 0 36 36" width="44" height="44"><rect width="36" height="36" fill="#fff"/>
+                <g fill="#0F0F0F">
+                  <rect x="3" y="3" width="9" height="9"/><rect x="6" y="6" width="3" height="3" fill="#fff"/>
+                  <rect x="24" y="3" width="9" height="9"/><rect x="27" y="6" width="3" height="3" fill="#fff"/>
+                  <rect x="3" y="24" width="9" height="9"/><rect x="6" y="27" width="3" height="3" fill="#fff"/>
+                  <rect x="15" y="3" width="3" height="3"/><rect x="18" y="9" width="3" height="3"/>
+                  <rect x="15" y="15" width="3" height="3"/><rect x="21" y="15" width="3" height="3"/>
+                  <rect x="27" y="18" width="3" height="3"/><rect x="24" y="24" width="3" height="3"/>
+                </g>
+              </svg>
+            </div>
+            <div class="mono small muted">T.12</div>
+          </div>
+        </div>
+        <div class="prod-card-body">
+          <span class="mono small muted">07 / Commande à table</span>
+          <h3>QR code &amp; tablette</h3>
+          <p class="muted">Tes clients commandent et paient sans attendre.</p>
+          <span class="btn-link">Découvrir →</span>
+        </div>
+      </a>
+
+      <a class="prod-card reveal reveal-d4" href="products/manager.html">
+        <div class="prod-card-illu">
+          <div class="manager-mini">
+            <div class="manager-h"></div>
+            <svg viewBox="0 0 160 70" width="100%" height="70" preserveAspectRatio="none">
+              <path d="M0 56 L20 42 L40 48 L60 30 L80 36 L100 22 L120 26 L140 14 L160 18"
+                fill="none" stroke="oklch(0.66 0.19 38)" stroke-width="1.6"/>
+              <path d="M0 56 L20 42 L40 48 L60 30 L80 36 L100 22 L120 26 L140 14 L160 18 L160 70 L0 70 Z"
+                fill="oklch(0.66 0.19 38 / 0.10)"/>
+            </svg>
+          </div>
+        </div>
+        <div class="prod-card-body">
+          <span class="mono small muted">08 / Manager</span>
+          <h3>Back-office en ligne</h3>
+          <p class="muted">Un menu, toutes les plateformes. Stats poussées.</p>
+          <span class="btn-link">Découvrir →</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="row reveal" style="justify-content:center;margin-top:48px">
+      <a class="btn btn-ghost" href="ecosystem.html">Voir comment ça s'articule <span class="arrow"></span></a>
+    </div>
+  </div>
+</section>
+<style>
+  .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  @media (max-width: 1100px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px)  { .product-grid { grid-template-columns: 1fr; } }
+  .prod-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r-l);
+    overflow: hidden;
+    transition: border-color .2s ease, transform .25s ease, box-shadow .2s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  .prod-card:hover {
+    border-color: var(--line-2);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-2);
+  }
+  .prod-card-illu {
+    height: 168px;
+    background: linear-gradient(135deg, var(--bg-2), var(--bg-3));
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    border-bottom: 1px solid var(--line);
+  }
+  .prod-card:hover .prod-card-illu > * { transform: scale(1.04); }
+  .prod-card-illu > * { transition: transform .35s ease; }
+  .prod-card-body { padding: 22px; display: flex; flex-direction: column; gap: 8px; }
+  .prod-card-body h3 { font-size: 20px; }
+  .prod-card-body .btn-link { margin-top: 10px; align-self: flex-start; }
+
+  /* Mini illus */
+  .mock-pos-mini { width: 70%; }
+  .pos-mini-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; padding: 8px; }
+  .pos-mini-grid > div { aspect-ratio: 1.2/1; background: var(--bg-2); border-radius: 4px; }
+  .pos-mini-grid > div:nth-child(1) { background: var(--ink); }
+
+  .kiosk-mini { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .kiosk-screen { width: 80px; height: 120px; background: #111; padding: 8px; border-radius: 8px; display: flex; flex-direction: column; gap: 4px; }
+  .kiosk-h { height: 10px; background: var(--accent); border-radius: 2px; }
+  .kiosk-row { height: 16px; background: rgba(255,255,255,.15); border-radius: 2px; }
+  .kiosk-cta { height: 14px; margin-top: auto; background: #fff; border-radius: 2px; }
+  .kiosk-base { width: 24px; height: 6px; background: #111; border-radius: 1px; }
+
+  .kds-mini { display: flex; flex-direction: column; gap: 6px; width: 70%; }
+  .kds-mini-t { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px; display: flex; justify-content: space-between; font-size: 11px; }
+  .kds-mini-t.warn { border-color: oklch(0.85 0.10 50); background: var(--accent-tint); }
+  .kds-mini-t span { font-family: var(--mono); color: var(--ink-3); }
+  .kds-mini-t.warn span { color: var(--accent); }
+
+  .client-mini { display: flex; gap: 8px; width: 80%; }
+  .client-mini-col { flex: 1; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px; display: flex; flex-direction: column; gap: 4px; }
+  .client-mini-col.ready { background: var(--accent-tint); border-color: oklch(0.86 0.07 50); }
+  .client-mini-col span { font-family: var(--serif); font-size: 20px; line-height: 1; }
+  .client-mini-col.ready span { color: var(--accent-deep); }
+
+  .phone-mini { width: 70px; height: 130px; background: #111; border-radius: 14px; padding: 6px; }
+  .phone-mini-screen { background: var(--bg); height: 100%; border-radius: 9px; padding: 6px; display: flex; flex-direction: column; gap: 4px; }
+  .phone-h { height: 10px; background: var(--ink); border-radius: 2px; }
+  .phone-row { height: 18px; background: var(--bg-2); border-radius: 2px; }
+  .phone-cta { height: 14px; margin-top: auto; background: var(--accent); border-radius: 2px; }
+
+  .map-mini { width: 80%; height: 100px; border-radius: 8px; overflow: hidden; border: 1px solid var(--line); }
+  .table-mini { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .qr-mini { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 4px; }
+
+  .manager-mini { width: 80%; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px; }
+  .manager-h { height: 6px; background: var(--ink); width: 40%; border-radius: 2px; margin-bottom: 8px; }
+</style>
+
+<!-- =================== DIFFERENTIATORS =================== -->
+<section class="section" style="background:var(--bg-2)">
+  <div class="container">
+    <div class="reveal" style="max-width:760px;margin-bottom:56px">
+      <span class="eyebrow">Pourquoi Maydan</span>
+      <h2 class="mt-2"><span class="serif italic">Différemment.</span> Et c'est volontaire.</h2>
+    </div>
+
+    <div class="diff-grid">
+      <div class="diff reveal">
+        <div class="diff-num serif">01</div>
+        <h3>Aucun hardware verrouillé</h3>
+        <p class="muted">Ta tablette n'est pas mariée à Maydan. Ton écran KDS pourra resservir.
+        Ta borne tourne sur Linux ou Windows si tu veux. <b>Tu gardes la main</b>.</p>
+      </div>
+      <div class="diff reveal reveal-d2">
+        <div class="diff-num serif">02</div>
+        <h3>Prix sans frais cachés</h3>
+        <p class="muted">Tout passe par devis, transparent. <b>Pas de commission</b> sur les transactions TPE,
+        pas de surprise en fin de mois. Ce que tu signes, c'est ce que tu paies.</p>
+      </div>
+      <div class="diff reveal reveal-d3">
+        <div class="diff-num serif">03</div>
+        <h3>Un seul manager pour tout</h3>
+        <p class="muted">Un menu, des prix, des photos. Modifie une fois, Maydan propage partout :
+        caisse, borne, app, Uber Eats, Deliveroo. <b>Fini les copier-coller</b>.</p>
+      </div>
+      <div class="diff reveal">
+        <div class="diff-num serif">04</div>
+        <h3>NF525 &amp; attestation</h3>
+        <p class="muted">Conformité fiscale assurée. On te fournit l'attestation officielle.
+        Audit, ticket Z, archivage — c'est carré.</p>
+      </div>
+      <div class="diff reveal reveal-d2">
+        <div class="diff-num serif">05</div>
+        <h3>Support 7j/7</h3>
+        <p class="muted">Une équipe joignable, du lundi au dimanche.
+        Service midi en panne ? <b>On répond en minutes</b>, pas en jours.</p>
+      </div>
+      <div class="diff reveal reveal-d3">
+        <div class="diff-num serif">06</div>
+        <h3>Marketing automation</h3>
+        <p class="muted">Push, SMS, e-mail. Programmation automatique sur match de foot,
+        météo, jour de paie. <b>Tu remplis ta salle quand tu veux</b>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r-l); overflow: hidden; }
+  @media (max-width: 900px) { .diff-grid { grid-template-columns: 1fr; } }
+  .diff { background: var(--bg-2); padding: 36px 32px; display: flex; flex-direction: column; gap: 8px; }
+  .diff-num { color: var(--accent); font-size: 32px; line-height: 1; margin-bottom: 12px; font-style: italic;}
+  .diff h3 { font-size: 22px; }
+  .diff p { font-size: 15px; line-height: 1.55; }
+  .diff p b { color: var(--ink); font-weight: 500; }
+</style>
+
+<!-- =================== ONE MANAGER FOCUS =================== -->
+<section class="section">
+  <div class="container">
+    <div class="feature-row" style="border:none;padding:0">
+      <div class="stack reveal" style="gap:24px">
+        <span class="eyebrow">Manager en ligne</span>
+        <h2>Un seul endroit.<br/><span class="serif italic">Tout ton restaurant.</span></h2>
+        <p class="lead">
+          Tu modifies un prix dans Maydan : il est à jour sur la caisse, la borne,
+          l'app mobile et Uber Eats en quelques secondes. Tu ajoutes une promo : elle
+          part en push, SMS, e-mail — au moment que tu choisis.
+        </p>
+        <ul class="check-list">
+          <li>Carte unique propagée sur 8 canaux de vente</li>
+          <li>Tableau de bord temps réel : CA, panier moyen, top produits</li>
+          <li>Marketing automation : campagnes programmées, segments clients</li>
+          <li>Multi-établissements en un coup d'œil</li>
+        </ul>
+        <div class="row" style="margin-top:8px">
+          <a class="btn btn-primary" href="products/manager.html">Explorer le manager <span class="arrow"></span></a>
+        </div>
+      </div>
+
+      <div class="reveal reveal-d2">
+        <div class="mgr-board">
+          <div class="mock-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="mono small muted" style="margin-left:8px">manager.maydan.app</span></div>
+          <div class="mgr-body">
+            <div class="mgr-side">
+              <div class="mgr-nav active">↗ Vue d'ensemble</div>
+              <div class="mgr-nav">◌ Commandes</div>
+              <div class="mgr-nav">⌷ Menu</div>
+              <div class="mgr-nav">⌥ Promotions</div>
+              <div class="mgr-nav">∿ Clients</div>
+              <div class="mgr-nav">⎈ Équipe</div>
+              <div class="mgr-nav">⌗ Statistiques</div>
+            </div>
+            <div class="mgr-main">
+              <div class="row" style="justify-content:space-between;align-items:flex-start">
+                <div>
+                  <div class="mono small muted">AUJOURD'HUI · MIDI</div>
+                  <div class="mgr-big serif"><span data-count="2847" data-suffix=" €">0 €</span></div>
+                  <div class="muted small">↑ 18,2% vs hier — 142 tickets · 20,05 € panier moyen</div>
+                </div>
+                <span class="chip chip-accent"><span class="chip-dot live" style="background:var(--accent)"></span> Live</span>
+              </div>
+              <div class="mgr-chart">
+                <svg viewBox="0 0 400 120" preserveAspectRatio="none" style="width:100%;height:100%">
+                  <defs>
+                    <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stop-color="oklch(0.66 0.19 38)" stop-opacity=".25"/>
+                      <stop offset="100%" stop-color="oklch(0.66 0.19 38)" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0 90 L40 80 L80 90 L120 60 L160 70 L200 40 L240 50 L280 30 L320 38 L360 18 L400 28 L400 120 L0 120 Z" fill="url(#g1)"/>
+                  <path d="M0 90 L40 80 L80 90 L120 60 L160 70 L200 40 L240 50 L280 30 L320 38 L360 18 L400 28" fill="none" stroke="oklch(0.66 0.19 38)" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+                <div class="mgr-axis">
+                  <span>10h</span><span>11h</span><span>12h</span><span>13h</span><span>14h</span>
+                </div>
+              </div>
+              <div class="mgr-pills">
+                <div class="mgr-pill"><span class="mono small muted">CAISSE</span><b>1 240 €</b></div>
+                <div class="mgr-pill"><span class="mono small muted">BORNE</span><b>620 €</b></div>
+                <div class="mgr-pill"><span class="mono small muted">EN LIGNE</span><b>540 €</b></div>
+                <div class="mgr-pill"><span class="mono small muted">UBER</span><b>447 €</b></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .mgr-board { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-l); overflow: hidden; box-shadow: var(--shadow-3); }
+  .mgr-body { display: grid; grid-template-columns: 180px 1fr; min-height: 320px; }
+  .mgr-side { background: var(--bg-2); border-right: 1px solid var(--line); padding: 16px 12px; display: flex; flex-direction: column; gap: 4px; }
+  .mgr-nav { padding: 8px 10px; border-radius: 6px; font-size: 13px; color: var(--ink-2); }
+  .mgr-nav.active { background: var(--surface); color: var(--ink); border: 1px solid var(--line); }
+  .mgr-main { padding: 22px; display: flex; flex-direction: column; gap: 16px; }
+  .mgr-big { font-size: 48px; line-height: 1; margin: 4px 0; letter-spacing: -.03em; }
+  .mgr-chart { background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 12px; height: 160px; display: flex; flex-direction: column; }
+  .mgr-axis { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 10px; color: var(--ink-4); padding: 0 4px; margin-top: 6px;}
+  .mgr-pills { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .mgr-pill { background: var(--bg-2); border-radius: 8px; padding: 10px 12px; display: flex; flex-direction: column; gap: 2px; }
+  .mgr-pill b { font-family: var(--serif); font-size: 18px; letter-spacing: -.02em; }
+  @media (max-width: 700px) { .mgr-body { grid-template-columns: 1fr; } .mgr-side { display: none; } }
+</style>
+
+<!-- =================== USE CASES =================== -->
+<section class="section" style="background:var(--ink);color:var(--bg)">
+  <div class="container">
+    <div class="row" style="justify-content:space-between;align-items:flex-end;margin-bottom:56px;gap:32px">
+      <div class="reveal" style="max-width:600px">
+        <span class="eyebrow" style="color:#A8A8A2">Cas d'usage</span>
+        <h2 style="color:var(--bg);margin-top:12px">Maydan s'adapte<br/>à ton format.<br/><span class="serif italic" style="color:oklch(0.85 0.13 50)">Pas l'inverse.</span></h2>
+      </div>
+      <a class="btn btn-ghost" href="use-cases.html" style="border-color:rgba(255,255,255,.2);color:#fff">Voir tous les cas <span class="arrow"></span></a>
+    </div>
+
+    <div class="usecase-grid">
+      <a class="usecase reveal" href="use-cases.html#resto-rapide">
+        <span class="mono small" style="color:#8B8B86">FAST</span>
+        <h3>Restaurant rapide</h3>
+        <p>Borne + caisse + KDS. Service à flux tendu, ticket moyen optimisé.</p>
+      </a>
+      <a class="usecase reveal reveal-d2" href="use-cases.html#table-service">
+        <span class="mono small" style="color:#8B8B86">SERVICE</span>
+        <h3>Brasserie / Table service</h3>
+        <p>Commande à table, tablette serveur, additions séparées.</p>
+      </a>
+      <a class="usecase reveal reveal-d3" href="use-cases.html#dark-kitchen">
+        <span class="mono small" style="color:#8B8B86">DELIVERY</span>
+        <h3>Dark kitchen</h3>
+        <p>100% en ligne. Tout converge dans une seule cuisine.</p>
+      </a>
+      <a class="usecase reveal reveal-d4" href="use-cases.html#food-truck">
+        <span class="mono small" style="color:#8B8B86">MOBILE</span>
+        <h3>Food truck</h3>
+        <p>Une tablette, un TPE, un menu en ligne. Léger comme l'air.</p>
+      </a>
+      <a class="usecase reveal" href="use-cases.html#chaine">
+        <span class="mono small" style="color:#8B8B86">SCALE</span>
+        <h3>Chaîne multi-sites</h3>
+        <p>Un manager pour tous les points de vente. Stats consolidées.</p>
+      </a>
+      <a class="usecase reveal reveal-d2" href="use-cases.html#franchise">
+        <span class="mono small" style="color:#8B8B86">RÉSEAU</span>
+        <h3>Franchise</h3>
+        <p>Branding partagé, autonomie locale. Centralisation propre.</p>
+      </a>
+    </div>
+  </div>
+</section>
+<style>
+  .usecase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #2A2A28; border-radius: var(--r-l); overflow: hidden; }
+  @media (max-width: 900px) { .usecase-grid { grid-template-columns: 1fr; } }
+  .usecase { padding: 32px; background: var(--ink); display: flex; flex-direction: column; gap: 8px; transition: background .15s ease; }
+  .usecase:hover { background: #1A1A18; }
+  .usecase h3 { color: #fff; font-size: 22px; }
+  .usecase p { color: #B5B5B0; font-size: 14.5px; }
+</style>
+
+<!-- =================== INTEGRATIONS MARQUEE =================== -->
+<section class="section">
+  <div class="container">
+    <div class="center reveal" style="max-width:680px;margin:0 auto 40px">
+      <span class="eyebrow" style="justify-content:center">Intégrations</span>
+      <h2 class="mt-2"><span class="serif italic">Branché</span> aux outils que tu utilises déjà.</h2>
+    </div>
+  </div>
+  <div class="marquee reveal">
+    <div class="marquee-track">
+      <span class="logo-pill">UBER&nbsp;EATS</span>
+      <span class="logo-pill">DELIVEROO</span>
+      <span class="logo-pill">SUMUP</span>
+      <span class="logo-pill">STRIPE</span>
+      <span class="logo-pill">PAYPLUG</span>
+      <span class="logo-pill">L'ADDITION</span>
+      <span class="logo-pill">QONTO</span>
+      <span class="logo-pill">CONNECTEUR&nbsp;COMPTABLE</span>
+      <span class="logo-pill">GOOGLE&nbsp;MY&nbsp;BUSINESS</span>
+      <!-- duplicate for seamless loop -->
+      <span class="logo-pill">UBER&nbsp;EATS</span>
+      <span class="logo-pill">DELIVEROO</span>
+      <span class="logo-pill">SUMUP</span>
+      <span class="logo-pill">STRIPE</span>
+      <span class="logo-pill">PAYPLUG</span>
+      <span class="logo-pill">L'ADDITION</span>
+      <span class="logo-pill">QONTO</span>
+      <span class="logo-pill">CONNECTEUR&nbsp;COMPTABLE</span>
+      <span class="logo-pill">GOOGLE&nbsp;MY&nbsp;BUSINESS</span>
+    </div>
+  </div>
+  <div class="container center" style="margin-top:24px">
+    <a class="btn-link" href="integrations.html">Voir toutes les intégrations →</a>
+  </div>
+</section>
+<style>
+  .logo-pill {
+    font-family: var(--mono);
+    font-size: 22px;
+    letter-spacing: 0.06em;
+    color: var(--ink-3);
+    font-weight: 500;
+  }
+</style>
+
+<!-- =================== MARKETING AUTOMATION =================== -->
+<section class="section" style="background:linear-gradient(180deg,var(--bg) 0%, var(--bg-2) 100%)">
+  <div class="container">
+    <div class="feature-row reverse" style="border:none;padding:0">
+      <div class="reveal" style="grid-column:1">
+        <div class="campaigns">
+          <div class="campaign">
+            <div class="campaign-icon" style="background:var(--accent)">PUSH</div>
+            <div class="campaign-body">
+              <b>Coup d'envoi 21h</b>
+              <div class="muted small">Notifications · Match France-Espagne · Auto</div>
+            </div>
+            <span class="chip"><span class="chip-dot live"></span> Programmée</span>
+          </div>
+          <div class="campaign">
+            <div class="campaign-icon" style="background:var(--ink)">SMS</div>
+            <div class="campaign-body">
+              <b>-10% sur le menu midi</b>
+              <div class="muted small">SMS · 432 clients · Lun 11:30</div>
+            </div>
+            <span class="chip">Envoyée</span>
+          </div>
+          <div class="campaign">
+            <div class="campaign-icon" style="background:#0F0F0F">MAIL</div>
+            <div class="campaign-body">
+              <b>Nouveau menu d'été</b>
+              <div class="muted small">E-mail · Segment fidèle · Brouillon</div>
+            </div>
+            <span class="chip" style="background:var(--bg-3);border-color:var(--bg-3)">Brouillon</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack reveal reveal-d2" style="gap:20px">
+        <span class="eyebrow">Marketing automation</span>
+        <h2><span class="serif italic">Remplis ta salle</span><br/>pendant que tu cuisines.</h2>
+        <p class="lead">
+          Programme des campagnes push, SMS, e-mail en quelques clics.
+          Déclenche-les sur un match, sur la météo, sur un anniversaire.
+          Maydan envoie au bon moment, au bon segment.
+        </p>
+        <ul class="check-list">
+          <li>Push, SMS, e-mail unifiés</li>
+          <li>Segments clients automatiques</li>
+          <li>Déclencheurs : heure, événement, météo, jour de paie</li>
+          <li>Mesure du retour : commandes générées, conversion</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .campaigns { display: flex; flex-direction: column; gap: 12px; }
+  .campaign {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: var(--r-l); padding: 16px; display: flex; align-items: center; gap: 16px;
+  }
+  .campaign-icon {
+    width: 52px; height: 52px; border-radius: 12px;
+    color: #fff; font-family: var(--mono); font-size: 11px; font-weight: 500;
+    display: grid; place-items: center; flex-shrink: 0;
+  }
+  .campaign-body { flex: 1; }
+  .campaign-body b { font-size: 15px; display: block; }
+</style>
+
+<!-- =================== CTA =================== -->
+<section class="section-wide">
+  <div class="container">
+    <div class="cta-card reveal">
+      <div class="cta-bg"></div>
+      <div class="cta-content">
+        <span class="eyebrow" style="color:rgba(255,255,255,0.7)">On y va</span>
+        <h2 style="color:#fff;max-width:18ch" class="mt-2">
+          <span class="serif italic">Parlons-en.</span><br/>
+          Un devis sur-mesure en 24h.
+        </h2>
+        <p style="color:rgba(255,255,255,0.78);max-width:50ch;margin-top:16px;font-size:17px">
+          Dis-nous quel type de resto, combien de couverts, et ce dont tu as besoin.
+          On te propose une config qui colle — sans engagement.
+        </p>
+        <div class="row" style="margin-top:32px;gap:14px">
+          <a class="btn btn-accent" href="tarifs.html">Demander un devis <span class="arrow"></span></a>
+          <a class="btn btn-ghost" href="support.html" style="border-color:rgba(255,255,255,.25);color:#fff">Parler à quelqu'un</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .cta-card {
+    position: relative;
+    background: #0F0F0F;
+    border-radius: var(--r-xl);
+    padding: 80px 56px;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .cta-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background:
+      radial-gradient(50% 70% at 90% 100%, oklch(0.66 0.19 38 / 0.5), transparent 70%),
+      radial-gradient(40% 60% at 0% 0%, oklch(0.74 0.16 60 / 0.3), transparent 70%);
+  }
+  .cta-content { position: relative; z-index: 1; }
+  @media (max-width: 700px) { .cta-card { padding: 48px 28px; } }
+</style>
+
+<!-- =================== FOOTER =================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">maydan</div>
+        <div class="footer-tagline">L'écosystème complet pour ton restaurant.</div>
+        <div class="row mt-3">
+          <span class="chip" style="background:transparent;border-color:#2A2A28;color:#A8A8A2">NF525</span>
+          <span class="chip" style="background:transparent;border-color:#2A2A28;color:#A8A8A2">Made in France</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Produits</h5>
+        <ul>
+          <li><a href="products/caisse.html">Caisse</a></li>
+          <li><a href="products/borne.html">Borne</a></li>
+          <li><a href="products/kds.html">KDS cuisine</a></li>
+          <li><a href="products/ecran-client.html">Écran client</a></li>
+          <li><a href="products/commande-en-ligne.html">Commande en ligne</a></li>
+          <li><a href="products/livraison.html">Livraison</a></li>
+          <li><a href="products/commande-table.html">Commande à table</a></li>
+          <li><a href="products/manager.html">Manager</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Découvrir</h5>
+        <ul>
+          <li><a href="ecosystem.html">Écosystème</a></li>
+          <li><a href="use-cases.html">Cas d'usage</a></li>
+          <li><a href="integrations.html">Intégrations</a></li>
+          <li><a href="tarifs.html">Devis</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="support.html">Aide &amp; FAQ</a></li>
+          <li><a href="support.html#contact">Nous contacter</a></li>
+          <li><a href="support.html#status">État des services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Légal</h5>
+        <ul>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">CGV</a></li>
+          <li><a href="#">Confidentialité</a></li>
+          <li><a href="#">Attestation NF525</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 MAYDAN · TOUS DROITS RÉSERVÉS</span>
+      <span>VERSION 2.4 · BUILD 0526</span>
+    </div>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

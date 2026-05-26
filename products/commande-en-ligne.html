@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="fr" data-root="../">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Commande en ligne — Maydan</title>
+<meta name="description" content="App mobile & site web de commande pour ton restaurant. Fidélité, suivi temps réel, marketing automation." />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body data-screen-label="06 Produit · Commande en ligne">
+
+<div id="site-nav"></div>
+
+<header class="product-hero">
+  <div class="hero-bg"><div class="grid-bg"></div></div>
+  <div class="container hero-inner">
+    <div class="product-hero-grid">
+      <div class="stack reveal" style="gap:24px">
+        <span class="eyebrow">05 / Commande en ligne</span>
+        <h1 style="font-size:clamp(40px,5.4vw,76px)">
+          <span class="serif italic">Ta propre</span><br/>
+          app, ton<br/>propre site.
+        </h1>
+        <p class="lead">
+          Pas un placard sur Uber. Tes clients commandent <em>chez toi</em>,
+          gardent leurs points de fidélité, reçoivent tes promos. App iOS &amp; Android,
+          site web responsive, marketing inclus. Tu gardes la relation.
+        </p>
+        <div class="row" style="gap:14px;margin-top:8px">
+          <a class="btn btn-accent" href="../tarifs.html">Demander un devis <span class="arrow"></span></a>
+          <a class="btn btn-ghost" href="#fonctionnalites">Voir les fonctionnalités</a>
+        </div>
+        <div class="row" style="gap:8px;margin-top:8px">
+          <span class="chip">iOS &amp; Android</span>
+          <span class="chip">Site web</span>
+          <span class="chip">Fidélité incluse</span>
+        </div>
+      </div>
+
+      <div class="reveal reveal-d2">
+        <div class="phone-stage">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-app-h">
+                <span class="serif italic" style="font-size:22px">m.</span>
+                <span class="mono small muted">SOIR · 19:24</span>
+              </div>
+              <div class="phone-hero">
+                <div class="phone-hero-img"></div>
+                <div class="phone-hero-text">
+                  <div class="mono small" style="color:var(--accent)">★ FIDÉLITÉ · 240 PTS</div>
+                  <h4 class="serif italic" style="font-size:22px;margin-top:4px;line-height:1.1">Bonsoir Léa.<br/>Encore faim ?</h4>
+                </div>
+              </div>
+              <div class="phone-cats">
+                <span class="phone-cat active">Burgers</span>
+                <span class="phone-cat">Pizzas</span>
+                <span class="phone-cat">Salades</span>
+                <span class="phone-cat">Desserts</span>
+              </div>
+              <div class="phone-card">
+                <div class="phone-card-img" style="background:linear-gradient(135deg,#F3D9C1,#E9B58A)"></div>
+                <div class="phone-card-body">
+                  <b>Burger maison</b>
+                  <p class="muted small">Pain brioché, bœuf charolais, cheddar affiné</p>
+                  <div class="row" style="justify-content:space-between"><span class="mono">14,50 €</span><span class="phone-add">+</span></div>
+                </div>
+              </div>
+              <div class="phone-card">
+                <div class="phone-card-img" style="background:linear-gradient(135deg,#F0E2C8,#D9C58A)"></div>
+                <div class="phone-card-body">
+                  <b>Chèvre miel</b>
+                  <p class="muted small">Pain de campagne, chèvre frais, miel, noix</p>
+                  <div class="row" style="justify-content:space-between"><span class="mono">15,50 €</span><span class="phone-add">+</span></div>
+                </div>
+              </div>
+              <div class="phone-tab">
+                <span>23,80 €</span>
+                <span style="background:var(--accent);color:#fff;padding:8px 16px;border-radius:999px;font-size:13px">Commander →</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-card commande-side-1">
+            <div class="row" style="gap:10px">
+              <div class="ring-pts">
+                <svg viewBox="0 0 40 40" width="42" height="42">
+                  <circle cx="20" cy="20" r="16" fill="none" stroke="var(--bg-2)" stroke-width="4"/>
+                  <circle cx="20" cy="20" r="16" fill="none" stroke="var(--accent)" stroke-width="4" stroke-dasharray="100" stroke-dashoffset="40" transform="rotate(-90 20 20)" stroke-linecap="round"/>
+                </svg>
+                <div class="ring-num mono">60%</div>
+              </div>
+              <div>
+                <div style="font-weight:500;font-size:13.5px">Carte fidélité</div>
+                <div class="muted small">240 / 400 pts · niveau Or</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-card commande-side-2">
+            <span class="mono small muted">Notification reçue</span>
+            <div class="row" style="gap:10px;margin-top:6px">
+              <div style="width:28px;height:28px;border-radius:6px;background:var(--accent);color:#fff;font-weight:500;display:grid;place-items:center;font-size:11px">m.</div>
+              <div style="font-size:12.5px"><b>Coup d'envoi 21h</b><br/><span class="muted small">-15% sur les burgers ce soir</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+.phone-stage { position: relative; display: grid; place-items: center; height: 600px; }
+.phone-frame { width: 290px; aspect-ratio: 9/19.5; background: #0F0F0F; border-radius: 36px; padding: 12px; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.45); position: relative; }
+.phone-notch { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 100px; height: 22px; background: #0A0A0A; border-radius: 0 0 16px 16px; z-index: 2; }
+.phone-screen { background: var(--bg); height: 100%; border-radius: 26px; padding: 30px 14px 14px; display: flex; flex-direction: column; gap: 10px; overflow: hidden; }
+.phone-app-h { display: flex; justify-content: space-between; align-items: center; padding: 4px 4px 6px; }
+.phone-hero { background: var(--bg-2); border-radius: 14px; padding: 14px; display: flex; gap: 12px; align-items: center; }
+.phone-hero-img { width: 56px; height: 56px; border-radius: 12px; background: linear-gradient(135deg, var(--accent), oklch(0.74 0.16 60)); }
+.phone-hero-text { flex: 1; }
+.phone-cats { display: flex; gap: 6px; overflow: hidden; }
+.phone-cat { padding: 6px 12px; border-radius: 999px; background: var(--bg-2); font-size: 11px; color: var(--ink-2); white-space: nowrap; }
+.phone-cat.active { background: var(--ink); color: var(--bg); }
+.phone-card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; display: flex; gap: 10px; padding: 10px; align-items: center; }
+.phone-card-img { width: 56px; height: 56px; border-radius: 8px; flex-shrink: 0; }
+.phone-card-body { flex: 1; min-width: 0; }
+.phone-card-body b { font-size: 13px; }
+.phone-card-body p { font-size: 11px; margin: 2px 0 4px; line-height: 1.3; }
+.phone-add { width: 20px; height: 20px; background: var(--accent); color: #fff; border-radius: 50%; display: grid; place-items: center; font-weight: 500; font-size: 13px; line-height: 1; }
+.phone-tab { background: var(--ink); color: #fff; border-radius: 12px; padding: 8px 8px 8px 14px; display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 13px; margin-top: auto; }
+.commande-side-1 { position: absolute; left: 0; top: 80px; width: 220px; transform: rotate(-3deg); z-index: 5; }
+.commande-side-2 { position: absolute; right: 0; top: 360px; width: 230px; transform: rotate(3deg); z-index: 5; }
+.float-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-l); box-shadow: var(--shadow-3); padding: 14px; }
+.ring-pts { position: relative; width: 42px; height: 42px; }
+.ring-num { position: absolute; inset: 0; display: grid; place-items: center; font-size: 11px; font-weight: 500; }
+.small { font-size: 11.5px; }
+@media (max-width: 900px) {
+  .phone-stage { height: auto; }
+  .commande-side-1, .commande-side-2 { position: static; transform: none; width: auto; margin: 12px 0; }
+}
+</style>
+
+<section class="section-tight" style="border-bottom:1px solid var(--line)">
+  <div class="container">
+    <div class="grid grid-4">
+      <div class="kpi reveal"><div class="kpi-num"><em>0</em>%</div><div class="kpi-label">Commission Maydan</div></div>
+      <div class="kpi reveal reveal-d2"><div class="kpi-num"><em>3,2</em>×</div><div class="kpi-label">Fidélité plus engagée</div></div>
+      <div class="kpi reveal reveal-d3"><div class="kpi-num"><em>iOS</em></div><div class="kpi-label">+ Android + Web</div></div>
+      <div class="kpi reveal reveal-d4"><div class="kpi-num"><em>1</em></div><div class="kpi-label">Seul menu, partout</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="fonctionnalites">
+  <div class="container">
+    <div class="feature-row">
+      <div class="stack reveal" style="gap:20px">
+        <span class="eyebrow">Ta marque, ta data</span>
+        <h2><span class="serif italic">Pas de placard</span><br/>sur une marketplace.</h2>
+        <p class="muted" style="font-size:17px;max-width:48ch">
+          Quand un client commande via Maydan, c'est <em>ton</em> client.
+          Tu connais son téléphone, ses commandes préférées, son anniversaire.
+          Ça change tout pour le marketing — et pour la marge.
+        </p>
+        <ul class="check-list">
+          <li>Application iOS &amp; Android brandée à ton enseigne</li>
+          <li>Site web responsive, intégré à ton domaine</li>
+          <li>Base clients propriétaire, RGPD compliant</li>
+          <li>Aucune commission par commande</li>
+        </ul>
+      </div>
+      <div class="reveal reveal-d2">
+        <div class="card">
+          <span class="eyebrow">BASE CLIENTS · CE MOIS</span>
+          <div class="kpi-row mt-3">
+            <div><div class="serif" style="font-size:42px;line-height:1">1 248</div><span class="muted small mono">CLIENTS ACTIFS</span></div>
+            <div><div class="serif" style="font-size:42px;line-height:1">3,4</div><span class="muted small mono">COMMANDES / CLIENT</span></div>
+            <div><div class="serif" style="font-size:42px;line-height:1">62%</div><span class="muted small mono">TAUX DE RÉTENTION</span></div>
+          </div>
+          <div style="border-top:1px solid var(--line);margin-top:20px;padding-top:14px;display:flex;flex-direction:column;gap:8px">
+            <div class="row" style="justify-content:space-between;font-size:13px"><span>Nouveaux clients ce mois</span><b style="color:var(--accent)">+ 184</b></div>
+            <div class="row" style="justify-content:space-between;font-size:13px"><span>Top segment : "midi régulier"</span><b>312 clients</b></div>
+            <div class="row" style="justify-content:space-between;font-size:13px"><span>Anniversaires ce mois</span><b>74</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row reverse">
+      <div class="stack reveal" style="gap:20px">
+        <span class="eyebrow">Fidélité &amp; promos</span>
+        <h2>Programme fidélité<br/><span class="serif italic">qui fidélise vraiment.</span></h2>
+        <p class="muted" style="font-size:17px;max-width:48ch">
+          Points, niveaux, récompenses. Codes promo, parrainage, happy hour automatique.
+          Tu paramètres une fois, ça tourne tout seul. Les clients reviennent — données à l'appui.
+        </p>
+        <ul class="check-list">
+          <li>Points / niveaux configurables (Bronze, Argent, Or…)</li>
+          <li>Récompenses : plat offert, % de remise, accès anticipé</li>
+          <li>Codes promo, parrainage, happy hour, anniversaire</li>
+          <li>Reporting : ROI par campagne, LTV par segment</li>
+        </ul>
+      </div>
+      <div class="reveal reveal-d2">
+        <div class="grid grid-2" style="gap:14px">
+          <div class="card" style="padding:20px">
+            <span class="mono small muted">NIVEAU OR</span>
+            <h3 class="serif italic mt-2" style="font-size:28px;color:var(--accent)">Léa V.</h3>
+            <div class="muted small">240 pts · 8 commandes</div>
+            <div style="margin-top:16px;background:var(--bg-2);height:6px;border-radius:999px;overflow:hidden"><div style="width:60%;height:100%;background:var(--accent);border-radius:999px"></div></div>
+            <div class="muted small mt-2">160 pts pour niveau Platine</div>
+          </div>
+          <div class="card" style="padding:20px">
+            <span class="mono small muted">RÉCOMPENSES</span>
+            <div class="rew mt-2"><span class="rew-dot"></span>Café offert · 100 pts</div>
+            <div class="rew"><span class="rew-dot"></span>Dessert offert · 250 pts</div>
+            <div class="rew on"><span class="rew-dot"></span>Burger offert · 400 pts</div>
+            <div class="rew"><span class="rew-dot"></span>Menu complet · 600 pts</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="stack reveal" style="gap:20px">
+        <span class="eyebrow">Suivi temps réel</span>
+        <h2>Le client suit sa commande.<br/><span class="serif italic">Le doute s'évapore.</span></h2>
+        <p class="muted" style="font-size:17px;max-width:48ch">
+          De la confirmation à la livraison, en passant par "en cuisine" et "prêt".
+          Notifications push à chaque étape. Si tu livres : carte temps réel avec le livreur.
+        </p>
+        <ul class="check-list">
+          <li>États : confirmée, en préparation, prête, en livraison, livrée</li>
+          <li>Carte live pour la livraison avec position du livreur</li>
+          <li>Push à chaque transition d'état</li>
+          <li>ETA estimée et mise à jour en continu</li>
+        </ul>
+      </div>
+      <div class="reveal reveal-d2">
+        <div class="card">
+          <span class="eyebrow">COMMANDE #143 · LÉA V.</span>
+          <div class="track mt-3">
+            <div class="track-step done"><span class="track-dot"></span><div><b>Commande confirmée</b><span class="muted small mono">13:18</span></div></div>
+            <div class="track-step done"><span class="track-dot"></span><div><b>En préparation</b><span class="muted small mono">13:21</span></div></div>
+            <div class="track-step current"><span class="track-dot"></span><div><b>Prête, en attente du livreur</b><span class="muted small mono">13:32</span></div></div>
+            <div class="track-step"><span class="track-dot"></span><div><b>En livraison</b><span class="muted small mono">—</span></div></div>
+            <div class="track-step"><span class="track-dot"></span><div><b>Livrée</b><span class="muted small mono">—</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.kpi-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+.kpi-row > div span { display: block; margin-top: 4px; }
+.rew { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 14px; color: var(--ink-2); }
+.rew-dot { width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--line-2); }
+.rew.on { color: var(--accent-deep); font-weight: 500; }
+.rew.on .rew-dot { background: var(--accent); border-color: var(--accent); }
+.track { display: flex; flex-direction: column; gap: 14px; position: relative; }
+.track::before { content: ""; position: absolute; left: 6px; top: 8px; bottom: 8px; width: 1px; background: var(--line); }
+.track-step { display: grid; grid-template-columns: 20px 1fr; gap: 12px; align-items: flex-start; position: relative; z-index: 1; opacity: .5; }
+.track-step.done, .track-step.current { opacity: 1; }
+.track-step b { display: block; font-size: 14px; }
+.track-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid var(--line); margin-top: 4px; }
+.track-step.done .track-dot { background: var(--accent); border-color: var(--accent); }
+.track-step.current .track-dot { background: var(--bg); border-color: var(--accent); box-shadow: 0 0 0 4px oklch(0.66 0.19 38 / 0.2); }
+</style>
+
+<section class="section-tight" style="background:var(--bg-2)">
+  <div class="container">
+    <div class="row" style="justify-content:space-between;margin-bottom:24px">
+      <span class="eyebrow">Aller plus loin</span>
+      <a class="btn-link" href="../ecosystem.html">L'écosystème complet →</a>
+    </div>
+    <div class="grid grid-3">
+      <a class="card card-hover reveal" href="livraison.html"><span class="mono small muted">LIVRAISON</span><h3 class="mt-2">Livraison</h3><p class="muted mt-1">Flotte interne ou livreurs externes, intégré à l'app.</p><span class="btn-link mt-3">Découvrir →</span></a>
+      <a class="card card-hover reveal reveal-d2" href="manager.html"><span class="mono small muted">MARKETING</span><h3 class="mt-2">Manager</h3><p class="muted mt-1">Campagnes push/SMS/email centralisées.</p><span class="btn-link mt-3">Découvrir →</span></a>
+      <a class="card card-hover reveal reveal-d3" href="../integrations.html"><span class="mono small muted">PLATEFORMES</span><h3 class="mt-2">Intégrations</h3><p class="muted mt-1">Continue d'utiliser Uber Eats &amp; Deliveroo en parallèle.</p><span class="btn-link mt-3">Découvrir →</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-card reveal">
+      <div class="cta-bg"></div>
+      <div class="cta-content">
+        <h2 style="color:#fff;max-width:18ch"><span class="serif italic">Récupère tes clients.</span></h2>
+        <p style="color:rgba(255,255,255,0.78);max-width:50ch;margin-top:14px;font-size:17px">
+          On te livre une app brandée et un site web. Tes clients commandent chez toi, sans intermédiaire.
+        </p>
+        <div class="row" style="margin-top:28px;gap:14px">
+          <a class="btn btn-accent" href="../tarifs.html">Demander un devis <span class="arrow"></span></a>
+          <a class="btn btn-ghost" href="../support.html" style="border-color:rgba(255,255,255,.25);color:#fff">Parler à quelqu'un</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+.cta-card { position: relative; background: #0F0F0F; border-radius: var(--r-xl); padding: 64px 56px; overflow: hidden; isolation: isolate; }
+.cta-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(50% 70% at 90% 100%, oklch(0.66 0.19 38 / 0.5), transparent 70%), radial-gradient(40% 60% at 0% 0%, oklch(0.74 0.16 60 / 0.3), transparent 70%); }
+.cta-content { position: relative; z-index: 1; }
+@media (max-width: 700px) { .cta-card { padding: 48px 28px; } }
+</style>
+
+<div id="site-footer"></div>
+<script src="../partials.js"></script>
+<script src="../scripts.js"></script>
+</body>
+</html>

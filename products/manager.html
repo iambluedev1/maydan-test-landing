@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="fr" data-root="../">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Manager en ligne — Maydan</title>
+<meta name="description" content="Un seul back-office pour piloter ton restaurant. Menu, prix, stats, campagnes marketing — partout, en temps réel." />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body data-screen-label="09 Produit · Manager">
+
+<div id="site-nav"></div>
+
+<header class="product-hero">
+  <div class="hero-bg"><div class="grid-bg"></div></div>
+  <div class="container hero-inner">
+    <div class="product-hero-grid">
+      <div class="stack reveal" style="gap:24px">
+        <span class="eyebrow">08 / Manager en ligne</span>
+        <h1 style="font-size:clamp(40px,5.4vw,76px)">
+          <span class="serif italic">Un seul</span><br/>
+          endroit. Tout<br/>ton restaurant.
+        </h1>
+        <p class="lead">
+          Modifie un prix : il change partout. Lance une promo : elle part en push.
+          Suis ton CA, ton panier moyen, tes top produits, en temps réel.
+          Le manager, c'est ton cockpit.
+        </p>
+        <div class="row" style="gap:14px;margin-top:8px">
+          <a class="btn btn-accent" href="../tarifs.html">Demander un devis <span class="arrow"></span></a>
+          <a class="btn btn-ghost" href="#fonctionnalites">Voir les fonctionnalités</a>
+        </div>
+        <div class="row" style="gap:8px;margin-top:8px">
+          <span class="chip">Web</span>
+          <span class="chip">Multi-établissements</span>
+          <span class="chip">Temps réel</span>
+        </div>
+      </div>
+
+      <div class="reveal reveal-d2">
+        <div class="mgr-stage">
+          <div class="mgr-board">
+            <div class="mock-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="mono small muted" style="margin-left:8px">manager.maydan.app</span></div>
+            <div class="mgr-body">
+              <div class="mgr-side">
+                <div class="mgr-nav active">↗ Vue d'ensemble</div>
+                <div class="mgr-nav">◌ Commandes</div>
+                <div class="mgr-nav">⌷ Menu</div>
+                <div class="mgr-nav">⌥ Promotions</div>
+                <div class="mgr-nav">∿ Clients</div>
+                <div class="mgr-nav">⎈ Équipe</div>
+                <div class="mgr-nav">⌗ Statistiques</div>
+              </div>
+              <div class="mgr-main">
+                <div class="row" style="justify-content:space-between;align-items:flex-start">
+                  <div>
+                    <div class="mono small muted">AUJOURD'HUI · MIDI</div>
+                    <div class="mgr-big serif"><span data-count="2847" data-suffix=" €">0 €</span></div>
+                    <div class="muted small">↑ 18,2% vs hier — 142 tickets</div>
+                  </div>
+                  <span class="chip chip-accent"><span class="chip-dot live" style="background:var(--accent)"></span> Live</span>
+                </div>
+                <div class="mgr-chart">
+                  <svg viewBox="0 0 400 120" preserveAspectRatio="none" style="width:100%;height:100%">
+                    <defs>
+                      <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+                        <stop offset="0%" stop-color="oklch(0.66 0.19 38)" stop-opacity=".25"/>
+                        <stop offset="100%" stop-color="oklch(0.66 0.19 38)" stop-opacity="0"/>
+                      </linearGradient>
+                    </defs>
+                    <path d="M0 90 L40 80 L80 90 L120 60 L160 70 L200 40 L240 50 L280 30 L320 38 L360 18 L400 28 L400 120 L0 120 Z" fill="url(#g1)"/>
+                    <path d="M0 90 L40 80 L80 90 L120 60 L160 70 L200 40 L240 50 L280 30 L320 38 L360 18 L400 28" fill="none" stroke="oklch(0.66 0.19 38)" stroke-width="2" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="mgr-pills">
+                  <div class="mgr-pill"><span class="mono small muted">CAISSE</span><b>1 240 €</b></div>
+                  <div class="mgr-pill"><span class="mono small muted">BORNE</span><b>620 €</b></div>
+                  <div class="mgr-pill"><span class="mono small muted">EN LIGNE</span><b>540 €</b></div>
+                  <div class="mgr-pill"><span class="mono small muted">UBER</span><b>447 €</b></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+.mgr-stage { position: relative; }
+.mgr-board { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-l); overflow: hidden; box-shadow: var(--shadow-3); }
+.mgr-body { display: grid; grid-template-columns: 180px 1fr; min-height: 360px; }
+.mgr-side { background: var(--bg-2); border-right: 1px solid var(--line); padding: 16px 12px; display: flex; flex-direction: column; gap: 4px; }
+.mgr-nav { padding: 8px 10px; border-radius: 6px; font-size: 13px; color: var(--ink-2); }
+.mgr-nav.active { background: var(--surface); color: var(--ink); border: 1px solid var(--line); }
+.mgr-main { padding: 22px; display: flex; flex-direction: column; gap: 16px; }
+.mgr-big { font-size: 48px; line-height: 1; margin: 4px 0; letter-spacing: -.03em; }
+.mgr-chart { background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 12px; height: 150px; }
+.mgr-pills { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.mgr-pill { background: var(--bg-2); border-radius: 8px; padding: 10px 12px; display: flex; flex-direction: column; gap: 2px; }
+.mgr-pill b { font-family: var(--serif); font-size: 18px; letter-spacing: -.02em; }
+@media (max-width: 700px) { .mgr-body { grid-template-columns: 1fr; } .mgr-side { display: none; } }
+.small { font-size: 11.5px; }
+</style>
+
+<section class="section-tight" style="border-bottom:1px solid var(--line)">
+  <div class="container">
+    <div class="grid grid-4">
+      <div class="kpi reveal"><div class="kpi-num"><em>1</em></div><div class="kpi-label">Seul endroit pour tout</div></div>
+      <div class="kpi reveal reveal-d2"><div class="kpi-num"><em>8</em></div><div class="kpi-label">Canaux de vente unifiés</div></div>
+      <div class="kpi reveal reveal-d3"><div class="kpi-num"><em>∞</em></div><div class="kpi-label">Établissements connectables</div></div>
+      <div class="kpi reveal reveal-d4"><div class="kpi-num"><em>3</em>s</div><div class="kpi-label">Sync changement de prix</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="fonctionnalites">
+  <div class="container">
+    <div class="feature-row">
+      <div class="stack reveal" style="gap:20px">
+        <span class="eyebrow">Menu unique</span>
+        <h2><span class="serif italic">Tu changes une fois.</span><br/>Maydan propage partout.</h2>
+        <p class="muted" style="font-size:17px;max-width:48ch">
+          Caisse, borne, app mobile, site web, Uber Eats, Deliveroo, écran cuisine.
+          Une modification du menu, et c'est à jour partout, en quelques secondes.
+          Fini les inconsistances de prix entre canaux.
+        </p>
+        <ul class="check-list">
+          <li>Une base produit unique, 8 canaux de diffusion</li>
+          <li>Prix différenciés par canal (sur place / livraison / app)</li>
+          <li>Disponibilité par heure, par jour, par canal</li>
+          <li>Photos, ingrédients, allergènes — un seul endroit</li>
+        </ul>
+      </div>
+      <div class="reveal reveal-d2">
+        <div class="card" style="padding:0;overflow:hidden">
+          <div class="mock-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="mono small muted" style="margin-left:8px">menu · burger maison</span></div>
+          <div style="padding:24px">
+            <div style="background:linear-gradient(135deg,#F3D9C1,#E9B58A);height:80px;border-radius:10px;margin-bottom:16px"></div>
+            <h3 class="serif" style="font-size:24px">Burger maison</h3>
+            <p class="muted small">Pain brioché, bœuf charolais, cheddar affiné</p>
+            <div style="border-top:1px solid var(--line);margin-top:18px;padding-top:14px;display:flex;flex-direction:column;gap:8px">
+              <div class="row" style="justify-content:space-between;font-size:13px"><span class="mono small muted">SUR PLACE</span><b class="mono">14,50 €</b></div>
+              <div class="row" style="justify-content:space-between;font-size:13px"><span class="mono small muted">À EMPORTER</span><b class="mono">13,50 €</b></div>
+              <div class="row" style="justify-content:space-between;font-size:13px"><span class="mono small muted">LIVRAISON</span><b class="mono">15,90 €</b></div>
+              <div class="row" style="justify-content:space-between;font-size:13px"><span class="mono small muted">UBER EATS</span><b class="mono">16,90 €</b></div>
+            </div>
+            <div class="row" style="margin-top:14px;gap:6px;flex-wrap:wrap">
+              <span class="chip chip-accent"><span class="chip-dot" style="background:var(--accent)"></span> Caisse</span>
+              <span class="chip chip-accent"><span class="chip-dot" style="background:var(--accent)"></span> Borne</span>
+              <span class="chip chip-accent"><span class="chip-dot" style="background:var(--accent)"></span> App</span>
+              <span class="chip chip-accent"><span class="chip-dot" style="background:var(--accent)"></span> UE</span>
+              <span class="chip chip-accent"><span class="chip-dot" style="background:var(--accent)"></span> Deliveroo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row reverse">
+      <div class="stack reveal" style="gap:20px">
+        <span class="eyebrow">Stats poussées</span>
+        <h2>Ce que tu vends,<br/><span class="serif italic">à qui, et quand.</span></h2>
+        <p class="muted" style="font-size:17px;max-width:48ch">
+          Top produits, top combos, créneaux de pic, clients fidèles, taux de rétention.
+          Comparaison année / mois / jour. Export Excel. Tu prends des décisions sur des faits.
+        </p>
+        <ul class="check-list">
+          <li>Tableau de bord temps réel</li>
+          <li>Top produits, top combos, top vendeurs</li>
+          <li>Analyses cohortes : fidélité, panier moyen, fréquence</li>
+          <li>Exports comptabilité, planning, RH</li>
+        </ul>
+      </div>
+      <div class="reveal reveal-d2">
+        <div class="grid grid-2" style="gap:14px">
+          <div class="card" style="padding:20px">
+            <span class="mono small muted">TOP PRODUITS · 30 J</span>
+            <div class="top-list mt-3">
+              <div class="top-row"><span class="top-rank mono">01</span><span>Burger maison</span><span class="mono small">428</span></div>
+              <div class="top-row"><span class="top-rank mono">02</span><span>Frites maison</span><span class="mono small">386</span></div>
+              <div class="top-row"><span class="top-rank mono">03</span><span>Pizza Reine</span><span class="mono small">221</span></div>
+              <div class="top-row"><span class="top-rank mono">04</span><span>Coca cherry</span><span class="mono small">204</span></div>
+              <div class="top-row"><span class="top-rank mono">05</span><span>Tiramisu</span><span class="mono small">178</span></div>
+            </div>
+          </div>
+          <div class="card" style="padding:20px">
+            <span class="mono small muted">CRÉNEAUX DE PIC</span>
+            <div class="hours mt-3">
+              <div class="hour"><div class="hour-bar" style="height:30%"></div><span>10</span></div>
+              <div class="hour"><div class="hour-bar" style="height:50%"></div><span>11</span></div>
+              <div class="hour"><div class="hour-bar" style="height:88%"></div><span>12</span></div>
+              <div class="hour"><div class="hour-bar" style="height:95%"></div><span>13</span></div>
+              <div class="hour"><div class="hour-bar" style="height:64%"></div><span>14</span></div>
+              <div class="hour"><div class="hour-bar" style="height:18%"></div><span>15</span></div>
+              <div class="hour"><div class="hour-bar" style="height:24%"></div><span>18</span></div>
+              <div class="hour"><div class="hour-bar" style="height:62%"></div><span>19</span></div>
+              <div class="hour"><div class="hour-bar" style="height:84%"></div><span>20</span></div>
+              <div class="hour"><div class="hour-bar" style="height:48%"></div><span>21</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="stack reveal" style="gap:20px">
+        <span class="eyebrow">Marketing automation</span>
+        <h2>Programme une campagne.<br/><span class="serif italic">Maydan envoie au bon moment.</span></h2>
+        <p class="muted" style="font-size:17px;max-width:48ch">
+          Push, SMS, e-mail. Déclenche sur un match de foot, une météo, un anniversaire,
+          un jour de paie. Mesure le ROI par campagne. Optimise en continu.
+        </p>
+        <ul class="check-list">
+          <li>Push, SMS, e-mail unifiés</li>
+          <li>Segments dynamiques (récents, fidèles, dormants…)</li>
+          <li>Déclencheurs météo, calendrier, événement, RFM</li>
+          <li>A/B testing intégré, ROI mesurable</li>
+        </ul>
+      </div>
+      <div class="reveal reveal-d2">
+        <div class="campaigns">
+          <div class="campaign">
+            <div class="campaign-icon" style="background:var(--accent)">PUSH</div>
+            <div class="campaign-body"><b>Coup d'envoi 21h</b><div class="muted small">Match France-Espagne · Auto</div></div>
+            <span class="chip"><span class="chip-dot live"></span> Programmée</span>
+          </div>
+          <div class="campaign">
+            <div class="campaign-icon" style="background:var(--ink)">SMS</div>
+            <div class="campaign-body"><b>-10% menu midi</b><div class="muted small">432 clients · Lun 11:30</div></div>
+            <span class="chip">Envoyée</span>
+          </div>
+          <div class="campaign">
+            <div class="campaign-icon" style="background:#2A2A28">MAIL</div>
+            <div class="campaign-body"><b>Nouveau menu d'été</b><div class="muted small">Segment fidèle · Brouillon</div></div>
+            <span class="chip" style="background:var(--bg-3);border-color:var(--bg-3)">Brouillon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.top-list { display: flex; flex-direction: column; gap: 8px; }
+.top-row { display: grid; grid-template-columns: 28px 1fr auto; gap: 12px; align-items: center; font-size: 14px; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.top-row:last-child { border-bottom: 0; }
+.top-rank { font-size: 11px; color: var(--ink-4); }
+.hours { display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px; align-items: end; height: 110px; }
+.hour { display: flex; flex-direction: column; gap: 4px; align-items: center; height: 100%; }
+.hour-bar { width: 100%; background: var(--accent); border-radius: 4px 4px 0 0; }
+.hour span { font-family: var(--mono); font-size: 10px; color: var(--ink-3); }
+.campaigns { display: flex; flex-direction: column; gap: 12px; }
+.campaign { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-l); padding: 16px; display: flex; align-items: center; gap: 16px; }
+.campaign-icon { width: 52px; height: 52px; border-radius: 12px; color: #fff; font-family: var(--mono); font-size: 11px; font-weight: 500; display: grid; place-items: center; flex-shrink: 0; }
+.campaign-body b { font-size: 15px; display: block; }
+</style>
+
+<section class="section-tight" style="background:var(--bg-2)">
+  <div class="container">
+    <div class="row" style="justify-content:space-between;margin-bottom:24px">
+      <span class="eyebrow">Aller plus loin</span>
+      <a class="btn-link" href="../ecosystem.html">L'écosystème complet →</a>
+    </div>
+    <div class="grid grid-3">
+      <a class="card card-hover reveal" href="../integrations.html"><span class="mono small muted">PLATEFORMES</span><h3 class="mt-2">Intégrations</h3><p class="muted mt-1">Uber, Deliveroo, paiement, compta. Tout branché.</p><span class="btn-link mt-3">Découvrir →</span></a>
+      <a class="card card-hover reveal reveal-d2" href="commande-en-ligne.html"><span class="mono small muted">APP &amp; WEB</span><h3 class="mt-2">Commande en ligne</h3><p class="muted mt-1">Tes clients deviennent ta base CRM.</p><span class="btn-link mt-3">Découvrir →</span></a>
+      <a class="card card-hover reveal reveal-d3" href="caisse.html"><span class="mono small muted">CAISSE</span><h3 class="mt-2">Logiciel TPV</h3><p class="muted mt-1">L'amont des données : le ticket en salle.</p><span class="btn-link mt-3">Découvrir →</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-card reveal">
+      <div class="cta-bg"></div>
+      <div class="cta-content">
+        <h2 style="color:#fff;max-width:18ch"><span class="serif italic">Un tableau de bord, un resto.</span></h2>
+        <p style="color:rgba(255,255,255,0.78);max-width:50ch;margin-top:14px;font-size:17px">
+          On t'embarque sur le manager dès la première semaine. Démo gratuite, sans engagement.
+        </p>
+        <div class="row" style="margin-top:28px;gap:14px">
+          <a class="btn btn-accent" href="../tarifs.html">Demander un devis <span class="arrow"></span></a>
+          <a class="btn btn-ghost" href="../support.html" style="border-color:rgba(255,255,255,.25);color:#fff">Parler à quelqu'un</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+.cta-card { position: relative; background: #0F0F0F; border-radius: var(--r-xl); padding: 64px 56px; overflow: hidden; isolation: isolate; }
+.cta-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(50% 70% at 90% 100%, oklch(0.66 0.19 38 / 0.5), transparent 70%), radial-gradient(40% 60% at 0% 0%, oklch(0.74 0.16 60 / 0.3), transparent 70%); }
+.cta-content { position: relative; z-index: 1; }
+@media (max-width: 700px) { .cta-card { padding: 48px 28px; } }
+</style>
+
+<div id="site-footer"></div>
+<script src="../partials.js"></script>
+<script src="../scripts.js"></script>
+</body>
+</html>
